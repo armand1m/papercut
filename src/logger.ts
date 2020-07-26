@@ -1,10 +1,10 @@
-import { Signale } from "signale";
+import { Signale } from 'signale';
 
 export const createLogger = (scope: string) => new Signale({ scope });
 
 /**
  * TODO: use pino instead of signale
- * @param scope 
+ * @param scope
  */
 export function withLogging<T>(scope: string) {
   const log = createLogger(scope);
@@ -26,4 +26,4 @@ export function withLogging<T>(scope: string) {
   };
 
   return logger;
-};
+}

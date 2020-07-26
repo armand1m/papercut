@@ -1,5 +1,5 @@
-import fetch from "node-fetch";
-import { LocalStorage } from "node-localstorage"
+import fetch from 'node-fetch';
+import { LocalStorage } from 'node-localstorage';
 
 const pagecache = new LocalStorage('./pagecache', 15 * 1024 * 1024);
 

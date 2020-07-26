@@ -3,4 +3,5 @@ export interface LabeledUrl {
   url: string;
 }
 
-export const createLabeledUrl = (label: string, url: string) => ({ label, url }) as LabeledUrl;
+export const createLabeledUrl = (label: string, url: string) =>
+  ({ label, url } as LabeledUrl);

@@ -1,5 +1,5 @@
-import fetch from "node-fetch";
-import { LocalStorage } from "node-localstorage"
+import fetch from 'node-fetch';
+import { LocalStorage } from 'node-localstorage';
 
 const geocache = new LocalStorage('./geocache');
 
@@ -16,7 +16,7 @@ interface Location {
   type: string;
   importance: number;
   icon: string;
-};
+}
 
 export const geosearch = async (q: string, limit: number = 1) => {
   const cacheResponse = geocache.getItem(q);
@@ -28,7 +28,7 @@ export const geosearch = async (q: string, limit: number = 1) => {
   const params = new URLSearchParams({
     q,
     limit: Number(limit).toString(),
-    format: "json"
+    format: 'json',
   });
 
   const ENDPOINT = `https://nominatim.openstreetmap.org/search?${params.toString()}`;
