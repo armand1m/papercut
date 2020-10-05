@@ -1,9 +1,10 @@
-import { JSDOM } from 'jsdom';
+import { DOMWindow, JSDOM } from 'jsdom';
+import PromisePool from '@supercharge/promise-pool';
 import range from 'lodash/range';
 import { createLogger } from './logger';
 import { fetchPage } from './fetchPage';
 import { supress } from './supress';
-import { createSelectors } from './createSelectors';
+import { createSelectors, SelectorFnProps } from './createSelectors';
 import { flat } from './flat';
 
 export interface ScraperProps {
@@ -14,6 +15,11 @@ export interface ScraperProps {
 export interface ScraperOptions {
   log: boolean;
   cache: boolean;
+  concurrency: {
+    page: number;
+    node: number;
+    selector: number;
+  };
 }
 
 export interface PaginationOptions {
@@ -21,17 +27,7 @@ export interface PaginationOptions {
   lastPageNumberSelector: string;
 }
 
-interface SelectorFnProps {
-  attr: (selector: string, attribute: string) => string | undefined;
-  text: (selector: string) => string | undefined;
-  href: (selector: string) => string | undefined;
-  src: (selector: string) => string | undefined;
-  geosearch: (address: string) => Promise<string | undefined>;
-  className: (selector: string) => string | undefined;
-  element: Element;
-}
-
-type SelectorFn = (props: SelectorFnProps, $this: SelectorMap) => any;
+type SelectorFn = <T>(props: SelectorFnProps, $this: SelectorMap) => T;
 
 export type SelectorMap = Record<string, SelectorFn>;
 
@@ -43,13 +39,21 @@ export class Scraper {
   private forEachSelector: string | undefined;
   private log: any;
 
-  constructor(props: ScraperProps, options: ScraperOptions) {
+  constructor(props: ScraperProps, options?: ScraperOptions) {
     this.props = props;
-    this.options = options;
+    this.options = {
+      log: process.env.DEBUG === '1',
+      cache: false,
+      concurrency: {
+        page: 2,
+        node: 2,
+        selector: 2,
+      },
+      ...options,
+    };
 
-    const logger = createLogger(this.props.name);
-    const log = this.options.log
-      ? logger
+    this.log = this.options.log
+      ? createLogger(this.props.name)
       : {
           await: () => {
             /** noop */
@@ -61,8 +65,6 @@ export class Scraper {
             /** noop */
           },
         };
-
-    this.log = log;
   }
 
   public forEach(selector: string) {
@@ -112,25 +114,41 @@ export class Scraper {
     const nodes = document.querySelectorAll(this.forEachSelector);
     const nodesArray = Array.prototype.slice.call(nodes) as Element[];
 
-    const results = [];
+    const { results } = await PromisePool.withConcurrency(
+      this.options.concurrency.node
+    )
+      .for(nodesArray)
+      .process(async node => {
+        const nodeSelectors = createSelectors(node);
+        const selectorKeys = Object.keys(this.selectors);
+        const {
+          results: nodeScrapeResultArray,
+        } = await PromisePool.withConcurrency(this.options.concurrency.selector)
+          .for(selectorKeys)
+          .process(async selectorKey => {
+            const selector = this.selectors[selectorKey];
+            const selectorResult = await supress(
+              () => selector(nodeSelectors, this.selectors),
+              err => this.log.error(err)
+            );
 
-    for (const node of nodesArray) {
-      const nodeSelectors = createSelectors(node);
-      const selectorKeys = Object.keys(this.selectors);
-      const nodeScrapeResult = {} as Record<string, string>;
+            return {
+              [selectorKey]: selectorResult,
+            };
+          });
 
-      for (const selectorKey of selectorKeys) {
-        const selector = this.selectors[selectorKey];
-        const selectorResult = await supress(
-          () => selector(nodeSelectors, this.selectors),
-          err => this.log.error(err)
+        const nodeScrapeResult = nodeScrapeResultArray.reduce(
+          (acc, scrapeResult) => {
+            return {
+              ...acc,
+              ...scrapeResult,
+            };
+          },
+          {}
         );
 
-        nodeScrapeResult[selectorKey] = selectorResult;
-      }
-
-      results.push(nodeScrapeResult);
-    }
+        return nodeScrapeResult;
+      });
 
     return results;
   }
@@ -146,11 +164,12 @@ export class Scraper {
 
     this.log.await('Fetching..');
 
-    const payload = await fetchPage(this.props.baseUrl);
+    let payload: string | null = await fetchPage(this.props.baseUrl);
 
     this.log.await('Parsing..');
 
-    const { document } = new JSDOM(payload).window;
+    let window: DOMWindow | null = new JSDOM(payload).window;
+    let document: Document | null = window.document;
 
     const pageNumbers = this.getPageNumbers(document);
 
@@ -163,30 +182,55 @@ export class Scraper {
         throw new Error('Please define a function to build a paginated url.');
       }
 
-      const scrapePromises = pageNumbers.map(async pageNumber => {
-        this.log.await(`Fetching page ${pageNumber}`);
+      const { results, errors } = await PromisePool.withConcurrency(
+        this.options.concurrency.page
+      )
+        .for(pageNumbers)
+        .process(async (pageNumber: number) => {
+          this.log.await(`Fetching page ${pageNumber}`);
 
-        const payload = await fetchPage(
-          createPaginatedUrl(this.props, pageNumber)
-        );
+          let pagePayload: string | null = await fetchPage(
+            createPaginatedUrl(this.props, pageNumber)
+          );
 
-        this.log.await(`Parsing page ${pageNumber}`);
+          this.log.await(`Parsing page ${pageNumber}`);
 
-        const { document: pageDocument } = new JSDOM(payload).window;
+          let pageWindow: DOMWindow | null = new JSDOM(pagePayload).window;
+          let pageDocument: Document | null = pageWindow.document;
 
-        this.log.await(`Scraping page ${pageNumber}`);
+          this.log.await(`Scraping page ${pageNumber}`);
 
-        const pageResult = await this.scrape(pageDocument);
+          const pageResult = await this.scrape(pageDocument);
 
-        return pageResult;
-      });
+          pageWindow.close();
+          pageWindow = null;
+          pagePayload = null;
+          pageDocument = null;
 
-      const unflattedResults = await Promise.all(scrapePromises);
-      const flatResults = flat(unflattedResults);
+          return pageResult;
+        });
+
+      if (errors) {
+        this.log.error('Some scraping requests failed with errors.');
+        this.log.error(errors);
+      }
+
+      const flatResults = flat(results);
+
+      window.close();
+      window = null;
+      document = null;
+      payload = null;
 
       return flatResults;
     } else {
       const mainPageResults = await this.scrape(document);
+
+      window.close();
+      window = null;
+      document = null;
+      payload = null;
+
       return mainPageResults;
     }
   }

@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
 
-const pagecache = new LocalStorage('./pagecache', 15 * 1024 * 1024);
+const pagecache = new LocalStorage('./pagecache', 30 * 1024 * 1024);
 
 export const fetchPage = async (url: string) => {
   const cacheResponse = pagecache.getItem(url);

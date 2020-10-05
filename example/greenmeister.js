@@ -1,6 +1,8 @@
 const papercut = require("papercut");
 const createLabeledUrl = (label, url) => ({ label, url });
 
+const noPhotoPlaceholderUrl = "https://greenmeister.nl/assets/coffeeshopcontent/default.png";
+
 const main = async () => {
   const scraper = new papercut.Scraper({
     name: "Greenmeister - Amsterdam",
@@ -18,7 +20,13 @@ const main = async () => {
         return ""
       },
       photo: ({ src }) => {
-        return ({ url: src(".shopimage") })
+        const url = src(".shopimage");
+
+        if (url === "" || url === noPhotoPlaceholderUrl) {
+          return { url: undefined }
+        }
+
+        return { url };
       },
       phone: () => {
         return ""
@@ -28,7 +36,12 @@ const main = async () => {
         const province = attr(".shopaddress > meta[itemprop='addressRegion']", "content");
         const streetAddress = text(".shopaddress > span[itemprop='streetAddress']");
       
-        return `${streetAddress}, ${city}, ${province}`;
+        return {
+          streetAddress,
+          city,
+          province,
+          fullAddress: `${streetAddress}, ${city}, ${province}`
+        };
       },
       location: async ({ attr }) => {
         const latitude = attr("meta[itemprop='latitude']", "content");
