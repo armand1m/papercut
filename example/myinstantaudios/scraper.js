@@ -1,4 +1,3 @@
-import fs from 'fs';
 import papercut from "papercut";
 
 const baseUrl = "https://www.myinstants.com"
@@ -46,6 +45,4 @@ const scraper = new papercut.Scraper({
 
 const results = await scraper.run();
 
-const jsonResults = JSON.stringify(results, null, 2);
-
-await fs.promises.writeFile("./instantaudios.json", jsonResults, "utf-8");
+console.log(JSON.stringify(results, null, 2));
