@@ -22,8 +22,8 @@ jobs:
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
 
-      - name: Coverage 
-        run: npx codecov -f coverage/*.json 
+      #- name: Coverage 
+        #run: npx codecov -f coverage/*.json 
 
       - name: Pack Inspect
         run: yarn pack:inspect
