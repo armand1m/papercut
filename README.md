@@ -1,5 +1,31 @@
 # papercut
 
+Papercut is a scraping/crawling library for Node.js
+
+It provides an abstraction layer on top of JSDOM with helpful features while scraping websites.
+
+## Features
+
+### JSDOM Integration
+
+Instead of relying on a headless browser engine, papercut relies on JSDOM to process client-side javascript code. This means that Papercut is also able to scrape Single Page Applications _(to a certain extent)_.
+
+#### Why not use `puppeteer`, `selenium` or `webdriver`?
+
+JSDOM is lighter and easier than using a headless browser engine and allows for enough scraping capabilities. Setup is minimal and it works out-of-the box with minimal overhead to users of this library. 
+
+#### Why not use `cheerio`?
+
+It is being considered. I see papercut being flexible in the future to use different engines, so you'd be able to switch from JSDOM to cheerio.
+
+### Page Caching
+
+As many websites introduce rate limits or blocks for scrapers, page caching is a useful feature for scraping.
+
+Once Papercut hits a page, it stores the payload locally in order to reuse it for subsequent executions. This reduces the need for network requests.
+
+**Note:** when scraping for a huge amount of pages, be careful about disk space.
+
 ## Install
 
 ```sh
@@ -9,7 +35,7 @@ yarn add papercut
 ## Usage
 
 ```ts
-import * as papercut from "papercut";
+import papercut from "papercut";
 
 const scraper = papercut
   .createScraper({
@@ -42,4 +68,6 @@ const scraper = papercut
   });
 
 const results = await scraper.run();
+
+console.log(results);
 ```

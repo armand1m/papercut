@@ -2,41 +2,36 @@ name: CI
 on: [push]
 jobs:
   build:
+    name: Build, lint, test and release on Node 16 
     runs-on: ubuntu-latest
-
     steps:
-      - name: Begin CI...
+      - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Use Node 12
+      - name: Use Node 16 
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16 
 
-      - name: Use cached node_modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            nodeModules-
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        env:
-          CI: true
+      - name: Install deps and build (with cache)
+        uses: bahmutov/npm-install@v1
 
       - name: Lint
         run: yarn lint
-        env:
-          CI: true
 
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
-        env:
-          CI: true
 
-      - name: Build
-        run: yarn build
+      - name: Coverage 
+        run: npx codecov -f coverage/*.json 
+
+      - name: Pack Inspect
+        run: yarn pack:inspect
+    
+      - name: Release
         env:
-          CI: true
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_AUTHOR_NAME: github-actions
+          GH_AUTHOR_EMAIL: actions@github.com
+        run: yarn semantic-release

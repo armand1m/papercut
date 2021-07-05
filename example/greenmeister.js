@@ -1,4 +1,4 @@
-const papercut = require("papercut");
+import papercut from "papercut";
 const createLabeledUrl = (label, url) => ({ label, url });
 
 const noPhotoPlaceholderUrl = "https://greenmeister.nl/assets/coffeeshopcontent/default.png";

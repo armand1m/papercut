@@ -29,11 +29,16 @@ export const createSelectors = (element: Element) => {
     return new JSDOM(htmlContent).window;
   };
 
+  const all = (selector: string) => {
+    return element.querySelectorAll(selector);
+  };
+
   return {
     text,
     src,
     href,
     attr,
+    all,
     className,
     element,
     geosearch,

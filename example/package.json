@@ -1,16 +1,17 @@
 {
-  "name": "example",
+  "name": "papercut-examples",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "author": "Armando Magalhães",
   "license": "MIT",
+  "engines": {
+    "node": "^16"
+  },
   "scripts": {
-    "start": "node --max-old-space-size=8192"
+    "start": "node --experimental-json-modules --max-old-space-size=8192"
   },
   "dependencies": {
-    "@supercharge/promise-pool": "^1.5.0",
-    "heapdump": "^0.3.15",
-    "mime-types": "^2.1.27",
     "node-fetch": "^2.6.1",
     "papercut": "file:.."
   }

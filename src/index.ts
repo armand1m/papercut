@@ -6,6 +6,7 @@ import { fetchPage } from './fetchPage';
 import { supress } from './supress';
 import { createSelectors, SelectorFnProps } from './createSelectors';
 import { flat } from './flat';
+import { Signale } from 'signale';
 
 export interface ScraperProps {
   name: string;
@@ -37,7 +38,7 @@ export class Scraper {
   private selectors: SelectorMap = {};
   private paginationOptions: PaginationOptions | undefined;
   private forEachSelector: string | undefined;
-  private log: any;
+  private log: Signale;
 
   constructor(props: ScraperProps, options?: ScraperOptions) {
     this.props = props;
@@ -54,7 +55,7 @@ export class Scraper {
 
     this.log = this.options.log
       ? createLogger(this.props.name)
-      : {
+      : ({
           await: () => {
             /** noop */
           },
@@ -64,7 +65,7 @@ export class Scraper {
           info: () => {
             /** noop */
           },
-        };
+        } as Signale);
   }
 
   public forEach(selector: string) {
@@ -77,8 +78,8 @@ export class Scraper {
     return this;
   }
 
-  public usePagination(paginationConfig: PaginationOptions) {
-    this.paginationOptions = paginationConfig;
+  public usePagination(paginationOptions: PaginationOptions) {
+    this.paginationOptions = paginationOptions;
     return this;
   }
 
