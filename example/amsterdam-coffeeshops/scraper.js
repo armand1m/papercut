@@ -6,7 +6,7 @@ const scraper = new papercut.Scraper({
   name: "Amsterdam Coffeeshops",
   baseUrl: "https://amsterdamcoffeeshops.com/search/item/coffeeshops",
 }, {
-  log: false,
+  log: process.env.DEBUG === 'true',
   cache: true,
 })
   .usePagination({
@@ -54,11 +54,10 @@ const scraper = new papercut.Scraper({
       /** TODO: scrape menus */
       return [];
     },
-    badges: ({ element }) => {
-      const badgeNodeList = element.querySelectorAll(".media-left > div > div > img");
-      const nodes = Array.prototype.slice.call(badgeNodeList);
+    badges: ({ all }) => {
+      const badges = [...all(".media-left > div > div > img")];
 
-      return nodes
+      return badges
         .map(badge => badge.getAttribute("title"))
         .filter(badge => badge !== undefined);
     },

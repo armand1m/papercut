@@ -6,7 +6,7 @@ const scraper = new papercut.Scraper({
   name: "My Instants",
   baseUrl,
 }, {
-  log: process.env.DEBUG === "1",
+  log: process.env.DEBUG === 'true',
   cache: true,
 })
   .usePagination({

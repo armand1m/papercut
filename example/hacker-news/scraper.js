@@ -4,7 +4,7 @@ const scraper = new papercut.Scraper({
   name: `Hacker News`,
   baseUrl: `https://news.ycombinator.com/`
 }, {
-  log: false,
+  log: process.env.DEBUG === 'true',
   cache: true,
 })
   .forEach(".athing")

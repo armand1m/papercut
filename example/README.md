@@ -28,3 +28,8 @@ In case you want to write the output to a file, run it with the `--silent` flag 
 yarn --silent run-scraper ./hacker-news/scraper.js
 ```
 
+To see debug information, run the scraper with the env var `DEBUG=true`:
+
+```sh
+DEBUG=true yarn --silent run-scraper ./hacker-news/scraper.js
+```

@@ -4,7 +4,7 @@ const scraper = new papercut.Scraper({
   name: `Tudo Gostoso`,
   baseUrl: `https://www.tudogostoso.com.br/receita/47884-esfiha-de-carne-adaptada-receita-turca.html`
 }, {
-  log: true,
+  log: process.env.DEBUG === 'true',
   cache: true,
 })
   .forEach(".recipe-container")
@@ -13,17 +13,17 @@ const scraper = new papercut.Scraper({
     rating: ({ text }) => text("#rating-average > span:nth-child(2)"),
     preparationTime: ({ text }) => text(".num.preptime > time"),
     recipeYield: ({ text }) => text("data[itemprop='recipeYield']"),
-    images: ({ element }) => {
-      const images = [...element.querySelectorAll(".recipe-media img")].map(node => node.getAttribute("src"))
-      return images;
+    images: ({ all }) => {
+      const images = [...all(".recipe-media img")]
+      return images.map(node => node.getAttribute("src"))
     },
-    ingredients: ({ element }) => {
-      const ingredients = [...element.querySelectorAll("span[itemprop='recipeIngredient']")].map(node => node.textContent);
-      return ingredients;
+    ingredients: ({ all }) => {
+      const ingredients = [...all("span[itemprop='recipeIngredient']")]
+      return ingredients.map(node => node.textContent);
     },
-    instructions: ({ element }) => {
-      const instructions = [...element.querySelectorAll("div[itemprop='recipeInstructions'] ol:first-child > li > span")].map(node => node.textContent);
-      return instructions;
+    instructions: ({ all }) => {
+      const instructions = [...all("div[itemprop='recipeInstructions'] ol:first-child > li > span")]
+      return instructions.map(node => node.textContent);
     }
   });
 

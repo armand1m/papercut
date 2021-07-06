@@ -9,7 +9,7 @@ const promises = amsterdamCoffeeshops
       name: `Google - ${coffeeshop.name}`,
       baseUrl: `https://www.google.com/search?q=${encodeURIComponent(`${coffeeshop.name} ${coffeeshop.address}`)}&ie=UTF-8&lr=lang_nl&sa=X`
     }, {
-      log: true,
+      log: process.env.DEBUG === 'true',
       cache: true,
     })
       .forEach("#main > div:nth-child(4) > div")

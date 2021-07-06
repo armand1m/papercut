@@ -12,7 +12,6 @@
     "run-scraper": "node --experimental-json-modules --max-old-space-size=8192"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
     "papercut": "file:.."
   }
 }
