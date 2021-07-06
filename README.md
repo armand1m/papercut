@@ -1,8 +1,8 @@
 # Papercut
 
-Papercut is a scraping/crawling library for Node.js
+Papercut is a scraping/crawling library for Node.js. It provides features that make it fairly easy to scrape a webpage with.
 
-It provides an abstraction layer on top of JSDOM with helpful features while scraping websites.
+Papercut is still in early days and the API might change a lot in the future. 
 
 ## Features
 
@@ -16,7 +16,7 @@ As many websites introduce rate limits or blocks for scrapers, page caching is a
 
 Once Papercut hits a page, it stores the payload locally in order to reuse it for subsequent executions. This reduces the need for network requests.
 
-**Note:** when scraping for a huge amount of pages, be careful about disk space.
+**Note:** when scraping a big amount of pages, be mindful about disk space.
 
 ### Cached Geosearch
 
@@ -52,10 +52,12 @@ Setup a scraper instance and set the selectors and how to fill them using the ut
 
 ```javascript
 /**
- * This is a demo-scraper.mjs file
+ * demo-scraper.mjs
  *
- * This scraper tries to scrape hackernews
- * homepage for the latest feeds.
+ * This is a hacker news homepage scraper.
+ * It will scrape all news from the homepage
+ * and print a json matching the selector schema
+ * in the stdout.
  */
 import papercut from "@armand1m/papercut";
 
@@ -134,12 +136,17 @@ Install dependencies
   yarn
 ```
 
+After that, feel free to update the `examples` folder to test your changes.
+
+Hopefully in the future, this will include a test runner a well to make the development experience a bit more reliable and enjoyable.
+
 ## Roadmap
 
 - Add unit tests
-- Add hacker news scraping example
 - Add documentation generation
 - Create medium article introducing the library
+- Create a gh-pages for the library
+- Create more examples
 
 ## Contributing
 
