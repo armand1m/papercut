@@ -61,14 +61,26 @@ Setup a scraper instance and set the selectors and how to fill them using the ut
  */
 import papercut from "@armand1m/papercut";
 
+// Instantiate your scraper. Give it a name and a base url.
 const scraper = new papercut.Scraper({
   name: `Hacker News`,
   baseUrl: `https://news.ycombinator.com/`
 }, {
+  // here you can toggle things like logging and caching on and off,
+  // as well as change the concurrency settings for node and selectors
   log: process.env.DEBUG === 'true',
   cache: true,
 })
+  // since we want to build a list of the hackerrank news, we need
+  // to run the selector scraper for each node with a classname `athing`.
   .forEach(".athing")
+  // this selector scraper will be executed for each node from the
+  // .forEach selector and the results will be used to build the end
+  // JSON Object array.
+  //
+  // Keep in mind that the selector scraper will suppress errors
+  // in order to prevent stopping the scraping process. If a selector field
+  // fails to be resolved, it will just ignore it and proceed to the next one.
   .createSelectors({
     rank: ({ text }) => text(".rank"),
     name: ({ text }) => text(".storylink"),
@@ -87,8 +99,11 @@ const scraper = new papercut.Scraper({
     },
   });
 
+// Run the scraper to gather the results
 const results = await scraper.run();
 
+// Print them out to the console so we can pipe
+// the output into a file
 console.log(JSON.stringify(results, null, 2))
 ```
 
