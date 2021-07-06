@@ -3,6 +3,13 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "contributors": [
+    {
+      "url": "https://armand1m.dev",
+      "name": "Armando Magalhaes",
+      "email": "armando.mag95@gmail.com"
+    }
+  ],
   "files": [
     "dist"
   ],
@@ -19,6 +26,7 @@
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "pack:inspect": "yarn pack && tar -ztvf *.tgz",
+    "generate:readme": "node ./scripts/generateReadme.js < template.md > README.md",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {},
@@ -47,10 +55,18 @@
     "@types/node-localstorage": "^1.3.0",
     "@types/signale": "^1.4.1",
     "husky": "^4.2.5",
+    "remark-code-import": "^0.3.0",
+    "remark-contributors": "^5.1.0",
+    "remark-gfm": "^1.0.0",
+    "remark-parse": "^9.0.0",
+    "remark-stringify": "^9.0.1",
     "semantic-release": "^17.4.4",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "unified": "^9.2.1",
+    "unified-stream": "^1.0.6",
+    "unist-util-visit": "^2.0.1"
   },
   "dependencies": {
     "@supercharge/promise-pool": "^1.5.0",
@@ -79,6 +95,7 @@
         {
           "assets": [
             "package.json",
+            "README.md",
             "CHANGELOG.md"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"

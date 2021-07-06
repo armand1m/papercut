@@ -28,6 +28,9 @@ jobs:
       #- name: Coverage 
         #run: npx codecov -f coverage/*.json 
 
+      - name: Regenerate README.md
+        run: yarn generate:readme
+
       - name: Pack Inspect
         run: yarn pack:inspect
     
