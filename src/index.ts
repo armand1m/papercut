@@ -43,7 +43,7 @@ export class Scraper {
   constructor(props: ScraperProps, options?: ScraperOptions) {
     this.props = props;
     this.options = {
-      log: process.env.DEBUG === '1',
+      log: process.env.DEBUG === 'true',
       cache: false,
       concurrency: {
         page: 2,

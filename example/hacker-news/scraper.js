@@ -13,16 +13,22 @@ const scraper = new papercut.Scraper({
     name: ({ text }) => text(".storylink"),
     url: ({ href }) => href(".storylink"),
     score: ({ element }) => {
-      const score = element.nextElementSibling.querySelector(".score");
-      return score.textContent;
+      return element
+        .nextElementSibling
+        ?.querySelector(".score")
+        ?.textContent;
     },
     createdBy: ({ element }) => {
-      const hnuser = element.nextElementSibling.querySelector(".hnuser");
-      return hnuser.textContent;
+      return element
+        .nextElementSibling
+        ?.querySelector(".hnuser")
+        ?.textContent;
     },
     createdAt: ({ element }) => {
-      const creationDate = element.nextElementSibling.querySelector(".age");
-      return creationDate.getAttribute("title");
+      return element
+        .nextElementSibling
+        ?.querySelector(".age")
+        ?.getAttribute("title");
     },
   });
 
