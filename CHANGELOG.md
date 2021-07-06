@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/armand1m/papercut/compare/v1.0.2...v1.0.3) (2021-07-06)
+
+
+### Bug Fixes
+
+* github actions build pipeline ([f74a860](https://github.com/armand1m/papercut/commit/f74a86093d34d6837e0450752e39a6e47902eb48))
+
 ## [1.0.2](https://github.com/armand1m/papercut/compare/v1.0.1...v1.0.2) (2021-07-06)
 
 
