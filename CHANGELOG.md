@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/armand1m/papercut/compare/v1.0.0...v1.0.1) (2021-07-06)
+
+
+### Bug Fixes
+
+* update all references to use @armand1m/papercut ([536ac15](https://github.com/armand1m/papercut/commit/536ac15105d120fec083fb72c2fc4a99a7596893))
+
 # 1.0.0 (2021-07-05)
 
 
