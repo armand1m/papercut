@@ -22,6 +22,14 @@ Once Papercut hits a page, it stores the payload locally in order to reuse it fo
 
 Sometimes when scraping pages for a list of locations, you might want to convert those into latitude and longitude points. Papercut comes with a geosearch handler with caching that enables you to convert scraped addresses into lat/lng objects.
 
+### Easy for simple tasks, flexible for difficult ones
+
+Papercut offers a nice selector foundation for basic needs of a scraping tooling. Text, attributes, url, image srcs, and many other handy selectors.
+
+When you face yourself with a situation where a simple selector wouldn't be enough: you'll still be able to access the element, the window, or even create a new window instance if needed.
+
+As tasks can grow on complexity, Papercut focus on being a guardrail but not a gatekeeper.
+
 ## Usage/Examples
 
 You can find more examples in the `./examples` folder.
