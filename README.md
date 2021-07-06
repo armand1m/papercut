@@ -51,42 +51,52 @@ yarn add @armand1m/papercut
 Setup a scraper instance and set the selectors and how to fill them using the utilities offered:
 
 ```javascript
-/* demo-scraper.mjs */
-import papercut from "@armand1m/papercut";
+/**
+ * This is a demo-scraper.mjs file
+ *
+ * This scraper tries to scrape hackernews
+ * homepage for the latest feeds.
+ */
+import papercut from "papercut";
 
-const scraper = papercut
-  .createScraper({
-    name: "Amsterdam Coffeeshops",
-    baseUrl: "https://amsterdamcoffeeshops.com/search/item/coffeeshops",
-  })
-  .forEach(".summary-box")
+const scraper = new papercut.Scraper({
+  name: `Hacker News`,
+  baseUrl: `https://news.ycombinator.com/`
+}, {
+  log: process.env.DEBUG === 'true',
+  cache: true,
+})
+  .forEach(".athing")
   .createSelectors({
-    name: ({ text }) => text(".media-body > h3 > a"),
-    description: ({ text }) => text(".media-body > .summary-desc"),
-    photo: ({ src }) => ({ url: src(".media-left > a > img") }),
-    phone: ({ text }) => text(".media-right > .contact-info > mark > a"),
-    address: ({ text }) => text(".media-body > address > p")
-      .replace(/\s+/g, " ")
-      .replace(/^\s+|\s+$/g, ""),
-    location: ({ text, geosearch }, $this) => geosearch($this.address({ text })),
-    social: ({ href }) => {
-      const websiteHref = href(".visit-website");
-      return websiteHref
-        ? [createLabeledUrl("Official Website", websiteHref)]
-        : [];
+    rank: ({ text }) => text(".rank"),
+    name: ({ text }) => text(".storylink"),
+    url: ({ href }) => href(".storylink"),
+    score: ({ element }) => {
+      const id = element.getAttribute("id");
+      const siblingRow = element.parentNode.querySelector(`tr[id='${id}'] + tr`);
+      const score = siblingRow.querySelector(".score");
+
+      return score.textContent;
     },
-    menus: () => [],
-    badges: ({ element }) => {
-      return [
-        ...element.querySelectorAll(".media-left > div > div > img")
-      ].map(badge => badge.getAttribute("title") || "")
+    createdBy: ({ element }) => {
+      const id = element.getAttribute("id");
+      const siblingRow = element.parentNode.querySelector(`tr[id='${id}'] + tr`);
+      const hnuser = siblingRow.querySelector(".hnuser");
+
+      return hnuser.textContent;
     },
-    rating: ({ className }) => Number(className(".media-right > .summary-info > span > span").replace("rate-", ""))
+    createdAt: ({ element }) => {
+      const id = element.getAttribute("id");
+      const siblingRow = element.parentNode.querySelector(`tr[id='${id}'] + tr`);
+      const creationDate = siblingRow.querySelector(".age");
+
+      return creationDate.getAttribute("title");
+    },
   });
 
 const results = await scraper.run();
 
-console.log(results);
+console.log(JSON.stringify(results, null, 2))
 ```
 
 Then run it:
