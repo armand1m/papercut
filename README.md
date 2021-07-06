@@ -57,7 +57,7 @@ Setup a scraper instance and set the selectors and how to fill them using the ut
  * This scraper tries to scrape hackernews
  * homepage for the latest feeds.
  */
-import papercut from "papercut";
+import papercut from "@armand1m/papercut";
 
 const scraper = new papercut.Scraper({
   name: `Hacker News`,

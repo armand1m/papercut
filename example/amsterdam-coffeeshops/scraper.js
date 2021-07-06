@@ -1,4 +1,4 @@
-import papercut from "papercut";
+import papercut from "@armand1m/papercut";
 
 const createLabeledUrl = (label, url) => ({ label, url });
 

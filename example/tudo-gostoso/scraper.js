@@ -1,4 +1,4 @@
-import papercut from "papercut";
+import papercut from "@armand1m/papercut";
 
 const scraper = new papercut.Scraper({
   name: `Tudo Gostoso`,

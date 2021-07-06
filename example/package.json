@@ -12,6 +12,6 @@
     "run-scraper": "node --experimental-json-modules --max-old-space-size=8192"
   },
   "dependencies": {
-    "papercut": "file:.."
+    "@armand1m/papercut": "file:.."
   }
 }
