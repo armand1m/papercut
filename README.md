@@ -2,13 +2,13 @@
 
 Papercut is a scraping/crawling library for Node.js. It provides features that make it fairly easy to scrape a webpage with.
 
-Papercut is still in early days and the API might change a lot in the future. 
+Papercut is still in early days and the API might change a lot in the future.
 
 ## Features
 
 ### JSDOM Integration
 
-Instead of relying on a headless browser engine, papercut relies on JSDOM to process client-side javascript code. This means that Papercut is also able to scrape Single Page Applications _(to a certain extent)_.
+Instead of relying on a headless browser engine, papercut relies on JSDOM to process client-side javascript code. This means that Papercut is also able to scrape Single Page Applications *(to a certain extent)*.
 
 ### Page Caching
 
@@ -50,60 +50,43 @@ yarn add @armand1m/papercut
 
 Setup a scraper instance and set the selectors and how to fill them using the utilities offered:
 
-```javascript
-/**
- * demo-scraper.mjs
- *
- * This is a hacker news homepage scraper.
- * It will scrape all news from the homepage
- * and print a json matching the selector schema
- * in the stdout.
- */
+```js file=./example/hacker-news/scraper.js
 import papercut from "@armand1m/papercut";
 
-// Instantiate your scraper. Give it a name and a base url.
 const scraper = new papercut.Scraper({
   name: `Hacker News`,
   baseUrl: `https://news.ycombinator.com/`
 }, {
-  // here you can toggle things like logging and caching on and off,
-  // as well as change the concurrency settings for node and selectors
   log: process.env.DEBUG === 'true',
   cache: true,
 })
-  // since we want to build a list of the hackerrank news, we need
-  // to run the selector scraper for each node with a classname `athing`.
   .forEach(".athing")
-  // this selector scraper will be executed for each node from the
-  // .forEach selector and the results will be used to build the end
-  // JSON Object array.
-  //
-  // Keep in mind that the selector scraper will suppress errors
-  // in order to prevent stopping the scraping process. If a selector field
-  // fails to be resolved, it will just ignore it and proceed to the next one.
   .createSelectors({
     rank: ({ text }) => text(".rank"),
     name: ({ text }) => text(".storylink"),
     url: ({ href }) => href(".storylink"),
     score: ({ element }) => {
-      const score = element.nextElementSibling.querySelector(".score");
-      return score.textContent;
+      return element
+        .nextElementSibling
+        ?.querySelector(".score")
+        ?.textContent;
     },
     createdBy: ({ element }) => {
-      const hnuser = element.nextElementSibling.querySelector(".hnuser");
-      return hnuser.textContent;
+      return element
+        .nextElementSibling
+        ?.querySelector(".hnuser")
+        ?.textContent;
     },
     createdAt: ({ element }) => {
-      const creationDate = element.nextElementSibling.querySelector(".age");
-      return creationDate.getAttribute("title");
+      return element
+        .nextElementSibling
+        ?.querySelector(".age")
+        ?.getAttribute("title");
     },
   });
 
-// Run the scraper to gather the results
 const results = await scraper.run();
 
-// Print them out to the console so we can pipe
-// the output into a file
 console.log(JSON.stringify(results, null, 2))
 ```
 
@@ -112,16 +95,16 @@ Then run it:
 ```sh
 node ./demo-scraper.mjs
 ```
-  
+
 ## API Reference
 
-_TBD_
-  
+*TBD*
+
 ## Environment Variables
 
 Papercut works well out of the box, but some environment variables are available for customizing behavior:
 
-`DEBUG`: enables debug level logs. Accepts `1` or `0`.
+`DEBUG=true`: enables debug level logs.
 
 ## Running Tests
 
@@ -157,11 +140,11 @@ Hopefully in the future, this will include a test runner a well to make the deve
 
 ## Roadmap
 
-- Add unit tests
-- Add documentation generation
-- Create medium article introducing the library
-- Create a gh-pages for the library
-- Create more examples
+*   Add unit tests
+*   Add documentation generation
+*   Create medium article introducing the library
+*   Create a gh-pages for the library
+*   Create more examples
 
 ## Contributing
 
@@ -175,12 +158,14 @@ Please adhere to this project's `code of conduct`.
 
 #### Why not use `puppeteer`, `selenium` or `webdriver`?
 
-JSDOM is lighter and easier than using a headless browser engine and allows for enough scraping capabilities. Setup is minimal and it works out-of-the box with minimal overhead to users of this library. 
+JSDOM is lighter and easier than using a headless browser engine and allows for enough scraping capabilities. Setup is minimal and it works out-of-the box with minimal overhead to users of this library.
 
 #### Why not use `cheerio`?
 
 It is being considered. I see papercut being flexible in the future to use different engines, so you'd be able to switch from JSDOM to cheerio.
 
-## Authors
+## Contributors
 
-- [@armand1m](https://www.github.com/armand1m)
+| Website                | Name                  |
+| ---------------------- | --------------------- |
+| <https://armand1m.dev> | **Armando Magalhaes** |
