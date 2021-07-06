@@ -72,24 +72,15 @@ const scraper = new papercut.Scraper({
     name: ({ text }) => text(".storylink"),
     url: ({ href }) => href(".storylink"),
     score: ({ element }) => {
-      const id = element.getAttribute("id");
-      const siblingRow = element.parentNode.querySelector(`tr[id='${id}'] + tr`);
-      const score = siblingRow.querySelector(".score");
-
+      const score = element.nextElementSibling.querySelector(".score");
       return score.textContent;
     },
     createdBy: ({ element }) => {
-      const id = element.getAttribute("id");
-      const siblingRow = element.parentNode.querySelector(`tr[id='${id}'] + tr`);
-      const hnuser = siblingRow.querySelector(".hnuser");
-
+      const hnuser = element.nextElementSibling.querySelector(".hnuser");
       return hnuser.textContent;
     },
     createdAt: ({ element }) => {
-      const id = element.getAttribute("id");
-      const siblingRow = element.parentNode.querySelector(`tr[id='${id}'] + tr`);
-      const creationDate = siblingRow.querySelector(".age");
-
+      const creationDate = element.nextElementSibling.querySelector(".age");
       return creationDate.getAttribute("title");
     },
   });
