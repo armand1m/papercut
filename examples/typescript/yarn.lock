@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@armand1m/papercut@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@armand1m/papercut/-/papercut-1.0.3.tgz#78c156147a0191c8b80404634c3fc35816ae8cc3"
-  integrity sha512-W4oKOMMU4SKGTEkPLDyoyznmzYPPaw1y8Ddp+1zskW0XdDl+ta8nEsfsoTkgAcnG4kY8mGZC5Db9A7VXwkj6/A==
+"@armand1m/papercut@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@armand1m/papercut/-/papercut-1.0.4.tgz#9822f9edd5f4cd5432196efb4e2886b3865bf63e"
+  integrity sha512-vGZeVcs7PbxhuRHbS7JzLFaaFsBHr2gKNYauuj14OEiaZvAvqMMLlH9wRgIUJO7uxfZg8s7N+g8Eo4yljiAkdQ==
   dependencies:
     "@supercharge/promise-pool" "^1.5.0"
     jsdom "^16.3.0"

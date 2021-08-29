@@ -2,7 +2,6 @@
   "name": "papercut-typescript-example",
   "version": "0.0.0",
   "description": "Example on how to use papercut with typescript",
-  "main": "build/index.js",
   "author": "Armando Magalhães",
   "license": "MIT",
   "devDependencies": {
@@ -13,12 +12,12 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@armand1m/papercut": "^1.0.3",
+    "@armand1m/papercut": "file:..",
     "tslib": "^2.3.1"
   },
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
+    "run-scraper": "ts-node",
     "lint": "prettier --check './src/**/*.{tsx,ts}'",
     "lint:fix": "prettier --write './src/**/*.{tsx,ts}'"
   }
