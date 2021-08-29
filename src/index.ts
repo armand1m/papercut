@@ -28,7 +28,10 @@ export interface PaginationOptions {
   lastPageNumberSelector: string;
 }
 
-type SelectorFn = <T>(props: SelectorFnProps, $this: SelectorMap) => T;
+type SelectorFn = (
+  props: SelectorFnProps,
+  $this: SelectorMap
+) => string | number | object;
 
 export type SelectorMap = Record<string, SelectorFn>;
 
@@ -40,7 +43,7 @@ export class Scraper {
   private forEachSelector: string | undefined;
   private log: Signale;
 
-  constructor(props: ScraperProps, options?: ScraperOptions) {
+  constructor(props: ScraperProps, options?: Partial<ScraperOptions>) {
     this.props = props;
     this.options = {
       log: process.env.DEBUG === 'true',
@@ -49,6 +52,7 @@ export class Scraper {
         page: 2,
         node: 2,
         selector: 2,
+        ...options?.concurrency,
       },
       ...options,
     };
