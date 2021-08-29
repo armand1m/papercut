@@ -67,7 +67,7 @@ Setup a scraper instance and set the selectors and how to fill them using the ut
 
 In case you're using TS or a version of node without support for top-level await, use the code below instead:
 
-```ts file=./examples/typescript/hacker-news/scraper.ts
+```ts file=./examples/typescript/src/hacker-news/scraper.ts
 ```
 
 Then run it using `node` or `ts-node`:
