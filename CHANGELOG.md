@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/armand1m/papercut/compare/v1.0.3...v1.0.4) (2021-08-29)
+
+
+### Bug Fixes
+
+* selector fn types and add initial code for typescript example ([c0afc4b](https://github.com/armand1m/papercut/commit/c0afc4b56553e8a72abaaf4076f6d32ebadb76c8))
+
 ## [1.0.3](https://github.com/armand1m/papercut/compare/v1.0.2...v1.0.3) (2021-07-06)
 
 
