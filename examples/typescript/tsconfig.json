@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "pretty": true,
+    "strict": true,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": false,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "forceConsistentCasingInFileNames": true,
+    "diagnostics": true,
+    "listEmittedFiles": true,
+    "importHelpers": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "lib": ["es6", "es2015", "es2017", "esnext"],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "include": ["./src"],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ]
+}
