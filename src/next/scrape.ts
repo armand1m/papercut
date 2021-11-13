@@ -25,12 +25,8 @@ export async function scrape<
   selectors,
   logger,
   options,
-}: ScrapeProps<T, B>): Promise<
-  (B extends true
-    ? { [Prop in keyof T]: ReturnType<T[Prop]> }
-    : { [Prop in keyof T]?: ReturnType<T[Prop]> })[]
-> {
-  type ResultType = B extends true
+}: ScrapeProps<T, B>) {
+  type ScrapeResultType = B extends true
     ? { [Prop in keyof T]: ReturnType<T[Prop]> }
     : { [Prop in keyof T]?: ReturnType<T[Prop]> };
 
@@ -60,7 +56,7 @@ export async function scrape<
 
     return {
       [selectorKey]: selectorScrapedValue,
-    } as ResultType;
+    } as ScrapeResultType;
   };
 
   /**
@@ -88,14 +84,15 @@ export async function scrape<
         ...accumulator,
         ...scrapeResult,
       }),
-      {} as ResultType
+      {} as ScrapeResultType
     );
 
     return nodeScrapeResult;
   };
 
   /**
-   * Trigger node scrapers
+   * Trigger node scrapers.
+   * Concurrency can be configured using Papercut options.
    */
   const { results } = await PromisePool.withConcurrency(
     options.concurrency.node
