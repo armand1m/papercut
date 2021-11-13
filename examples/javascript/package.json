@@ -13,7 +13,7 @@
     "lint:fix": "prettier --write './**/*.js'"
   },
   "dependencies": {
-    "@armand1m/papercut": "file:.."
+    "@armand1m/papercut": "file:../.."
   },
   "devDependencies": {
     "prettier": "^2.3.2"

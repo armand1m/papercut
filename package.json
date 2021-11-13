@@ -36,7 +36,7 @@
     }
   },
   "prettier": {
-    "printWidth": 80,
+    "printWidth": 70,
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
@@ -55,25 +55,28 @@
     "@types/node-localstorage": "^1.3.0",
     "@types/signale": "^1.4.1",
     "husky": "^4.2.5",
+    "jest": "^27.3.1",
     "remark-code-import": "^0.3.0",
     "remark-contributors": "^5.1.0",
     "remark-gfm": "^1.0.0",
     "remark-parse": "^9.0.0",
     "remark-stringify": "^9.0.1",
     "semantic-release": "^17.4.4",
-    "tsdx": "^0.13.2",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.7",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
     "unified": "^9.2.1",
     "unified-stream": "^1.0.6",
     "unist-util-visit": "^2.0.1"
   },
   "dependencies": {
     "@supercharge/promise-pool": "^1.5.0",
+    "fp-ts": "^2.11.5",
     "jsdom": "^16.3.0",
     "lodash": "^4.17.19",
     "node-fetch": "^2.6.0",
     "node-localstorage": "^2.1.6",
+    "pino": "^7.2.0",
     "signale": "^1.4.0"
   },
   "release": {
