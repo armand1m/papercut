@@ -1,10 +1,12 @@
-import { JSDOM } from 'jsdom';
-import { geosearch } from './geosearch';
-import { fetchPage } from './fetchPage';
+import { DOMWindow, JSDOM } from 'jsdom';
+import { geosearch } from '../http/geosearch';
+import { fetchPage } from '../http/fetchPage';
 
-export type SelectorFnProps = ReturnType<typeof createSelectors>;
+export type SelectorUtilities = ReturnType<
+  typeof createSelectorUtilities
+>;
 
-export const createSelectors = (element: Element) => {
+export const createSelectorUtilities = (element: Element) => {
   const $ = (selector: string) => element.querySelector(selector);
   const attr = (selector: string, attribute: string) => {
     const fallback = '';
@@ -26,7 +28,15 @@ export const createSelectors = (element: Element) => {
   const className = (selector: string) => attr(selector, 'class');
 
   const createWindowForHTMLContent = (htmlContent: string) => {
-    return new JSDOM(htmlContent).window;
+    let window: DOMWindow | null = new JSDOM(htmlContent).window;
+
+    return {
+      window,
+      close: () => {
+        window?.close();
+        window = null;
+      },
+    };
   };
 
   const all = (selector: string) => {

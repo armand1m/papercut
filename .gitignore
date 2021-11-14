@@ -4,4 +4,5 @@ node_modules
 dist
 pagecache
 geocache
+coverage
 *.tgz
