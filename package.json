@@ -83,7 +83,8 @@
   },
   "resolutions": {
     "**/typescript": "^4.4.4",
-    "**/prettier": "^2.4.1"
+    "**/prettier": "^2.4.1",
+    "**/node-notifier": ">=8.0.1"
   },
   "release": {
     "branches": [
