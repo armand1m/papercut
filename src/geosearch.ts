@@ -32,7 +32,7 @@ export const geosearch = async (q: string, limit: number = 1) => {
   });
 
   const ENDPOINT = `https://nominatim.openstreetmap.org/search?${params.toString()}`;
-  const payload: Location[] = await fetch(ENDPOINT).then(res =>
+  const payload: Location[] = await fetch(ENDPOINT).then((res) =>
     res.json()
   );
 

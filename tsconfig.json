@@ -7,7 +7,7 @@
     "removeComments": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "alwaysStrict": false,
+    "alwaysStrict": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "forceConsistentCasingInFileNames": true,

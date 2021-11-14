@@ -2,9 +2,11 @@ import { JSDOM } from 'jsdom';
 import { geosearch } from './geosearch';
 import { fetchPage } from './fetchPage';
 
-export type SelectorFnProps = ReturnType<typeof createSelectors>;
+export type SelectorUtilities = ReturnType<
+  typeof createSelectorUtilities
+>;
 
-export const createSelectors = (element: Element) => {
+export const createSelectorUtilities = (element: Element) => {
   const $ = (selector: string) => element.querySelector(selector);
   const attr = (selector: string, attribute: string) => {
     const fallback = '';

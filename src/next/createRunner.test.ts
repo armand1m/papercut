@@ -12,7 +12,7 @@ test('createRunner', () => {
   expect(runner).toBeDefined();
 });
 
-test('runner scrapes', async () => {
+test('runner scrapes and returns values properly', async () => {
   const runner = createRunner({
     logger: mockLogger as any,
     options: {
@@ -23,7 +23,7 @@ test('runner scrapes', async () => {
   });
 
   const results = await runner({
-    strict: false,
+    strict: true,
     baseUrl: 'http://localhost',
     target: '.test',
     selectors: {

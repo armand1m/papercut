@@ -13,7 +13,9 @@ function extractLines(content, fromLine, hasDash, toLine) {
   return lines.slice(start - 1, end).join('\n');
 }
 
-function codeImport(options = {}) {
+function codeImport(options = {
+  async: true
+}) {
   return function transformer(tree, file) {
     const codes = [];
     const promises = [];

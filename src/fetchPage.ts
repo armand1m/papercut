@@ -10,7 +10,7 @@ export const fetchPage = async (url: string) => {
     return cacheResponse;
   }
 
-  const payload = await fetch(url).then(res => res.text());
+  const payload = await fetch(url).then((res) => res.text());
 
   pagecache.setItem(url, payload);
 

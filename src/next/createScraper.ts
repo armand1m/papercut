@@ -50,14 +50,6 @@ export interface ScraperOptions {
   };
 }
 
-export interface PaginationOptions {
-  createPaginatedUrl: (
-    metadata: ScraperProps,
-    pageNumber: number
-  ) => string;
-  lastPageNumberSelector: string;
-}
-
 export const defaultOptions: ScraperOptions = {
   log: process.env.DEBUG === 'true',
   cache: false,
@@ -82,6 +74,9 @@ export type Scraper = ReturnType<typeof createScraper>;
  *
  * This function will also create a pino logger
  * and embed it within the runner.
+ *
+ * In case you prefer to manage the logger yourself,
+ * please use `createRunner` instead.
  */
 export const createScraper = (props: ScraperProps) => {
   const options: ScraperOptions = {
@@ -102,22 +97,6 @@ export const createScraper = (props: ScraperProps) => {
    * The scraper struct.
    */
   const scraper = {
-    /**
-     * The scraper runner.
-     *
-     * When executed, it will fetch the base url and
-     * build a JSDOM using the received HTML payload
-     * in order to make a virtual window and document
-     * available for scraping.
-     *
-     * Once these are ready, the scraper will start to
-     * spawn promise pools to deal with more intensive
-     * tasks, such as pagination, node scraping and
-     * selector scraping in parallel.
-     *
-     * All these settings will depend on the options given
-     * during the creation of the scraper struct.
-     */
     run: createRunner({
       logger,
       options,

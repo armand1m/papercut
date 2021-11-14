@@ -25,6 +25,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
+    "docs": "typedoc ./src/index.ts",
     "pack:inspect": "yarn pack && tar -ztvf *.tgz",
     "generate:readme": "node ./scripts/generateReadme.js < template.md > README.md",
     "semantic-release": "semantic-release"
@@ -64,6 +65,7 @@
     "semantic-release": "^17.4.4",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
+    "typedoc": "^0.22.8",
     "typescript": "^4.4.4",
     "unified": "^9.2.1",
     "unified-stream": "^1.0.6",
@@ -78,6 +80,10 @@
     "node-localstorage": "^2.1.6",
     "pino": "^7.2.0",
     "signale": "^1.4.0"
+  },
+  "resolutions": {
+    "**/typescript": "^4.4.4",
+    "**/prettier": "^2.4.1"
   },
   "release": {
     "branches": [

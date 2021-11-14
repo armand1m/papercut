@@ -4,7 +4,10 @@ import range from 'lodash/range';
 import { createLogger } from './logger';
 import { fetchPage } from './fetchPage';
 import { supress } from './supress';
-import { createSelectors, SelectorFnProps } from './createSelectors';
+import {
+  createSelectorUtilities,
+  SelectorUtilities,
+} from './createSelectorUtilities';
 import { flat } from './flat';
 import { Signale } from 'signale';
 
@@ -32,7 +35,7 @@ export interface PaginationOptions {
 }
 
 type SelectorFn = (
-  props: SelectorFnProps,
+  props: SelectorUtilities,
   $this: SelectorMap
 ) => string | number | object;
 
@@ -133,26 +136,25 @@ export class Scraper {
       this.options.concurrency.node
     )
       .for(nodesArray)
-      .process(async node => {
-        const nodeSelectors = createSelectors(node);
+      .process(async (node) => {
+        const nodeSelectors = createSelectorUtilities(node);
         const selectorKeys = Object.keys(this.selectors);
-        const {
-          results: nodeScrapeResultArray,
-        } = await PromisePool.withConcurrency(
-          this.options.concurrency.selector
-        )
-          .for(selectorKeys)
-          .process(async selectorKey => {
-            const selector = this.selectors[selectorKey];
-            const selectorResult = await supress(
-              () => selector(nodeSelectors, this.selectors),
-              err => this.log.error(err)
-            );
+        const { results: nodeScrapeResultArray } =
+          await PromisePool.withConcurrency(
+            this.options.concurrency.selector
+          )
+            .for(selectorKeys)
+            .process(async (selectorKey) => {
+              const selector = this.selectors[selectorKey];
+              const selectorResult = await supress(
+                () => selector(nodeSelectors, this.selectors),
+                (err) => this.log.error(err)
+              );
 
-            return {
-              [selectorKey]: selectorResult,
-            };
-          });
+              return {
+                [selectorKey]: selectorResult,
+              };
+            });
 
         const nodeScrapeResult = nodeScrapeResultArray.reduce(
           (acc, scrapeResult) => {
@@ -195,8 +197,8 @@ export class Scraper {
     this.log.await('Scraping..');
 
     if (pageNumbers) {
-      const createPaginatedUrl = this.paginationOptions
-        ?.createPaginatedUrl;
+      const createPaginatedUrl =
+        this.paginationOptions?.createPaginatedUrl;
 
       if (!createPaginatedUrl) {
         throw new Error(

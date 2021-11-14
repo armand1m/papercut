@@ -14,9 +14,8 @@ test('createScraper', async () => {
     baseUrl: 'https://news.ycombinator.com/',
     target: '.athing',
     selectors: {
-      rank: ({ text }) => {
-        const value = text('.rank').replace(/^\D+/g, '');
-
+      rank: (utils) => {
+        const value = utils.text('.rank').replace(/^\D+/g, '');
         return Number(value);
       },
       name: ({ text }) => text('.titlelink'),

@@ -4,9 +4,15 @@ import { SelectorMap } from './createRunner';
 import { ScraperOptions } from './createScraper';
 
 import { supress } from '../supress';
-import { createSelectors, SelectorFnProps } from '../createSelectors';
+import {
+  createSelectorUtilities,
+  SelectorUtilities,
+} from '../createSelectorUtilities';
 
-interface ScrapeProps<T extends SelectorMap, B extends boolean> {
+export interface ScrapeProps<
+  T extends SelectorMap,
+  B extends boolean
+> {
   strict: B;
   target: string;
   document: Document;
@@ -14,6 +20,13 @@ interface ScrapeProps<T extends SelectorMap, B extends boolean> {
   logger: Logger;
   options: ScraperOptions;
 }
+
+export type ScrapeResultType<
+  T extends SelectorMap,
+  B extends boolean
+> = B extends true
+  ? { [Prop in keyof T]: ReturnType<T[Prop]> }
+  : { [Prop in keyof T]?: ReturnType<T[Prop]> };
 
 export async function scrape<
   T extends SelectorMap,
@@ -26,10 +39,6 @@ export async function scrape<
   logger,
   options,
 }: ScrapeProps<T, B>) {
-  type ScrapeResultType = B extends true
-    ? { [Prop in keyof T]: ReturnType<T[Prop]> }
-    : { [Prop in keyof T]?: ReturnType<T[Prop]> };
-
   const nodes: Element[] = Array.prototype.slice.call(
     document.querySelectorAll(target)
   );
@@ -42,22 +51,22 @@ export async function scrape<
    * a selector scraper based on the given
    * node selectors and selectors.
    */
-  const createSelectorScraper = (
-    nodeSelectors: SelectorFnProps
-  ) => async (selectorKey: SelectorKey) => {
-    const selectorFn = selectors[selectorKey];
+  const createSelectorScraper =
+    (selectorUtils: SelectorUtilities) =>
+    async (selectorKey: SelectorKey) => {
+      const selectorFn = selectors[selectorKey];
 
-    const selectorScrapedValue = strict
-      ? await selectorFn(nodeSelectors, selectors)
-      : await supress(
-          () => selectorFn(nodeSelectors, selectors),
-          error => logger.error(error)
-        );
+      const selectorScrapedValue = strict
+        ? await selectorFn(selectorUtils, selectors)
+        : await supress(
+            () => selectorFn(selectorUtils, selectors),
+            (error) => logger.error(error)
+          );
 
-    return {
-      [selectorKey]: selectorScrapedValue,
-    } as ScrapeResultType;
-  };
+      return {
+        [selectorKey]: selectorScrapedValue,
+      } as ScrapeResultType<T, B>;
+    };
 
   /**
    * The node scraper
@@ -69,22 +78,19 @@ export async function scrape<
    * Concurrency can be controlled via papercut options.
    */
   const scrapeNode = async (node: Element) => {
-    const nodeSelectors = createSelectors(node);
+    const nodeSelectorUtilities = createSelectorUtilities(node);
 
-    const {
-      results: scrapeResults,
-    } = await PromisePool.withConcurrency(
-      options.concurrency.selector
-    )
-      .for(selectorKeys)
-      .process(createSelectorScraper(nodeSelectors));
+    const { results: scrapeResults } =
+      await PromisePool.withConcurrency(options.concurrency.selector)
+        .for(selectorKeys)
+        .process(createSelectorScraper(nodeSelectorUtilities));
 
     const nodeScrapeResult = scrapeResults.reduce(
       (accumulator, scrapeResult) => ({
         ...accumulator,
         ...scrapeResult,
       }),
-      {} as ScrapeResultType
+      {} as ScrapeResultType<T, B>
     );
 
     return nodeScrapeResult;
