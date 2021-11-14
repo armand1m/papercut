@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/armand1m/papercut/compare/v2.0.0...v2.0.1) (2021-11-14)
+
+
+### Bug Fixes
+
+* improve logs and add tsd type tests ([#8](https://github.com/armand1m/papercut/issues/8)) ([7e64549](https://github.com/armand1m/papercut/commit/7e64549698ef07a5fd7e0c81723b12425107df47))
+
 # [2.0.0](https://github.com/armand1m/papercut/compare/v1.0.4...v2.0.0) (2021-11-14)
 
 
