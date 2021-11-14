@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/armand1m/papercut/compare/v2.0.1...v2.0.2) (2021-11-14)
+
+
+### Bug Fixes
+
+* add tests for pagination and increased coverage, fixes selector utilities ([#9](https://github.com/armand1m/papercut/issues/9)) ([eec651b](https://github.com/armand1m/papercut/commit/eec651bff2f018192d85030da86c017219ca85ab))
+
 ## [2.0.1](https://github.com/armand1m/papercut/compare/v2.0.0...v2.0.1) (2021-11-14)
 
 
