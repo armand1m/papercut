@@ -1,3 +1,31 @@
+# [2.0.0](https://github.com/armand1m/papercut/compare/v1.0.4...v2.0.0) (2021-11-14)
+
+
+* Merge pull request #7 from armand1m/release/v2 ([798d6d8](https://github.com/armand1m/papercut/commit/798d6d82424c7f2f6ccd3eee5c34004b394a1042)), closes [#7](https://github.com/armand1m/papercut/issues/7)
+
+
+### Bug Fixes
+
+* add missing fixtures ([6b5be8a](https://github.com/armand1m/papercut/commit/6b5be8ad78140ca1e8811b5a3fc95ac7a1686506))
+* code import script ([a0e4887](https://github.com/armand1m/papercut/commit/a0e4887cdc7beaf02416b24d7d871c7c7ea2401d))
+* node notifier vulnerabities ([dfab3f3](https://github.com/armand1m/papercut/commit/dfab3f34f9c127f97d9f6db874b43f4654fe5fb8))
+* remove signale and hash geocache ([1ad4a30](https://github.com/armand1m/papercut/commit/1ad4a30bea2fa175e9b6d8063e05bd6e802ee017))
+* test cache path and add hash key ([b7c9446](https://github.com/armand1m/papercut/commit/b7c9446aae1464983288ec5df9f29594ca4f4d59))
+
+
+### Features
+
+* papercut@v2.0.0 ([706cc5c](https://github.com/armand1m/papercut/commit/706cc5c212964e0606ebda66c1d1e2f595e46056))
+* **v2:** new type-safe API introduced ([8276816](https://github.com/armand1m/papercut/commit/827681680736d83918566a9f5c4c7972781117ed))
+
+
+### BREAKING CHANGES
+
+* the entire API changed in favour of a function-based API
+instead of classes.
+* the entire API changed in favor of a function based API
+instead of classes.
+
 ## [1.0.4](https://github.com/armand1m/papercut/compare/v1.0.3...v1.0.4) (2021-08-29)
 
 

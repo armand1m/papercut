@@ -1,0 +1,133 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@armand1m/papercut</title><meta name="description" content="Documentation for @armand1m/papercut"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@armand1m/papercut</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@armand1m/papercut</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#papercut" id="papercut" style="color: inherit; text-decoration: none;">
+  <h1>Papercut</h1>
+</a>
+<p>Papercut is a scraping/crawling library for Node.js, written in Typescript.</p>
+<p>It provides a type-safe and small foundation that makes it fairly easy to scrape webpages with confidence.</p>
+
+<a href="#features" id="features" style="color: inherit; text-decoration: none;">
+  <h2>Features</h2>
+</a>
+
+<a href="#selectors-api" id="selectors-api" style="color: inherit; text-decoration: none;">
+  <h3>Selectors API</h3>
+</a>
+<p>Inspired by GraphQL Resolvers, Papercut works similarly by allowing you to specify selectors for each scraper runner.
+The type definition for the scrape result array items is guaranteed to be compliant with the selectors given.</p>
+
+<a href="#jsdom-integration" id="jsdom-integration" style="color: inherit; text-decoration: none;">
+  <h3>JSDOM Integration</h3>
+</a>
+<p>Instead of relying on a headless browser engine, papercut relies on JSDOM to process client-side javascript code. This means that Papercut is also able to scrape Single Page Applications <em>(to a certain extent)</em>.</p>
+
+<a href="#concurrency-controls" id="concurrency-controls" style="color: inherit; text-decoration: none;">
+  <h3>Concurrency controls</h3>
+</a>
+<p>Papercut makes usage of Promise Pools to run pagination, node scraping and selector scraping. It comes with sane defaults for simple tasks, but configurable properties to make sure you have the flexibility to suit your needs.</p>
+
+<a href="#pagination" id="pagination" style="color: inherit; text-decoration: none;">
+  <h3>Pagination</h3>
+</a>
+<p>In most cases when web scraping, you&#39;re looking to scrape a feed. This feed can be quite long and you might have other challenges like pagination and a hard to predict total number of pages.</p>
+<p>Luckily, most of the time, there is some way to figure the last page number in the UI. Papercut allows you to set a selector to find an element that contains the last page number and a callback for creating the url for each page number using the base url.</p>
+<p>As page urls are not always implemented in the same way, Papercut leaves it up to you to tell it how to build it.</p>
+
+<a href="#page-caching" id="page-caching" style="color: inherit; text-decoration: none;">
+  <h3>Page Caching</h3>
+</a>
+<p>As many websites introduce rate limits or blocks for scrapers, page caching is a useful feature for scraping.</p>
+<p>Once Papercut hits a page, it stores the payload locally in order to reuse it for subsequent executions. This reduces the need for network requests.</p>
+<p><strong>Note:</strong> when scraping a big amount of pages, be mindful about disk space. Papercut <strong>does not</strong> handle cache invalidation.</p>
+
+<a href="#cached-geosearch" id="cached-geosearch" style="color: inherit; text-decoration: none;">
+  <h3>Cached Geosearch</h3>
+</a>
+<p>Sometimes when scraping pages for a list of locations, you might want to convert those into latitude and longitude points. Papercut comes with a geosearch handler with caching that enables you to convert scraped addresses into lat/lng objects.</p>
+<p>To avoid overloading the services that papercut uses for that <em>(like Nominatin from OpenStreetMap)</em>, we cache the results to save on subsequent requests and add concurrency limits to comply with rate limits.</p>
+
+<a href="#easy-for-simple-tasks-flexible-for-difficult-ones" id="easy-for-simple-tasks-flexible-for-difficult-ones" style="color: inherit; text-decoration: none;">
+  <h3>Easy for simple tasks, flexible for difficult ones</h3>
+</a>
+<p>Papercut offers a nice selector foundation for basic needs of a scraping tooling. Text, attributes, url, image srcs, and many other handy selectors.</p>
+<p>When you face yourself with a situation where a simple selector wouldn&#39;t be enough: you&#39;ll still be able to access the element, the window, or even create a new window instance if needed.</p>
+<p>As tasks can grow on complexity, Papercut focus on being a guardrail but not a gatekeeper.</p>
+
+<a href="#usageexamples" id="usageexamples" style="color: inherit; text-decoration: none;">
+  <h2>Usage/Examples</h2>
+</a>
+<p>You can find more examples in the <code>./examples</code> folder.</p>
+
+<a href="#quick-example" id="quick-example" style="color: inherit; text-decoration: none;">
+  <h3>Quick example</h3>
+</a>
+<p>Create an empty project with yarn:</p>
+<pre><code class="language-sh"><span class="hl-0">mkdir papercut-demo</span><br/><span class="hl-1">cd</span><span class="hl-0"> papercut-demo</span><br/><span class="hl-0">yarn init -y</span>
+</code></pre>
+<p>Add papercut:</p>
+<pre><code class="language-sh"><span class="hl-0">yarn add @armand1m/papercut</span>
+</code></pre>
+<p>Setup a scraper instance and set the selectors and how to fill them using the utilities offered:</p>
+<pre><code class="language-ts"><span class="hl-2">import</span><span class="hl-0"> { </span><span class="hl-3">createScraper</span><span class="hl-0"> } </span><span class="hl-2">from</span><span class="hl-0"> </span><span class="hl-4">&#39;@armand1m/papercut&#39;</span><span class="hl-0">;</span><br/><br/><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-1">main</span><span class="hl-0"> = </span><span class="hl-5">async</span><span class="hl-0"> () </span><span class="hl-5">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-6">scraper</span><span class="hl-0"> = </span><span class="hl-1">createScraper</span><span class="hl-0">({</span><br/><span class="hl-0">    </span><span class="hl-3">name:</span><span class="hl-0"> </span><span class="hl-4">`Hacker News`</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">options:</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-3">log:</span><span class="hl-0"> </span><span class="hl-3">process</span><span class="hl-0">.</span><span class="hl-3">env</span><span class="hl-0">.</span><span class="hl-6">DEBUG</span><span class="hl-0"> === </span><span class="hl-4">&#39;true&#39;</span><span class="hl-0">,</span><br/><span class="hl-0">      </span><span class="hl-3">cache:</span><span class="hl-0"> </span><span class="hl-5">true</span><span class="hl-0">,</span><br/><span class="hl-0">    }</span><br/><span class="hl-0">  });</span><br/><br/><span class="hl-0">  </span><span class="hl-5">const</span><span class="hl-0"> </span><span class="hl-6">results</span><span class="hl-0"> = </span><span class="hl-2">await</span><span class="hl-0"> </span><span class="hl-3">scraper</span><span class="hl-0">.</span><span class="hl-1">run</span><span class="hl-0">({</span><br/><span class="hl-0">    </span><span class="hl-3">strict:</span><span class="hl-0"> </span><span class="hl-5">true</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">baseUrl:</span><span class="hl-0"> </span><span class="hl-4">&quot;https://news.ycombinator.com/&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">target:</span><span class="hl-0"> </span><span class="hl-4">&quot;.athing&quot;</span><span class="hl-0">,</span><br/><span class="hl-0">    </span><span class="hl-3">selectors:</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-1">rank</span><span class="hl-3">:</span><span class="hl-0"> ({ </span><span class="hl-3">text</span><span class="hl-0"> }) </span><span class="hl-5">=&gt;</span><span class="hl-0"> </span><span class="hl-1">text</span><span class="hl-0">(</span><span class="hl-4">&#39;.rank&#39;</span><span class="hl-0">),</span><br/><span class="hl-0">      </span><span class="hl-1">name</span><span class="hl-3">:</span><span class="hl-0"> ({ </span><span class="hl-3">text</span><span class="hl-0"> }) </span><span class="hl-5">=&gt;</span><span class="hl-0"> </span><span class="hl-1">text</span><span class="hl-0">(</span><span class="hl-4">&#39;.titlelink&#39;</span><span class="hl-0">),</span><br/><span class="hl-0">      </span><span class="hl-1">url</span><span class="hl-3">:</span><span class="hl-0"> ({ </span><span class="hl-3">href</span><span class="hl-0"> }) </span><span class="hl-5">=&gt;</span><span class="hl-0"> </span><span class="hl-1">href</span><span class="hl-0">(</span><span class="hl-4">&#39;.titlelink&#39;</span><span class="hl-0">),</span><br/><span class="hl-0">      </span><span class="hl-1">score</span><span class="hl-3">:</span><span class="hl-0"> ({ </span><span class="hl-3">element</span><span class="hl-0"> }) </span><span class="hl-5">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">        </span><span class="hl-2">return</span><span class="hl-0"> </span><span class="hl-3">element</span><span class="hl-0">.</span><span class="hl-3">nextElementSibling</span><span class="hl-0">?.</span><span class="hl-1">querySelector</span><span class="hl-0">(</span><span class="hl-4">&#39;.score&#39;</span><span class="hl-0">)</span><br/><span class="hl-0">          ?.</span><span class="hl-3">textContent</span><span class="hl-0">;</span><br/><span class="hl-0">      },</span><br/><span class="hl-0">      </span><span class="hl-1">createdBy</span><span class="hl-3">:</span><span class="hl-0"> ({ </span><span class="hl-3">element</span><span class="hl-0"> }) </span><span class="hl-5">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">        </span><span class="hl-2">return</span><span class="hl-0"> </span><span class="hl-3">element</span><span class="hl-0">.</span><span class="hl-3">nextElementSibling</span><span class="hl-0">?.</span><span class="hl-1">querySelector</span><span class="hl-0">(</span><span class="hl-4">&#39;.hnuser&#39;</span><span class="hl-0">)</span><br/><span class="hl-0">          ?.</span><span class="hl-3">textContent</span><span class="hl-0">;</span><br/><span class="hl-0">      },</span><br/><span class="hl-0">      </span><span class="hl-1">createdAt</span><span class="hl-3">:</span><span class="hl-0"> ({ </span><span class="hl-3">element</span><span class="hl-0"> }) </span><span class="hl-5">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">        </span><span class="hl-2">return</span><span class="hl-0"> </span><span class="hl-3">element</span><span class="hl-0">.</span><span class="hl-3">nextElementSibling</span><br/><span class="hl-0">          ?.</span><span class="hl-1">querySelector</span><span class="hl-0">(</span><span class="hl-4">&#39;.age&#39;</span><span class="hl-0">)</span><br/><span class="hl-0">          ?.</span><span class="hl-1">getAttribute</span><span class="hl-0">(</span><span class="hl-4">&#39;title&#39;</span><span class="hl-0">);</span><br/><span class="hl-0">      },</span><br/><span class="hl-0">    }</span><br/><span class="hl-0">  });</span><br/><br/><span class="hl-0">  </span><span class="hl-3">console</span><span class="hl-0">.</span><span class="hl-1">log</span><span class="hl-0">(</span><span class="hl-7">JSON</span><span class="hl-0">.</span><span class="hl-1">stringify</span><span class="hl-0">(</span><span class="hl-3">results</span><span class="hl-0">, </span><span class="hl-5">null</span><span class="hl-0">, </span><span class="hl-8">2</span><span class="hl-0">));</span><br/><span class="hl-0">};</span><br/><br/><span class="hl-1">main</span><span class="hl-0">();</span>
+</code></pre>
+<p>Then run it using <code>node</code> or <code>ts-node</code>:</p>
+<pre><code class="language-sh"><span class="hl-0">npx ts-node ./demo-scraper.ts</span>
+</code></pre>
+
+<a href="#api-reference" id="api-reference" style="color: inherit; text-decoration: none;">
+  <h2>API Reference</h2>
+</a>
+<p><a href="https://armand1m.github.io/papercut">Click here to open the API reference.</a></p>
+
+<a href="#environment-variables" id="environment-variables" style="color: inherit; text-decoration: none;">
+  <h2>Environment Variables</h2>
+</a>
+<p>Papercut works well out of the box, but some environment variables are available for customizing behavior:</p>
+<p><code>DEBUG=true</code>: enables debug level logs.</p>
+
+<a href="#roadmap" id="roadmap" style="color: inherit; text-decoration: none;">
+  <h2>Roadmap</h2>
+</a>
+<ul>
+<li>[-] Add unit tests</li>
+<li><input checked="" disabled="" type="checkbox"> Add documentation generation</li>
+<li><input disabled="" type="checkbox"> Create medium article introducing the library</li>
+<li>[-] Create a gh-pages for the library</li>
+<li><input checked="" disabled="" type="checkbox"> Create more examples</li>
+</ul>
+
+<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+  <h2>Contributing</h2>
+</a>
+<p>Contributions are always welcome!</p>
+<p>See <code>CONTRIBUTING.md</code> for ways to get started.</p>
+
+<a href="#faq" id="faq" style="color: inherit; text-decoration: none;">
+  <h2>FAQ</h2>
+</a>
+
+<a href="#why-not-use-puppeteer-selenium-or-webdriver" id="why-not-use-puppeteer-selenium-or-webdriver" style="color: inherit; text-decoration: none;">
+  <h4>Why not use <code>puppeteer</code>, <code>selenium</code> or <code>webdriver</code>?</h4>
+</a>
+<p>JSDOM is lighter and easier than using a headless browser engine and <em>(I hope that it)</em> allows for enough scraping capabilities. Setup is minimal and it works out-of-the box with minimal overhead to users of this library. Please open an issue if you&#39;d like to discuss more about this, I can definitely be wrong.</p>
+
+<a href="#why-not-use-cheerio" id="why-not-use-cheerio" style="color: inherit; text-decoration: none;">
+  <h4>Why not use <code>cheerio</code>?</h4>
+</a>
+<p>I like the idea. I see papercut being flexible in the future to use different engines, so you&#39;d be able to switch from JSDOM to cheerio, though I&#39;m not sure if I see much value on it. Please open an issue if you&#39;d like to discuss a possible API implementation here.</p>
+
+<a href="#contributors" id="contributors" style="color: inherit; text-decoration: none;">
+  <h2>Contributors</h2>
+</a>
+<table>
+<thead>
+<tr>
+<th>Website</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://armand1m.dev">https://armand1m.dev</a></td>
+<td><strong>Armando Magalhaes</strong></td>
+</tr>
+</tbody></table>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-interface"><a href="interfaces/CreateRunnerProps.html" class="tsd-kind-icon">Create<wbr/>Runner<wbr/>Props</a></li><li class="tsd-kind-interface"><a href="interfaces/GeosearchResult.html" class="tsd-kind-icon">Geosearch<wbr/>Result</a></li><li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/RunProps.html" class="tsd-kind-icon">Run<wbr/>Props</a></li><li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/ScrapeProps.html" class="tsd-kind-icon">Scrape<wbr/>Props</a></li><li class="tsd-kind-interface"><a href="interfaces/ScraperOptions.html" class="tsd-kind-icon">Scraper<wbr/>Options</a></li><li class="tsd-kind-interface"><a href="interfaces/ScraperProps.html" class="tsd-kind-icon">Scraper<wbr/>Props</a></li><li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="modules.html#ScrapeResultType" class="tsd-kind-icon">Scrape<wbr/>Result<wbr/>Type</a></li><li class="tsd-kind-type-alias"><a href="modules.html#Scraper" class="tsd-kind-icon">Scraper</a></li><li class="tsd-kind-type-alias"><a href="modules.html#SelectorFunction" class="tsd-kind-icon">Selector<wbr/>Function</a></li><li class="tsd-kind-type-alias"><a href="modules.html#SelectorMap" class="tsd-kind-icon">Selector<wbr/>Map</a></li><li class="tsd-kind-type-alias"><a href="modules.html#SelectorUtilities" class="tsd-kind-icon">Selector<wbr/>Utilities</a></li><li class="tsd-kind-function"><a href="modules.html#createRunner" class="tsd-kind-icon">create<wbr/>Runner</a></li><li class="tsd-kind-function"><a href="modules.html#createScraper" class="tsd-kind-icon">create<wbr/>Scraper</a></li><li class="tsd-kind-function"><a href="modules.html#createSelectorUtilities" class="tsd-kind-icon">create<wbr/>Selector<wbr/>Utilities</a></li><li class="tsd-kind-function"><a href="modules.html#geosearch" class="tsd-kind-icon">geosearch</a></li><li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#scrape" class="tsd-kind-icon">scrape</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
