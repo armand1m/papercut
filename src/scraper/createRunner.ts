@@ -158,16 +158,16 @@ export const createRunner = ({
     selectors,
     pagination,
   }: RunProps<T, B>) => {
-    logger.info('Fetching...');
+    logger.info('Fetching initial page...');
 
     const rawHTML = await fetchPage(baseUrl);
 
-    logger.info('Parsing...');
+    logger.info('Parsing initial page...');
 
     let window: DOMWindow | null = new JSDOM(rawHTML).window;
     let document: Document | null = window.document;
 
-    logger.info('Starting...');
+    logger.info('Starting scraping process...');
 
     const results = await pipe(
       fromNullable(
@@ -176,7 +176,7 @@ export const createRunner = ({
       match(
         async () => {
           logger.info(
-            'Unable to find last page number. Scraping the main page only.'
+            'Unable to find last page number. Scraping the initial page only.'
           );
 
           if (document === null) {
@@ -203,15 +203,15 @@ export const createRunner = ({
         async (lastPageNumber) => {
           logger.info(`Found ${lastPageNumber} pages`);
 
-          const pageNumbers = range(1, lastPageNumber);
-
           const createPaginatedUrl = pagination?.createPaginatedUrl;
 
           if (!createPaginatedUrl) {
             throw new Error(
-              'Please define a function to build a paginated url.'
+              'Please define a function to help papercut create the paginated url in the pagination options.'
             );
           }
+
+          const pageNumbers = range(1, lastPageNumber);
 
           const { results, errors } =
             await PromisePool.withConcurrency(
@@ -219,13 +219,13 @@ export const createRunner = ({
             )
               .for(pageNumbers)
               .process(async (pageNumber: number) => {
-                logger.await(`Fetching page ${pageNumber}`);
+                logger.info(`Fetching page no. ${pageNumber}`);
 
                 let pagePayload: string | null = await fetchPage(
                   createPaginatedUrl(baseUrl, pageNumber)
                 );
 
-                logger.info(`Parsing page ${pageNumber}`);
+                logger.info(`Parsing page no. ${pageNumber}`);
 
                 let pageWindow: DOMWindow | null = new JSDOM(
                   pagePayload
@@ -233,7 +233,7 @@ export const createRunner = ({
                 let pageDocument: Document | null =
                   pageWindow.document;
 
-                logger.info(`Scraping page ${pageNumber}`);
+                logger.info(`Scraping page no. ${pageNumber}`);
 
                 const pageResult = await scrape({
                   strict,
@@ -280,11 +280,7 @@ const getLastPageNumberFromDocument = (
   document: Document,
   options?: PaginationOptions
 ): number | undefined => {
-  if (!options) {
-    return;
-  }
-
-  if (!options.enabled) {
+  if (!options?.enabled) {
     return;
   }
 
@@ -294,7 +290,7 @@ const getLastPageNumberFromDocument = (
 
   if (!lastPageNumberElement) {
     throw new Error(
-      `Failed to fetch page count, cannot scrape with pagination. Aborted.`
+      `Failed to find last page number using the given selector: "${options.lastPageNumberSelector}"`
     );
   }
 
