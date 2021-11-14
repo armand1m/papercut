@@ -1,12 +1,12 @@
 import path from 'path';
 
-import { createScraper } from './createScraper';
 process.env.PAPERCUT_PAGE_CACHE_PATH = path.resolve(
   __dirname,
   './__fixtures__/testpagecache'
 );
 
 test('createScraper', async () => {
+  const { createScraper } = await import('./createScraper');
   const scraper = createScraper({
     name: `Hacker News`,
     options: {

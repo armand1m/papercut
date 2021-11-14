@@ -1,20 +1,20 @@
-export { createScraper } from './next/createScraper';
+export { createScraper } from './scraper/createScraper';
 export type {
   Scraper,
   ScraperOptions,
   ScraperProps,
-} from './next/createScraper';
+} from './scraper/createScraper';
 
-export { createRunner } from './next/createRunner';
+export { createRunner } from './scraper/createRunner';
 export type {
   SelectorMap,
   SelectorFunction,
   CreateRunnerProps,
   RunProps,
-} from './next/createRunner';
+} from './scraper/createRunner';
 
-export { scrape } from './next/scrape';
-export type { ScrapeProps, ScrapeResultType } from './next/scrape';
+export { scrape } from './scraper/scrape';
+export type { ScrapeProps, ScrapeResultType } from './scraper/scrape';
 
 export { createSelectorUtilities } from './selectors/createSelectorUtilities';
 export type { SelectorUtilities } from './selectors/createSelectorUtilities';
