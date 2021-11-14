@@ -60,7 +60,7 @@ const main = async () => {
         return [];
       },
       badges: ({ all }) => {
-        const badges = [...all('.media-left > div > div > img')];
+        const { asArray: badges } = all('.media-left > div > div > img');
 
         return badges
           .map((badge) => badge.getAttribute('title'))

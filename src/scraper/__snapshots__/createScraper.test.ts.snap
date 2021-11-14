@@ -1,6 +1,3399 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createScraper 1`] = `
+exports[`createScraper - Pagination 1`] = `
+Array [
+  Object {
+    "address": "Marnixstraat 74-HS Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "This establishment in the picturesque Jordaan neighborhood is a bit more traditional than many of the shops on the city center. At the same time it has a decidedly upscale feel to it. The cannabis menu is also large, with a good mix of hash and weed.",
+    "menus": Array [],
+    "name": "'T Keteltje",
+    "phone": "+31 20 622 ",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_56.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Ooievaarsweg 10-HS Noord, Amsterdam",
+    "badges": Array [],
+    "description": "The name of this shop translates to English as “The Stork”. This coffeeshop takes its avian connection quite seriously. Once you step inside, you’ll be engulfed by a tropical theme, and even find plexiglass windows into resident pigeon coops.",
+    "menus": Array [],
+    "name": "'T Ooievaartje",
+    "phone": "+31 20 637 2215",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1205.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Brouwersgracht 137 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Though not expansive, Coffeeshop 137 is quite comfortable and welcoming. Its one room has sufficient seating for visitors on most afternoons. Comfortable couches and benches line the walls, and the outdoor seating is perfect on warm sunny day.",
+    "location": Object {
+      "latitude": 52.3814043,
+      "longitude": 4.8862981,
+    },
+    "menus": Array [],
+    "name": "137",
+    "phone": "+31 20 627 0764",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_500.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Hudsonstraat 156 West, Amsterdam",
+    "badges": Array [],
+    "description": "This shop is best described as a low-key take-away establishment. They have a menu stocked with long running popular strains, which you’ll find displayed on-screen. 156 seems to value simplicity. They focus on cannabis, and ignore the flashy extras. ",
+    "location": Object {
+      "latitude": 52.3696493,
+      "longitude": 4.8524867,
+    },
+    "menus": Array [],
+    "name": "156",
+    "phone": "+31 20 685 5308",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_504.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Marnixstraat 194 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "1e Hulp literally means \\"First Help\\". A reputation for quality cannabis has strengthened interest among visitors, who often make a special trip here. This coffeeshop is quite nicely appointed, with an ornate Arabian them throughout its three floors.",
+    "location": Object {
+      "latitude": 52.3715629,
+      "longitude": 4.8758363,
+    },
+    "menus": Array [],
+    "name": "1e Hulp",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3242.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Halvemaansteeg 1 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "3 Floors Lounge, formerly Andalucia, is located on the south side of the Amstel canal, just adjacent to Rembrantplein. This shop has three levels, which makes it quite roomy inside. The décor would be best described as simple, but contemporary.",
+    "location": Object {
+      "latitude": 52.3668215,
+      "longitude": 4.8958891,
+    },
+    "menus": Array [],
+    "name": "3 Floors Lounge",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_170.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Singel 387 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "420 Coffeeshop is a canal-side shop just outside Spui Square, a main cultural center for the city. Spui is home to many trendy cafés, restaurants, and (esp) bookshops. 420 is a small but nicely appointed shop; perfect to chill and do some reading.  ",
+    "location": Object {
+      "latitude": 52.3687535,
+      "longitude": 4.8882265,
+    },
+    "menus": Array [],
+    "name": "420 Coffeeshop",
+    "phone": "+31 6 18949745",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1793.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Jan Pieter Heijestraat 96 West, Amsterdam",
+    "badges": Array [],
+    "description": "Coffeeshop 96 is a more traditional Dutch establishment. It is unassuming, but practical; functional. The abundance of locals lend validity to the quality and variety of their offerings, including many local strains, and lower priced imports. ",
+    "location": Object {
+      "latitude": 52.3635636,
+      "longitude": 4.8632801,
+    },
+    "menus": Array [],
+    "name": "96",
+    "phone": "+31 20 618 6084",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_510.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Jonge Roelensteeg 12-14 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Top Shops",
+    ],
+    "description": "Abraxas is a theme coffeeshop. It takes its name from the children’s book “The Little Witch”, and is similarly mystical is its style of décor. The counters, stools, and tables appear as if they were grown out of trees. Feels like Harry Potter, LOTR. ",
+    "location": Object {
+      "latitude": 52.3720587,
+      "longitude": 4.8911669,
+    },
+    "menus": Array [],
+    "name": "Abraxas",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_130.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.abraxas.tv",
+      },
+    ],
+  },
+  Object {
+    "address": "Herengracht 133 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Vapor Lounge",
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "Amnesia Coffeeshop is a trendy establishment in the heart of Amsterdam Centrum’s canal ring. The shop has somewhat of a nightclub feeling to it, with a well detailed and “polished” interior. The cannabis menu is also connoisseur quality here.  ",
+    "location": Object {
+      "latitude": 52.3755551,
+      "longitude": 4.8890435,
+    },
+    "menus": Array [],
+    "name": "Amnesia",
+    "phone": "+31 20 427 7874",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_152.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Haarlemmerstraat 6 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Amsterdamned is located on Haarlemmerstraat, a bustling area of the city packed with restaurants and small trendy boutiques. The ambiance of the place is a mix between artsy and modern; the type of shop that could easily fit well as a café or bakery.",
+    "location": Object {
+      "latitude": 52.3794229,
+      "longitude": 4.8940052,
+    },
+    "menus": Array [],
+    "name": "Amsterdamned",
+    "phone": "+31 20 638 8079",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3156.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://coffeeshopamsterdamned.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Parlevinker 8 Noord, Amsterdam",
+    "badges": Array [],
+    "description": "Atlas is the northern most shop in Amsterdam. It is frequented almost exclusively by locals, but is a warm welcoming place. They are also very serious about cannabis here!",
+    "location": Object {
+      "latitude": 52.4115426,
+      "longitude": 4.9222305,
+    },
+    "menus": Array [],
+    "name": "Atlas",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_172.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Barentszstraat 130 West, Amsterdam",
+    "badges": Array [],
+    "description": "Baba looks like an upscale restaurant or city tea house. It is quite contemporary, beautiful, and polished. We'd assume that no expense has been spared to make the customer feel relaxed and comfortable while they enjoy their favourite bud. ",
+    "location": Object {
+      "latitude": 52.3888396,
+      "longitude": 4.8872877,
+    },
+    "menus": Array [],
+    "name": "Baba",
+    "phone": "+31 20 624 1409",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3244.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.babashops.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Beursstraat 27 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Babylon Coffeeshop is a reggae themed establishment. It is also well known for its prices, which are modest for a shop in the city center. The imported hashish tends to be of especially notable value, and additionally, quality..",
+    "location": Object {
+      "latitude": 52.3753547,
+      "longitude": 4.8973747,
+    },
+    "menus": Array [],
+    "name": "Babylon",
+    "phone": "+31 6 42359358",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_196.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Kloveniersburgwal 60 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+    ],
+    "description": "This shop gets its name from Bagheera, the black Indian leopard from famous children’s novel The Jungle Book. In contrast to the aggressive logo of Bagheera Coffeeshop, the actual vibe of this place is relaxed and welcoming. ",
+    "location": Object {
+      "latitude": 52.3700452,
+      "longitude": 4.8973658,
+    },
+    "menus": Array [],
+    "name": "Bagheera",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3234.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Halvemaansteeg 5 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The atmosphere of the shop is also very relaxed and welcoming. This particular shop takes its name from the famous children’s story Jungle Book. Specifically, the lovable talking bear named Baloo (in Dutch, Balou).",
+    "location": Object {
+      "latitude": 52.3667407,
+      "longitude": 4.8959047,
+    },
+    "menus": Array [],
+    "name": "Balou",
+    "phone": "+31 20 627 5653",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_214.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Haarlemmerstraat 102 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "Barney's Coffeeshop is regarded as a connoisseur establishment. They have a long history of entering cannabis competitions, and its menu will typically host several award winning strains of weed and hashish.",
+    "location": Object {
+      "latitude": 52.3806956,
+      "longitude": 4.8908886,
+    },
+    "menus": Array [],
+    "name": "Barney's",
+    "phone": "+31 20 625 9761",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_222.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://barneys.biz",
+      },
+    ],
+  },
+  Object {
+    "address": "Reguliersgracht 27 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Weed",
+    ],
+    "description": "Barney's Lounge is a modern establishment; the decor a bit of a mix between nightclub and a posh coffee lounge. One of several Barney's establishments, which are are known for their award winning strains and focus on connoisseur customers. ",
+    "location": Object {
+      "latitude": 52.3639288,
+      "longitude": 4.8962294,
+    },
+    "menus": Array [],
+    "name": "Barney's Lounge",
+    "phone": "+31 20 420 6655",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_242.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.barneysamsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Gravenstraat 9 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The décor in Barraka is somewhat reminiscent of an upscale bar or cafe. There is a lot of dark wood inside, and a beautiful polished bar where you place your order. The selection here is extensive, with roughly two dozen strains during last check. ",
+    "location": Object {
+      "latitude": 52.3742317,
+      "longitude": 4.8926204,
+    },
+    "menus": Array [],
+    "name": "Barraka",
+    "phone": "+31 20-6269766",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_248.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Kloveniersburgwal 62 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+    ],
+    "description": "Basjoe is well known for its selection of marijuana edibles. You’ll notice a large chalkboard behind the counter, which displays their extensive list of offerings. This shop is also known for its gourmet coffee and tea selections.",
+    "location": Object {
+      "latitude": 52.3700092,
+      "longitude": 4.8973513,
+    },
+    "menus": Array [],
+    "name": "Basjoe",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3139.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Huidenstraat 13a Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Best Friends Centrum Coffeeshop is found in the De Negen Straatjes section of Amsterdam, which translates in English as “The Nine Streets”. This small neighborhood resides in the inner city’s canal belt, and is known for its selection shopping. ",
+    "location": Object {
+      "latitude": 52.3688485,
+      "longitude": 4.8847515,
+    },
+    "menus": Array [],
+    "name": "Best Friends Centrum",
+    "phone": "+31 20 6928989",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_282.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.bestfriendsamsterdam.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Niasstraat 1 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Best Friends Oost Coffeeshop is located in the Indische Buurt, or translated in English, “Indies Neighborhood\\". Though quite a large building from the outside, at present they are operating as a take away only location. ",
+    "location": Object {
+      "latitude": 52.364748399999996,
+      "longitude": 4.941496018243107,
+    },
+    "menus": Array [],
+    "name": "Best Friends Oost",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_270.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.bestfriendsamsterdam.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Amstelveenseweg 61II Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Best Friends Coffeeshop (South) is located just outside the entrance to Vondel Park. This is the third Best Friends shop, joining the brand in 2018. This also makes it among the newest coffeeshops in Amsterdam, at least when counting ownership. ",
+    "location": Object {
+      "latitude": 52.3454885,
+      "longitude": 4.8579261,
+    },
+    "menus": Array [],
+    "name": "Best Friends Zuid",
+    "phone": "+31206273858",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3158.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.bestfriendsamsterdam.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Reguliersdwarsstraat 29 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "This shop was once the sister to the original Betty Boop coffeeshop (now the sole location), which was near the red light district. That shop was famously known as one of the places in Amsterdam that Quentin Tarantino wrote much of Pulp Fiction. ",
+    "location": Object {
+      "latitude": 52.3665552,
+      "longitude": 4.8902393,
+    },
+    "menus": Array [],
+    "name": "Betty Boop",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2252.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Rozengracht 1-A Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Inside Black Star you find an African themed coffee shop. The decor presents mainly continental-focused colors and artwork. The full name of this shop is actually \\"African Black Star Coffeeshop\\", though it tends to be known as just Black Star.",
+    "location": Object {
+      "latitude": 52.3722565,
+      "longitude": 4.875785,
+    },
+    "menus": Array [],
+    "name": "Black Star",
+    "phone": "+31 20 626 9469",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_302.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Overtoom 342 West, Amsterdam",
+    "badges": Array [],
+    "description": "The decor of Blue Lagoon coffeeshop is contemporary. There are polished hardwood floors, colored accent lights, dark trim, and lot of recessed lighting above. The atmosphere is chill and comfortable. It feels somewhat like a neighborhood coffeeshop.",
+    "location": Object {
+      "latitude": 52.3606116,
+      "longitude": 4.866253,
+    },
+    "menus": Array [],
+    "name": "Blue Lagoon",
+    "phone": "+31 20 6126232 ",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_308.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://coffeeshopbluelagoon.hyves.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Van Woustraat 87 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Blue Sea is just far enough from the hustle and bustle to be a bit more of a locals’ shop. Inside you'll find a Moroccan / Dutch vibe; very chill and unpretentious. It feels cozy and real, just not quite beachy, as its name might suggest.  ",
+    "menus": Array [],
+    "name": "Blue Sea",
+    "phone": "+31 20 676 1991",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_312.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Sint Antoniesbreestraat 71 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Hash",
+    ],
+    "description": "An interesting coffeeshop; its windows and architecture are open and modern, and the shop quite inviting. There is cool artwork on the walls, ample seating, even a comfortable couch. We’d best describe Bluebird Coffeshop as a “chill” location.",
+    "location": Object {
+      "latitude": 52.369998,
+      "longitude": 4.900897,
+    },
+    "menus": Array [],
+    "name": "Bluebird",
+    "phone": "+31 20 622 5232",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2695.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Bonairestraat 78 West, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "The Bij Coffeeshop is quite different from the old-school vibe of many others in the city. It has the medically professional feel of a pharmacy or Colorado cannabis dispensary. The shop decor is  clean and clinical, and budtenders wear white coats. ",
+    "menus": Array [],
+    "name": "Boerejongens Bij",
+    "phone": "+31 20 8100025",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_554.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Utrechtsestraat 21 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "Boerenjongen translates as \\"Farmer Boy\\". When you come here, you feel like you are making a visit to the local pharmacy to pick up your prescribed meds... only your medicine is weed, and your local pharmacy is somewhere in Denver or LA. ",
+    "location": Object {
+      "latitude": 52.3648554,
+      "longitude": 4.898009,
+    },
+    "menus": Array [],
+    "name": "Boerejongens Center",
+    "phone": "+31 20 8100025",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_322.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Humberweg 5 West, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "This Boerejongens location has a similar feel to their other shops. The vibe inside is elegant and clinical. If we were to define it, we would say it feels like a cross between a bank and an American cannabis dispensary. ",
+    "menus": Array [],
+    "name": "Boerejongens Sloterdijk",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3224.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.boerejongens.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Baarsjesweg 239 West, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "The dutch word Boerenjongen translates in English to \\"farmer boy,\\" undoubtedly referring this shop's focus on quality cannabis. Boerejongen's resembles a Colorado medical marijuana dispensary; clinical, very serious about cannabis therapeutics. ",
+    "location": Object {
+      "latitude": 52.3623061,
+      "longitude": 4.8575482,
+    },
+    "menus": Array [],
+    "name": "Boerejongens West",
+    "phone": "+31 20 8100025",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_332.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.boerejongens.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Marnixstraat 92 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Coffeeshop Bronx is located on Marnixstraat, at the western edge of Amsterdam Centrum and close to the Marnix Bowl skate park. This coffeeshop isn’t a simple take-and-go establishment. It is a neighborhood hangout, catering mainly to local clients.",
+    "location": Object {
+      "latitude": 52.3791277,
+      "longitude": 4.8793332,
+    },
+    "menus": Array [],
+    "name": "Bronx",
+    "phone": "+31 (0)20 5287292",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_338.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Oudezijds Voorburgwal 90 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Top Shops",
+    ],
+    "description": "Founded in 1975, The Bulldog claims the distinction of being the first coffeeshop in the city. At one time Bulldog 90 was an illegal establishment, selling cannabis in violation of Dutch law. There is much tribute to this history throughout the shop.",
+    "location": Object {
+      "latitude": 52.3736775,
+      "longitude": 4.8976779,
+    },
+    "menus": Array [],
+    "name": "Bulldog 90",
+    "phone": "+31 20 624 8248",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_348.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.thebulldog.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Oudezijds Voorburgwal 218 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The decor in Bulldog Energy is hard to put into words. It feels like a fantasy restaurant; Harry Potter or Lord of the Rings style. Rocks press out from the entryway facade and bar. The walls curve in and are painted tan, feeling like a large cave.",
+    "location": Object {
+      "latitude": 52.3725137,
+      "longitude": 4.8962514,
+    },
+    "menus": Array [],
+    "name": "Bulldog Energy",
+    "phone": "+31 (0)20 6382593",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2729.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.thebulldog.com/bulldog-energy",
+      },
+    ],
+  },
+  Object {
+    "address": "Leidseplein 15 Centrum, Amsterdam",
+    "badges": Array [
+      "Top Shops",
+    ],
+    "description": "The Bulldog Palace is a must-see coffeeshop when in Amsterdam. It was built inside Amsterdam's former police station number 14, in the old jail downstairs. Here visitors will find an amazing museum, with many artifacts from the prohibition era.",
+    "location": Object {
+      "latitude": 52.3642355,
+      "longitude": 4.882745556059698,
+    },
+    "menus": Array [],
+    "name": "Bulldog Palace",
+    "phone": "+31 20 638 2593",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_412.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.thebulldog.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Coenhavenweg 26 West, Amsterdam",
+    "badges": Array [],
+    "description": "Bulldog Port 26 Coffeeshop is the most recent of The Bulldog shops, opening in April 2015. It is located in the Coenhavenweg area of Amsterdam. This is one of the city port locations, and due to this the clientele are mainly local.",
+    "menus": Array [],
+    "name": "Bulldog Port 26",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2735.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.thebulldog.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Singel 12 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The Rockshop is run by the famous Bulldog brand, and as such is one of the more maintained and \\"polished\\" establishments in the city. As its name suggests, this is a themed coffeeshop, paying tribute to both classic and modern rock music. ",
+    "location": Object {
+      "latitude": 52.3790679,
+      "longitude": 4.8938367,
+    },
+    "menus": Array [],
+    "name": "Bulldog Rock Shop",
+    "phone": "+31 20 627 8900",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_436.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.thebulldog.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Woestduinstraat 76 West, Amsterdam",
+    "badges": Array [],
+    "description": "Bullwackie Coffeeshop is found in the Hoofddorppleinbuurt neighborhood, a largely residential section of Amsterdam Zuid. The name of this shop pays tribute to Lloyd Barnes, a NY reggae music producer, better known by the name Bullwackie. ",
+    "menus": Array [],
+    "name": "Bullwackie",
+    "phone": "+31 20 617 9395",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_440.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://bullwackie.business.site",
+      },
+    ],
+  },
+  Object {
+    "address": "Thorbeckeplein 28 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "Being in Thorbecke Square, Bushdoctor Coffeeshop has access to a great deal of outdoor seating space. On sunny days, they take full advantage of it. They'll place roughly a dozen small tables outside, and enough seating for several times that number.",
+    "location": Object {
+      "latitude": 52.3651124,
+      "longitude": 4.8955556,
+    },
+    "menus": Array [],
+    "name": "Bushdoctor",
+    "phone": "+31 203307475",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1503.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.thebushdocter.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Tweede Jan van der Heijdenstraat 43 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Carmona blends into this neighborhood well, and seems to be popular among locals. This coffeeshop is contemporary, yet unpretentious. The shop's smoking lounge is spruced up with traditional Moroccan themed pillows, and padded leather benches; cozy.",
+    "location": Object {
+      "latitude": 52.3554719,
+      "longitude": 4.9007255,
+    },
+    "menus": Array [],
+    "name": "Carmona",
+    "phone": "+31 20 400 4026",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_452.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Nassaukade 33-HS West, Amsterdam",
+    "badges": Array [],
+    "description": "The theme inside Catch 33 coffeeshop is distinctly Moroccan, with a vibe that is chill and artsy. Hand painted clouds on the ceiling lend some dreaminess to the atmosphere. This is complimented by hand textured walls and wooden trim. ",
+    "menus": Array [],
+    "name": "Catch 33",
+    "phone": "+31 20 486 2444",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_458.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://coffeeshopcatch33.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Prins Hendrikkade 89 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Central Coffeeshop is located on Prins Hendrikkade, just across the street from Centraal Station. Central is mainly a take-and-go establishment. Over the years Central has gained a reputation for quality cannabis, and perhaps better prices.",
+    "location": Object {
+      "latitude": 52.3767148,
+      "longitude": 4.9019324,
+    },
+    "menus": Array [],
+    "name": "Central",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_464.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Van Boetzelaerstraat 31 West, Amsterdam",
+    "badges": Array [],
+    "description": "Chapiteau is actually French for “Marquee”. While the name might conjure up visions of a mega nightclub along the lines of Marquee in Las Vegas, Chapiteau is not actually a hangout spot. This shop is exclusively as a take-away location these days.",
+    "location": Object {
+      "latitude": 52.3823631,
+      "longitude": 4.8730538,
+    },
+    "menus": Array [],
+    "name": "Chapiteau",
+    "phone": "+31 20 682 2548",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2133.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Oudezijds Voorburgwal 189 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "City Hall is found in the basement level of its building. As you step down to enter, you will notice what looks to be a traditional brown bar. The cannabis menu tends to be extensive by most standards. They also have a small area of outdoor seating. ",
+    "location": Object {
+      "latitude": 52.3757041,
+      "longitude": 4.9001615,
+    },
+    "menus": Array [],
+    "name": "City Hall",
+    "phone": "+31 20 626 3985",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_490.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Gerard Doustraat 83-85 Zuid, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "Club Media coffeeshop is located in Oude Pijp (the Old Pipe) neighborhood. It is right adjacent to the Abert Cuypmarkt, a busy outdoor market which attracts a lot of locals and tourists alike. ",
+    "location": Object {
+      "latitude": 52.355811,
+      "longitude": 4.8918846,
+    },
+    "menus": Array [],
+    "name": "Club Media",
+    "phone": "+31 (0)20 6645889",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_496.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://coffeeshopclubmedia.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Haarlemmerstraat 44 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "CoffeeshopAmsterdam is aesthetically impressive, with a combination of exposed brick, modern furnishings, and cool lighting that makes this shop contemporary and inviting. Sister shop to Tweede Kamer, and a connoisseur establishment.",
+    "location": Object {
+      "latitude": 52.380066,
+      "longitude": 4.8929225,
+    },
+    "menus": Array [],
+    "name": "CoffeeshopAmsterdam",
+    "phone": "+31 20 320 5427",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1862.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.coffeeshopamsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Pretoriusstraat 67 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Crash Light is a small Moroccan themed coffeeshop. Size is probably not important though, as this is a take-and-go establishment only. They seem to do their business discretely here, perhaps something that keeps them in good favor with the neighbors.",
+    "location": Object {
+      "latitude": 52.3547848,
+      "longitude": 4.9222237,
+    },
+    "menus": Array [],
+    "name": "Crash Light",
+    "phone": "+31 20 665 9757",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_516.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Marnixstraat 383 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Crush Coffeeshop is located on Marnixstraat, at the southwestern edge of the Centrum. Inside one finds a fairly contemporary artsy establishment. The seating area is fairly large, with low benches against the walls; stools and tables in the center. ",
+    "location": Object {
+      "latitude": 52.3657218,
+      "longitude": 4.880148,
+    },
+    "menus": Array [],
+    "name": "Crush",
+    "phone": " +31 (0)20 4204435",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_524.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://crush-seed-bank.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Govert Flinckstraat 323 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "D&L is a small and fairly practical Dutch shop. The owner has not gone over-the-top with decor and amenities. However,  there is a fair amount of seating in its Moroccan themed lounge in the back. D&L is unpretentious, but \\"real\\" at the same time. ",
+    "location": Object {
+      "latitude": 52.357249,
+      "longitude": 4.9012821,
+    },
+    "menus": Array [],
+    "name": "D&L",
+    "phone": "+31 6 11253599",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_532.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.dlcoffeeshop.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Handboogstraat 29 Centrum, Amsterdam",
+    "badges": Array [
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "Dampkring coffeeshop is perhaps most noted for being featured in the major motion picture Oceans 12. Commercialism aside though, they also have long had a reputation for quality cannabis. This shop is identified as a connoisseur establishment. ",
+    "location": Object {
+      "latitude": 52.3677317,
+      "longitude": 4.8904809,
+    },
+    "menus": Array [],
+    "name": "Dampkring",
+    "phone": "+31 20 638 0705",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_534.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://dampkring-coffeeshop-amsterdam.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Balboastraat 19 West, Amsterdam",
+    "badges": Array [],
+    "description": "De Bommel translates in English as \\"The Bumblebee.\\" The shop itself is unpretentious, but comfortable. We’d say traditionally Dutch in its practicality. They are not big on flash, but do have WiFi, a tobacco room, and some retro gaming. ",
+    "location": Object {
+      "latitude": 52.3688767,
+      "longitude": 4.8537108,
+    },
+    "menus": Array [],
+    "name": "De Bommel",
+    "phone": "+31 (0)20 6854509",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3254.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Stadionkade 107 Zuid, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Weed",
+    ],
+    "description": "The atmosphere of De Kade is best described as artsy, chill, and unpretentious. This shop is basically a hybrid combination of small arcade, local pub, and your living room. The cannabis menu at De Kade was recently upgrade to connoisseur status",
+    "location": Object {
+      "latitude": 52.3435253,
+      "longitude": 4.86442,
+    },
+    "menus": Array [],
+    "name": "De Kade",
+    "phone": "+31 20 673 8102",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3262.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshopdekade.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Van Woustraat 193 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "The English translation for De Keeper is a goalkeeper or goalie, of course, a pivotal position in the game of football/soccer. This is a comfortable down-to-earth shop, which has a lounge in the back that includes a closed tobacco smoking room.",
+    "menus": Array [],
+    "name": "De Keeper",
+    "phone": "+31 20 673 2972",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_572.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Oudebrugsteeg 26 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "De Kroon means “The Crown.” We assume this is to convey a sense a quality. With a name like this, you risk not being taken seriously if you fail to deliver a memorable experience. Fortunately for De Kroon, they have built quite a nice shop here. ",
+    "location": Object {
+      "latitude": 52.3759804,
+      "longitude": 4.8959932,
+    },
+    "menus": Array [],
+    "name": "De Kroon",
+    "phone": "+31 20 625 2011",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_82.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshopdekroon.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Nieuwe Herengracht 71 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "De Overkant (\\"The Other Side\\") coffeeshop is fairly low-key in its decor. It is a modest establishment, what you expect with most local dutch coffeeshops. While it may not be expansive in size, their lounge is still well appointed and comfortable. ",
+    "menus": Array [],
+    "name": "De Overkant",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_588.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Surinamestraat 7I West, Amsterdam",
+    "badges": Array [],
+    "description": "In English, one way to translate De Prijs is “The Price.” The best way for us to sum up De Prijs coffeeshop, is to say that this establishment is a comfortable local hangout, especially if you enjoy getting stoned and playing billiards. ",
+    "menus": Array [],
+    "name": "De Prijs",
+    "phone": "+31 20 669 0620",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_590.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Tweede Nassaustraat 1B West, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "This coffeeshop is owned by the proprietors of Siberië, The Loft, and De Supermarkt. The management has been quite serious about weed, often focusing on the more contemporary high-potency strains. All four are regarded as connoisseur coffeeshops.",
+    "location": Object {
+      "latitude": 52.3821712,
+      "longitude": 4.8785639,
+    },
+    "menus": Array [],
+    "name": "De Republiek",
+    "phone": "+31 20 682 8431",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_596.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://thecoffeeshops.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Frederik Hendrikstraat 69-HS West, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "This establishment is relaxed and unpretentious in its appearance. It is also owned by the same group as Siberie, The Loft, and De Republiek. As such, expect to find a connoisseur menu here. This is one of the few shops that invest in lab testing.",
+    "menus": Array [],
+    "name": "De Supermarkt",
+    "phone": "+31 20 486 2497",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_616.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://thecoffeeshops.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Lodewijk van Deysselstraat 37 West, Amsterdam",
+    "badges": Array [],
+    "description": "De Watersnip is a juice bar and take-away coffeeshop, in a part of Amsterdam is not widely visited by tourists. Though there is no smoking lounge here, the lobby has just enough space to roll a quick joint before heading back into the neighborhood. ",
+    "location": Object {
+      "latitude": 52.3778862,
+      "longitude": 4.8093301,
+    },
+    "menus": Array [],
+    "name": "De Watersnip",
+    "phone": "+31 20 614 7260",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_622.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Achillesstraat 104 Zuid, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "DNA Coffeeshop is quite modern in appearance. It’s look is very reminiscent of an American dispensary. The inside is clean, ornate, and clinical. This shop has a connoisseur cannabis menu, featuring items from the breeder Amsterdam Genetics.",
+    "location": Object {
+      "latitude": 52.345061,
+      "longitude": 4.8641671,
+    },
+    "menus": Array [],
+    "name": "DNA",
+    "phone": "+31 20 6648279",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1551.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://shopdna.weebly.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Kerkstraat 39 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Dolphins Coffeeshop has an  elaborately handcrafted interior, which takes on a deep sea theme. Dolphins, coral, sea urchin surround you in unbelievably detailed 3D sculptures and plaster decorations. The presentation is intricate and beautiful.",
+    "location": Object {
+      "latitude": 52.3656175,
+      "longitude": 4.8852579,
+    },
+    "menus": Array [],
+    "name": "Dolphins",
+    "phone": "+31 20 774 3336",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_640.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Pieter Vlamingstraat 286 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Eastwood Coffeeshop feels very much like a small cafe. Simple, clean, comfortable. The decor is contemporary, and seems to match the new building this shop moved into well. The color scheme is mainly shades of gray and black; furniture comfortable.",
+    "location": Object {
+      "latitude": 52.3651426,
+      "longitude": 4.9279633,
+    },
+    "menus": Array [],
+    "name": "Eastwood",
+    "phone": "+31 20 663 4236",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_666.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Prinsengracht 476 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Hash",
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "The cannabis menu in Easy Times Coffeeshop is quite extensive. They tend to list well over a dozen strains on the flower (weed) side, typically a mix of contemporary and old school strains. Though not as extensive, their hash menu is formidable.",
+    "location": Object {
+      "latitude": 52.3643312,
+      "longitude": 4.8850229,
+    },
+    "menus": Array [],
+    "name": "Easy Times",
+    "phone": "+31 20 626 5709",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_684.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.easytimes-amsterdam.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Nieuwe Nieuwstraat 32 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "El Guapo is a chill and artsy shop. One of the most notable features of the interior is an airbrushed scene, which covers one full wall, front to back, top to bottom. It is beautiful and colorful work, presented in a sort of urban spray paint style.",
+    "location": Object {
+      "latitude": 52.3753268,
+      "longitude": 4.8934766,
+    },
+    "menus": Array [],
+    "name": "El Guapo",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_98.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.elguapo.shop",
+      },
+    ],
+  },
+  Object {
+    "address": "Witte de Withstraat 106 West, Amsterdam",
+    "badges": Array [],
+    "description": "While we wouldn't regard this coffeeshop as large, El Marssa is still fairly roomy. This shop is not especially elaborate or luxurious, but is comfortable and real. This is largely a locals place... people know each other here; but they welcome all. ",
+    "location": Object {
+      "latitude": 52.3689918,
+      "longitude": 4.8592893,
+    },
+    "menus": Array [],
+    "name": "El Marssa",
+    "phone": "+31 20 683 1261",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_686.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Amstel 36 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "The decor inside Family First Coffeeshop is quite interesting and artsy. The tables are painted with colorful abstract images, which are infused with the occasional marijuana leaf. The walls are not bare, but full murals floor to ceiling.",
+    "location": Object {
+      "latitude": 52.3668909,
+      "longitude": 4.8953892,
+    },
+    "menus": Array [],
+    "name": "Family First",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3146.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Oudezijds Voorburgwal 36-HS Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Feels Good has an interesting vibe; like you've walked into a small neighborhood nightclub. In the back of the shop is the smoking lounge, which is partitioned off behind a glass door. It is fairly spacious in here, but also has a bit of privacy.",
+    "menus": Array [],
+    "name": "Feels Good",
+    "phone": "+31 20 622 1055",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_690.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Hudsonstraat 138-HS West, Amsterdam",
+    "badges": Array [],
+    "description": "Flashback is a Moroccan-owned shop. They feature a large smoking room in the back, and it isn't rare to find it packed with locals. However, being so accustomed to serving locals, don't be surprised (or offended) if they ask you to smoke elsewhere.",
+    "menus": Array [],
+    "name": "Flashback",
+    "phone": "+31 20 489 6115",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_692.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Rozengracht 139 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The decor in Flower Power coffeeshop is fairly basic. However, they do have pinball and arcade games; rare in European cities like Amsterdam, given the premium on space. So if you are into these classic games, Flower Power might just be a nice find.",
+    "location": Object {
+      "latitude": 52.3727074,
+      "longitude": 4.8786137,
+    },
+    "menus": Array [],
+    "name": "Flower Power",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_696.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Reguliersdwarsstraat 70 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Free I Coffeeshop has a tiki bar theme, something that is apparent as soon as you walk in. It is perhaps more well known for its basement though. The cellar has low ceilings, exposed concrete, and small areas of seating. All character. No frills. ",
+    "location": Object {
+      "latitude": 52.3659665,
+      "longitude": 4.8934466,
+    },
+    "menus": Array [],
+    "name": "Free I",
+    "phone": "+31 20 622 7727",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_708.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Van Hogendorpstraat 201 West, Amsterdam",
+    "badges": Array [],
+    "description": "There is a Moroccan theme inside Freedom coffeeshop; a bit chill and funky, very down to earth. The furniture basic, but comfortable. Freedom has a Statue of Liberty on its sign. We’ll take this as confirmation that all city visitors are welcome.",
+    "location": Object {
+      "latitude": 52.3825524,
+      "longitude": 4.871201,
+    },
+    "menus": Array [],
+    "name": "Freedom",
+    "phone": "+31 20 686 8683",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_710.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Marnixstraat 333 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The best way to describe Funky Munkey would be to say it is a cross between a city coffee house and \\"man cave\\". There is a pool table in the center of the room. A chess table rests in here as well. A giant dartboard is also hung on one wall. ",
+    "location": Object {
+      "latitude": 52.3726966,
+      "longitude": 4.8761177,
+    },
+    "menus": Array [],
+    "name": "Funky Munkey",
+    "phone": "+31 20 6384014",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_718.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Tt. Vasumweg 4C Noord, Amsterdam",
+    "badges": Array [],
+    "description": "The theme of Funny People coffeeshop is “classic comedians.” The shop logo is a tribute to the Marx Brothers, though there are plenty of other famous faces plastered around this place… Laurel and Hardy, Charlie Chaplain, Abbott and Costello...",
+    "location": Object {
+      "latitude": 52.4019561,
+      "longitude": 4.8984972,
+    },
+    "menus": Array [],
+    "name": "Funny People",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1575.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Korte Leidsedwarsstraat 77-79 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Get Down To It Coffeeshop is quite large. Three rooms full of tables, chairs, and booths provide ample space. There are even two pool tables in here, and enough room to actually play. The decor throughout would be best described as abstract.",
+    "location": Object {
+      "latitude": 52.362266,
+      "longitude": 4.8861579,
+    },
+    "menus": Array [],
+    "name": "Get Down To It",
+    "phone": "+31 20 4201512",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1929.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Kloveniersburgwal 42 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The décor of Goa coffeeshop is best compared to a nicer sit-down Asian restaurant. A lot of the furniture here is dark wood, and Asian in style. There are also red couches, black leather stools, hanging birdcage lights, and Asian inspired artwork.",
+    "location": Object {
+      "latitude": 52.3677884,
+      "longitude": 4.8960666,
+    },
+    "menus": Array [],
+    "name": "Goa",
+    "phone": "+31 20 330 9722",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3304.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Kloveniersburgwal 4 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+    ],
+    "description": "The trim throughout Green Place is a bit Arabian, with a touch of modern. What this shop lacks in size it seems to make up for in \\"cool vibe\\". With regard to their cannabis, Green Place is presently considered a connoisseur establishment. ",
+    "location": Object {
+      "latitude": 52.3704054,
+      "longitude": 4.8986812,
+    },
+    "menus": Array [],
+    "name": "Green Place",
+    "phone": "+31 20 22096816 ",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3306.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Spuistraat 122 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The most notable feature of Green Planet is probably the outdoor seating. On warm sunny days, the management places out table and chair sets. Spuistraat has a wide sidewalk, so there is plenty of room to stretch out and enjoy this shop \\"al fresco\\" ",
+    "location": Object {
+      "latitude": 52.3745453,
+      "longitude": 4.8902379,
+    },
+    "menus": Array [],
+    "name": "Green Planet",
+    "phone": "+31 20 6229644",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_747.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Oudezijds Voorburgwal 191 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Weed",
+    ],
+    "description": "In the back of this location, one will find numerous display cases showing off various trophies and other awards that Green House has won. They also have a \\"wall of celebrities\\" in the far corner. They've had no shortage of famous customers here. ",
+    "location": Object {
+      "latitude": 52.371476,
+      "longitude": 4.895748,
+    },
+    "menus": Array [],
+    "name": "GreenHouse Centrum",
+    "phone": "+31 20 627 1739",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3308.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.greenhouse.org/",
+      },
+    ],
+  },
+  Object {
+    "address": "Nieuwmarkt 14 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+    ],
+    "description": "The cannabis menu tends to be moderate in size at Greenhouse Effect. They are also big on edibles, and we've recognized this shop for it. If you are in search of something a bit more elegant than the traditional bland \\"space cake\\", come here. ",
+    "location": Object {
+      "latitude": 52.3728238,
+      "longitude": 4.8998311,
+    },
+    "menus": Array [],
+    "name": "Greenhouse Effect",
+    "phone": "+31 20 427 7878",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_765.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://greenhouse-effect.business.site",
+      },
+    ],
+  },
+  Object {
+    "address": "Waterlooplein 345 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "The shop itself is small, but undoubtedly luxurious. Seating is provided in the form of plush leather and suede covered couches. The cannabis menu is connoisseur grade at this coffeeshop, as all Green House Amsterdam locations.",
+    "location": Object {
+      "latitude": 52.36665,
+      "longitude": 4.9022485,
+    },
+    "menus": Array [],
+    "name": "GreenHouse Namaste",
+    "phone": "+31 20 6225499",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_773.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.greenhouse.org/",
+      },
+    ],
+  },
+  Object {
+    "address": "Tolstraat 91 Zuid, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Weed",
+    ],
+    "description": "This shop might just be “the” place for the visiting celebrity stoner. The atmosphere is upscale. The menu is excellent, and boasts many internationally famous strains. Perhaps most importantly though, it is far enough from the center to be quiet. ",
+    "location": Object {
+      "latitude": 52.3523465,
+      "longitude": 4.9034616,
+    },
+    "menus": Array [],
+    "name": "GreenHouse Pijp",
+    "phone": "+31 20 673 7430",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_785.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.greenhouse.org/",
+      },
+    ],
+  },
+  Object {
+    "address": "Haarlemmerstraat 64 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "With a slogan such as “Creators of Champions”, the GreenHouse Amsterdam brand clearly understands that without top quality cannabis, even terrific ambiance wouldn’t give them worldwide awareness and reputation. Those are earned, which this shop has.",
+    "location": Object {
+      "latitude": 52.3803036,
+      "longitude": 4.89217,
+    },
+    "menus": Array [],
+    "name": "GreenHouse United",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_795.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.greenhouse.org/",
+      },
+    ],
+  },
+  Object {
+    "address": "Oude Leliestraat 2 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Weed",
+    ],
+    "description": "Grey Area is short on amenities. Don't expect a TV, hot food, or much by way of snacks or coffee. Grey Area is about one thing: cannabis. This establishment has established itself as one of the most recognized connoisseur shops in Amsterdam.",
+    "location": Object {
+      "latitude": 52.3746905,
+      "longitude": 4.8888723,
+    },
+    "menus": Array [],
+    "name": "Grey Area",
+    "phone": "+31 20 420 4301",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3310.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.greyarea.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Amsteldijk 139 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "We’d start off our description by stating that Happy Days is not your typical Dutch locals’ type of coffeeshop. Mind you, it is largely frequently by residents in the area. It is a true locals’ shop. But it is more polished than you'd likely expect.",
+    "location": Object {
+      "latitude": 52.3298234,
+      "longitude": 4.8982014,
+    },
+    "menus": Array [],
+    "name": "Happy Days",
+    "phone": "+31 20 661 3986",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2320.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Kerkstraat 51 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "You walk through a turnstile entering Happy Feelings coffeeshop. Upon doing so, you are presented with a shop that is distinctly contemporary (dare we say trendy) in appearance. Exposed brick and recessed lighting give the room an industrial feel. ",
+    "location": Object {
+      "latitude": 52.3652516,
+      "longitude": 4.8858642,
+    },
+    "menus": Array [],
+    "name": "Happy Feelings",
+    "phone": "+31 20 777 9898",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2338.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.happyfeelingsamsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Dapperstraat 2 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Clean and unassuming on the outside, Happy People is the corner business in a large historic building. Inside, the feel is quite different. We’d say the theme is Garden of Eden, with a modern mythical twist... a splendid smoking sanctuary.",
+    "location": Object {
+      "latitude": 52.3651803,
+      "longitude": 4.9258144,
+    },
+    "menus": Array [],
+    "name": "Happy People",
+    "phone": "+31 20 6931869",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3312.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Roetersstraat 12 Oost, Amsterdam",
+    "badges": Array [
+      "Top Shops",
+      "Best Weed",
+    ],
+    "description": "The name of this shop translates in English as \\"The Balloon\\". Het Ballonnetje is one of the oldest coffeeshops in the city, first opening its doors in 1978. So, this is a historic place. It is also one of the more quintessential Dutch establishments.",
+    "menus": Array [],
+    "name": "Het Ballonnetje",
+    "phone": "+31 20 6228027",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_835.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://coffeeshophetballonnetje.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Geldersekade 54-HS Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Het Gelderse Coffeeshop is located just to the south of Centraal Station. Though it resides in a very busy section of the city, its immediate block is actually one somewhat less traveled. As such, this can be, at times, a bit more relaxed of a place.",
+    "menus": Array [],
+    "name": "Het Gelderse",
+    "phone": "+31 20 420 7211",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_853.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Vechtstraat 9 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "In English Het Wolkje translates as “The Cloud”. This, of course, an obvious reference to cannabis. This is largely a locals' place, given the strongly residential area. The shop now seems to serve as a take away location only.",
+    "menus": Array [],
+    "name": "Het Wolkje",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_855.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Frederik Hendrikstraat 123-hs West, Amsterdam",
+    "badges": Array [],
+    "description": "Coffeeshop Hugo is a pickup location only. The decor is beautiful. Its hardwood accents and stone-lined walls are extravagant. Stone tiles on the floor and soft accent lighting make this shop feel more like the lobby of a fancy spa or hotel. ",
+    "menus": Array [],
+    "name": "Hugo",
+    "phone": "+31 20 681 7979",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_857.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Utrechtsestraat 14 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "",
+    "location": Object {
+      "latitude": 52.3654806,
+      "longitude": 4.8975372,
+    },
+    "menus": Array [],
+    "name": "Hunter's",
+    "phone": "+31206244820",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1599.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.hunters-coffeeshop.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Waterlandplein 7 Noord, Amsterdam",
+    "badges": Array [],
+    "description": "Bros is a Hunter's location. This coffeeshop with a contemporary smoking lounge is found in a shopping center on Waterlandplein. Practically hidden, a purple and white neon sign above the door is probably the only thing you notice from the road.  ",
+    "location": Object {
+      "latitude": 52.3923061,
+      "longitude": 4.9563296,
+    },
+    "menus": Array [],
+    "name": "Hunter's Bros",
+    "phone": "+31 (0)20 6370018",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3314.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.hunters-coffeeshop.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Papaverweg 2 Noord, Amsterdam",
+    "badges": Array [],
+    "description": "Hunter’s Filiaal is a down-to-earth establishment reminiscent of a local sports bar. This furnishings are wood and basic, but comfortable. Perhaps the most notable feature is found behind the shop: its large garden and patio area.",
+    "location": Object {
+      "latitude": 52.3934497,
+      "longitude": 4.9129591,
+    },
+    "menus": Array [],
+    "name": "Hunter's Filiaal",
+    "phone": "+31 20 493 0713",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3316.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Orteliusstraat 193 West, Amsterdam",
+    "badges": Array [],
+    "description": "Hunter’s Coffeeshop is part of the Hunter's chain, long established in Amsterdam. This particular location has a smoking lounge in the back. It is not especially large or luxurious, but has enough of the basics to keep you relaxed and comfortable. ",
+    "location": Object {
+      "latitude": 52.3699972,
+      "longitude": 4.8490427,
+    },
+    "menus": Array [],
+    "name": "Hunter's Mercator",
+    "phone": "+31 20 4893929",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3320.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Hemonystraat 16 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Ibiza is the largest coffeeshop in the immediate neighborhood. The place is ornate in detail, starting with the bright blue painted building facade. Presumably named after the mediterranean island, the theme here is “island smokers' paradise.\\"",
+    "menus": Array [],
+    "name": "Ibiza",
+    "phone": "+31 20 223 2534",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_873.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshopibiza.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Elandsgracht 3 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Johnny is a modern shop. Its decor includes cleanly painted walls, contemporary light-colored (wood) wainscoting on the walls, plenty of additional wood trim, and thick white mica counters. To put the look into words, we'd say \\"high-end clinical\\".",
+    "location": Object {
+      "latitude": 52.3699089,
+      "longitude": 4.8820968,
+    },
+    "menus": Array [],
+    "name": "Johnny",
+    "phone": "+31 20 638 3984",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2119.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshopjohnny.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Nieuwmarkt 4a Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The Jolly Joker coffeeshop is very traditional in its decor. There is a lot of wood inside; bar, tables, benches, trim. It all has a very \\"corner bar\\" feeling to it. Not a lot of frills, so much more traditional Dutch. ",
+    "location": Object {
+      "latitude": 52.3730673,
+      "longitude": 4.9000786,
+    },
+    "menus": Array [],
+    "name": "Jolly Joker",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_885.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Rosmarijnsteeg 9 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Kadinsky Coffeeshop on Rosmarijnsteeg is one of three Kadinsky locations in Amsterdam. If you are familiar with the Kadinsky coffeeshops, you know they boast a sizable cannabis menu. There are typically over a dozen types of flower (weed) here.",
+    "location": Object {
+      "latitude": 52.3703176,
+      "longitude": 4.8894189,
+    },
+    "menus": Array [],
+    "name": "Kadinsky 1",
+    "phone": "+31 20 624 7023",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2847.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.kadinsky.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Zoutsteeg 14 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Kadinsky Coffeeshop (on Zoutsteeg) is one of three Kadinsky coffeeshops. For Amsterdam, this is one of the more notable chains.",
+    "location": Object {
+      "latitude": 52.3742268,
+      "longitude": 4.8936043,
+    },
+    "menus": Array [],
+    "name": "Kadinsky 2",
+    "phone": "+31 20 620 4715",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2368.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.kadinsky.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Langebrugsteeg 7-A Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Kadinsky Coffeeshop on Langebrugsteeg is one of three shops operating under the Kadinsky brand. The front has a beautiful large window, and the outer facade is of handcrafted polished wood. It gives the shop an upscale city pub feel.",
+    "location": Object {
+      "latitude": 52.3693527,
+      "longitude": 4.8929391,
+    },
+    "menus": Array [],
+    "name": "Kadinsky 3",
+    "phone": "+31 20 420 2132",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_112.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.kadinsky.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Jan Pieter Heijestraat 82 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "This shop is really a take-and-go. The management has a sister bar/cafe/restaurant across the street called Kashmir Lounge,  which is large, luxurious, and stunningly beautiful. If you stop here for weed, we recommend crossing the street to smoke it.",
+    "menus": Array [],
+    "name": "Kashmir",
+    "phone": "+31 20 683 2268",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_52.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.kashmirlounge.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Eerste v/d Helststraat 70 Zuid, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+      "Best Weed",
+    ],
+    "description": "Katsu is that this is an extremely artsy place, with an eclectic welcoming vibe. It is also regarded as a connoisseur shop, and generally boasts an excellent and diverse weed and hash menu. This is a standout shop in De Pijp section of Amsterdam.",
+    "location": Object {
+      "latitude": 52.3548348,
+      "longitude": 4.8932984,
+    },
+    "menus": Array [],
+    "name": "Katsu",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_897.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.katsu.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Amstelstraat 35 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The word Kooi is Dutch, and translates in English as Birdcage. It is hard to put this shop in words, but abstract, artistic, and modern keep coming to mind. Though one of the newest shops here,  we think Kooi is already an Amsterdam original.",
+    "location": Object {
+      "latitude": 52.3662607,
+      "longitude": 4.8993897,
+    },
+    "menus": Array [],
+    "name": "Kooi",
+    "phone": "+31 20 622 0422",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3264.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Prinsengracht 312 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+    ],
+    "description": "The name La Tertulia translates from Spanish as \\"The Salon\\". This appears consistent with this vibe they are trying to cultivate in this place. When you walk in, you will find a bright and open split-level coffeeshop. ",
+    "location": Object {
+      "latitude": 52.3694651,
+      "longitude": 4.8823176,
+    },
+    "menus": Array [],
+    "name": "La Tertulia",
+    "phone": "+31 20 623 8503",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_903.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshoptertulia.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Jan van Galenstraat 285 West, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "The same group that owns Siberië Coffeeshop also owns the Loft. The management is quite serious about their cannabis menu. On the weed side, expect a mix of high quality strains, including some contemporary items. The hash side is also formidable. ",
+    "location": Object {
+      "latitude": 52.372668,
+      "longitude": 4.8494805,
+    },
+    "menus": Array [],
+    "name": "Loft",
+    "phone": "+31 20 580 5710",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_905.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://thecoffeeshops.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Derde Oosterparkstraat 142 /BG Oost, Amsterdam",
+    "badges": Array [],
+    "description": "While this Moroccan-owned coffeeshop may be a great deal east of California, it carries a distantly west coast vibe... well, American Wild West. They do have a billiards table in their smoking lounge, and a TV if you want to catch a game.",
+    "menus": Array [],
+    "name": "Los Angeles",
+    "phone": "+31 20 777 2776",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_911.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Chasséstraat 4 West, Amsterdam",
+    "badges": Array [],
+    "description": "The owners at Coffeeshop Massawa are Moroccan, though we’d be hard pressed to say there is a strong Moroccan theme. Hardwood floors, polished wood trim, and circular “grand bar” make this place feel much more like an upscale pub or hotel lobby bar. ",
+    "location": Object {
+      "latitude": 52.367449,
+      "longitude": 4.8620091,
+    },
+    "menus": Array [],
+    "name": "Massawa",
+    "phone": "+31 20 689 4377",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_915.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Jan Hanzenstraat 109 West, Amsterdam",
+    "badges": Array [],
+    "description": "Their Moroccan roots shine through here at Coffeeshop Millennium, with beautiful camel paintings on the walls, and themed couches and decor lining the smoking room. They also have a billiards table, undeniably the main attraction of the smoking area.",
+    "location": Object {
+      "latitude": 52.3674871,
+      "longitude": 4.8639469,
+    },
+    "menus": Array [],
+    "name": "Millennium",
+    "phone": "+31 20 34059903",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3280.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Tweede Laurierdwarsstraat 44C Centrum, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "Mr. K Coffeeshop is found in the popular Jordaan district. They seem focused on cannabis quality here, and feature name-brand genetics on their menu. The pricing tends to be reasonable as well, as this isn't a shop that is inundated by tourists.",
+    "location": Object {
+      "latitude": 52.3718104,
+      "longitude": 4.8790205,
+    },
+    "menus": Array [],
+    "name": "Mr. K and Co.",
+    "phone": "+31 20 624 1907",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_939.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Spuistraat 260 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "New Times would be best described as a modern coffeeshop. The interior is highly polished. Clean hardwood floors frame the room, and the shop is accented with purple lighting and trim. They have recessed lighting, and other contemporary fixtures. ",
+    "location": Object {
+      "latitude": 52.3705649,
+      "longitude": 4.8889467,
+    },
+    "menus": Array [],
+    "name": "New Times",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_951.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://newtimes-amsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Van Ostadestraat 290 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "The name of this shop is very to the point: Coffeeshop Nice Place. This begs the obvious question, is it actually a nice place to visit? We’d have to argue that it is. The interior of this shop is roomy, contemporary, and clearly well appointed.",
+    "location": Object {
+      "latitude": 52.3533323,
+      "longitude": 4.899703,
+    },
+    "menus": Array [],
+    "name": "Nice Place",
+    "phone": "+31 20 6757148",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_953.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Hoofdweg 226 West, Amsterdam",
+    "badges": Array [],
+    "description": "The decor inside Coffeeshop Nieuw Amsterdam is funky; marble tiled floors, purple accent lighting, a mix of glass-tile and painted walls, comfortable plush couches with vibrant abstract printed fabric. This place feels much like an artsy nightclub.",
+    "location": Object {
+      "latitude": 52.3669858,
+      "longitude": 4.8528824,
+    },
+    "menus": Array [],
+    "name": "Nieuw Amsterdam",
+    "phone": "+31 20 6854995",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1613.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Czaar Peterstraat 122 Noord, Amsterdam",
+    "badges": Array [],
+    "description": "Nogal Wiedes is a small coffeeshop that primarily serves as a take-and-go. If you are looking to chill a bit though, fret not. There are two small smoking rooms behind the counter. Each area has one table and a TV, and offers a fair bit of privacy.",
+    "location": Object {
+      "latitude": 52.3702203,
+      "longitude": 4.9299319,
+    },
+    "menus": Array [],
+    "name": "Nogal Wiedes",
+    "phone": "+31 20 626 0448",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_959.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Balthasar Floriszstraat 10 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Black leather benches, tan wooden stools, and polished tables make you feel as if you are in a cafe or gourmet bakery. Add a large TV, track lighting, and a few classic paintings, and you’ve got one impressive smoking lounge at Coffeeshop Pacific. ",
+    "location": Object {
+      "latitude": 52.3530315,
+      "longitude": 4.8846713,
+    },
+    "menus": Array [],
+    "name": "Pacific",
+    "phone": "+31 20 671 0318",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_973.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Van der Helstplein 8 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "The inside of Papillon is modern in appearance. Though not especially large, the main lounge area is open and lined with comfortable leather couches. Small square tablets are in front of each. The room has a very cubic and contemporary feel to it. ",
+    "location": Object {
+      "latitude": 52.3515868,
+      "longitude": 4.8945016,
+    },
+    "menus": Array [],
+    "name": "Papillon",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1635.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.coffeeshoppapillonamsterdam.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Eerste Bloemdwarsstraat 2R Centrum, Amsterdam",
+    "badges": Array [
+      "Best Edibles",
+      "Vapor Lounge",
+    ],
+    "description": "This coffeeshop is a true \\"chill out\\" place. The furniture (especially the couches) are comfortable, the music is hip (we think so anyway), and the management keeps the guests happy. They have everything from milkshakes to chocolate chip cookies too!",
+    "location": Object {
+      "latitude": 52.3745074,
+      "longitude": 4.8812359,
+    },
+    "menus": Array [],
+    "name": "Paradox",
+    "phone": "+31 20 623 5639",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_991.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://paradoxcoffeeshop.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Haarlemmerstraat 63 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Popeye Coffeeshop takes its name from the classic comic strip character “Popeye the Sailor Man”. The shop inside is quite warm and welcoming. It is not large, but does have three distinct levels. They also have a large breakfast menu.",
+    "location": Object {
+      "latitude": 52.3799353,
+      "longitude": 4.892811,
+    },
+    "menus": Array [],
+    "name": "Popeye",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_999.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshop-popeye.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Haringpakkerssteeg 3 Centrum, Amsterdam",
+    "badges": Array [
+      "Top Shops",
+    ],
+    "description": "Prix d'Ami Coffeeshop is arguably more of a weed nightclub than a traditional Dutch cannabis bar. The largest coffeeshop in the city, this shop is spread over three floors, and six rooms. It is also packed with features and amenities.",
+    "location": Object {
+      "latitude": 52.3768482,
+      "longitude": 4.8972025,
+    },
+    "menus": Array [],
+    "name": "Prix d'Ami",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2857.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.prixdami.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Sint Antoniesbreestraat 77 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Reefer is hard to miss if you are looking for it. Two large red neon signs serve as beacons for finding the place. The decor of Reefer is quite traditional for a Dutch coffeeshop. Polished wood dominates the interior. ",
+    "location": Object {
+      "latitude": 52.3697849,
+      "longitude": 4.9009948,
+    },
+    "menus": Array [],
+    "name": "Reefer",
+    "phone": "+31 20 6233615",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2867.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Binnen Oranjestraat 9 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The decor of Relax is traditional for a Dutch coffeeshop. You won't find a lot of frills here. Instead, it is like your neighborhood bar. There is a lot of wood: tables, chairs, leather-topped benches, flooring, bar, trim. All clean. Well maintained.",
+    "location": Object {
+      "latitude": 52.3821894,
+      "longitude": 4.8871855,
+    },
+    "menus": Array [],
+    "name": "Relax",
+    "phone": "+31 20 639 1058",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1023.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshop-relax.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Hekelveld 7 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "We’d place Resin coffeeshop amongst our favorite places when it comes to layout and décor. Along most of the walls, you will find stunning hand-painted artwork. Amongst it, prominent figures in the cannabis world, such as Bob Market and Snoop Dogg.",
+    "location": Object {
+      "latitude": 52.3778364,
+      "longitude": 4.8959341,
+    },
+    "menus": Array [],
+    "name": "Resin",
+    "phone": "+31 (0)20 4229838",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_38.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Oudezijds Voorburgwal 252 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Rick's Coffeeshop stands out as a unique place for a few reasons. First, it has beautiful outdoor seating directly on the canal; prime real estate. They also have a great sister cafe next door, and, well, an unusual set of bus seats on the inside. ",
+    "location": Object {
+      "latitude": 52.3717046,
+      "longitude": 4.8952505,
+    },
+    "menus": Array [],
+    "name": "Rick's Coffeeshop",
+    "phone": "+31 20 6229655",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1031.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Nieuwmarkt 12 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Rock It is a \\"down to earth\\" dutch coffeeshop. There aren't a lot of frills here. Instead, it focuses on the basics. Like most shops in the vicinity, they have a nice stretch of outdoor seating to take advantage of the scenery and bustling activity. ",
+    "location": Object {
+      "latitude": 52.3728506,
+      "longitude": 4.8998166,
+    },
+    "menus": Array [],
+    "name": "Rock It",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1041.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Raadhuisstraat 8 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Rockland Coffeeshop is found on the basement level of its building. As you pass the outdoor seating, you step down into this one room shop. The shop is clean, well lit, and has the feeling of a contemporary coffee bar or bakery. It is cozy. ",
+    "location": Object {
+      "latitude": 52.3734139,
+      "longitude": 4.8883416,
+    },
+    "menus": Array [],
+    "name": "Rockland",
+    "phone": "+31 20 6248890",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1045.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Korte Leidsedwarsstraat 145-147 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Rookies was opened in 1992. The owners were said to be the youngest coffeeshop owners at the time, hence their adoption of the name \\"The Rookies\\". This coffeeshop is a bit larger than it appears on the outside, and has a traditional Dutch vibe to it.",
+    "location": Object {
+      "latitude": 52.362266,
+      "longitude": 4.8861579,
+    },
+    "menus": Array [],
+    "name": "Rookies",
+    "phone": "+31 20 6390978",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1051.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.rookies.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Hoekenrode 14 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Inside Roots Coffeeshop, one will find a decidedly new and contemporary vibe. Its hardwood floors, polished light-colored wood furniture, and an overall black, white, and wood scheme for decor make the place feel more like a cafe or bakery.",
+    "menus": Array [],
+    "name": "Roots",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1643.jpg",
+    },
+    "rating": 3,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://roots-coffeeshop.business.site",
+      },
+    ],
+  },
+  Object {
+    "address": "Gerard Doustraat 188 Zuid, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "Coffeeshop Roxy has a very upscale feel to it. The place looks more like a trendy restaurant or small art gallery than a traditional Dutch coffeeshop, which is typically more austere. They also have a reputation for quality hashish.",
+    "location": Object {
+      "latitude": 52.3564155,
+      "longitude": 4.8955743,
+    },
+    "menus": Array [],
+    "name": "Roxy",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1059.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Rusland 16 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+      "Top Shops",
+    ],
+    "description": "Rusland has the distinction of being the first legally-established coffeeshop in the city. It holds coffeeshop license number 001, and opened its doors on April 30, 1975. As such, this is recognized as a historic shop and one of Amsterdam's pioneers.",
+    "location": Object {
+      "latitude": 52.3700049,
+      "longitude": 4.896309,
+    },
+    "menus": Array [],
+    "name": "Rusland",
+    "phone": "+31 20 845 6434",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3232.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://coffeeshop-rusland-amsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Hoofdweg 174 West, Amsterdam",
+    "badges": Array [],
+    "description": "The decor in Coffeeshop Ruthless is best described as contemporary. The color scheme is a strong mix of red and black. It makes the place feel a bit like a small Asian restaurant. You half expect to order Pho or Pad Thai with a side of weed. ",
+    "location": Object {
+      "latitude": 52.3654872,
+      "longitude": 4.8534292,
+    },
+    "menus": Array [],
+    "name": "Ruthless",
+    "phone": "+31 20 412 3057",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1071.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.ruthlesscoffeeshop.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Meer en Vaart 177/B West, Amsterdam",
+    "badges": Array [],
+    "description": "Sensemillia Osdorp is found on the upstairs of a modern standalone building right on the lakefront. The shop is fairly standard for a dutch coffeeshop, minus one very unique feature. They have an outdoor terrace with a stunning view of the lake. ",
+    "location": Object {
+      "latitude": 52.356921,
+      "longitude": 4.8091398,
+    },
+    "menus": Array [],
+    "name": "Sensemillia Osdorp",
+    "phone": "+31 20 6198846",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1085.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Brouwersgracht 11 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "Siberië coffeeshop has an excellent cannabis menu, which brings us to another notable feature of this shop. It is one of only a few in the city providing lab test reports. They show not only the THC percentage, but a full cannabinoid profile.",
+    "location": Object {
+      "latitude": 52.378892,
+      "longitude": 4.893038,
+    },
+    "menus": Array [],
+    "name": "Siberie",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1093.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshopsiberie.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Linnaeusstraat 83 HS Oost, Amsterdam",
+    "badges": Array [
+      "Top Shops",
+    ],
+    "description": "Smoke Palace is large, and the decor beautiful. Custom tile and wood work are featured on the walls and counter throughout much of the shop. Add mirrors and track lighting, and you have a place that looks more a nightclub than a coffeeshop. ",
+    "menus": Array [],
+    "name": "Smoke Palace",
+    "phone": "+31 20 468 7676",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2883.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.smokepalace.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Rembrandtplein 24 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Smokey is most reminiscent of a theme restaurant; something like Hard Rock Cafe or Planet Hollywood. Classic rock or contemporary music is wafting from the speakers, there are a lot of colorful lights and decorations, and its often quite busy. ",
+    "location": Object {
+      "latitude": 52.3656552,
+      "longitude": 4.8964012,
+    },
+    "menus": Array [],
+    "name": "Smokey",
+    "phone": "+31 20 623 7244",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1125.jpg",
+    },
+    "rating": 2,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.smokey.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Spuistraat 222 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Softland is a theme coffeeshop. Walking into this establishment feels like you are entering a spaceship. The closest thing we can liken it to would be the Ripley Scott movie Alien. The room is long, the floor is metal, and your steps reverberate.",
+    "location": Object {
+      "latitude": 52.371476,
+      "longitude": 4.8891563,
+    },
+    "menus": Array [],
+    "name": "Softland",
+    "phone": "+31 20 420 9799",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1133.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Korte Koningsstraat 2 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "On nice days the management will usually open up one of the wide front windows. Sit next to it. You'll be indoors, but immersed in the beautiful outside air and sunshine. This feature probably places Solo on the \\"coolest coffeeshop seating\\" list.",
+    "location": Object {
+      "latitude": 52.3718645,
+      "longitude": 4.9026614,
+    },
+    "menus": Array [],
+    "name": "Solo",
+    "phone": "+31 20 420 0428",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1135.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.soloamsterdam.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Eerste Oosterparkstraat 47 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Speakeasy coffeeshop was originally founded in 1982, but this is a new recently renovated location. The interior of this place is a well designed mix of contemporary and classic. The shop is interesting, as much as comfortable and accommodating.",
+    "location": Object {
+      "latitude": 52.3559996,
+      "longitude": 4.9088087,
+    },
+    "menus": Array [],
+    "name": "Speakeasy",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1159.jpg",
+    },
+    "rating": 1,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://speakeasyamsterdam.com/",
+      },
+    ],
+  },
+  Object {
+    "address": "Ruysdaelkade 145 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Stone's Coffeeshop is a longstanding brand in Amsterdam, which established itself in the main Red Light District. This location in Amsterdam Zuid is their newest, and unfortunately only remaining. This coffeeshop is take-and-go; no smoking lounge.",
+    "location": Object {
+      "latitude": 52.3536957,
+      "longitude": 4.8871751,
+    },
+    "menus": Array [],
+    "name": "Stone's",
+    "phone": "+31 20 6715370",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1171.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.stones.amsterdam",
+      },
+    ],
+  },
+  Object {
+    "address": "Prinsengracht 480 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The décor inside is contemporary and impressive, and the shop has a decidedly \\"upscale lounge\\" feel to it. Super Skunk is actually split into two lounge areas. The front has the counter, which is best described as a futuristic glowing cube. ",
+    "location": Object {
+      "latitude": 52.3642612,
+      "longitude": 4.8851485,
+    },
+    "menus": Array [],
+    "name": "Super Skunk",
+    "phone": "+31 20 638 4108",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1179.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Daniel Stalpertstraat 78 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "The inside of Coffeeshop Super Skunk is fairly contemporary. There are bar stools lining a brightly lit ordering counter here; very funky. Around the room, several hightop tables and leather-topped stools. The place feels like an upscale hotel bar.  ",
+    "location": Object {
+      "latitude": 52.3560695,
+      "longitude": 4.8910319,
+    },
+    "menus": Array [],
+    "name": "Super Skunk De Pijp",
+    "phone": "+31 20 6732353",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1183.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Admiraal de Ruijterweg 104 West, Amsterdam",
+    "badges": Array [],
+    "description": "Terminator Coffeeshop is named after the famous 80’s movie of the same name. They borrow some graphics from the film, but otherwise do not go too overboard with it. If we had to make a comparison, we’d say this place feels like an artsy dormitory. ",
+    "location": Object {
+      "latitude": 52.3725695,
+      "longitude": 4.8594229,
+    },
+    "menus": Array [],
+    "name": "Terminator",
+    "phone": "+31 20 6169558",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1221.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Amstelveenseweg 1160 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "The Border Coffeeshop is an apt name given the location of this shop. It sits at the very southern edge of Amsterdam. The Border is a takeaway only coffeeshop. Although there is no lounge here, the decor is quite posh.",
+    "location": Object {
+      "latitude": 52.3454885,
+      "longitude": 4.8579261,
+    },
+    "menus": Array [],
+    "name": "The Border",
+    "phone": "+31 20 642 0681",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1231.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.theborder.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Spaarndammerdijk 9 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The Wauw Shop is found in the Houthavens neighborhood. It is largely a place frequented by locals, though does get a tourist visitor or two as well, being somewhat near the city center. This is not a \\"hangout\\" coffeeshop. It is strictly take-and-go.",
+    "menus": Array [],
+    "name": "The Corner",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1675.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Witte de Withstraat 30-A West, Amsterdam",
+    "badges": Array [],
+    "description": "The Dream is a fairly traditional Dutch coffeeshop. The decor in the smoking lounge is basic, with not a lot of frills. This isn’t a touristy “theme” shop. It caters largely to locals. The key attraction here is likely the billiards table.",
+    "location": Object {
+      "latitude": 52.3659011,
+      "longitude": 4.859517,
+    },
+    "menus": Array [],
+    "name": "The Dream",
+    "phone": "+31 20 685 3847",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3282.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Zieseniskade 22 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "Inside The Noon you'll fine ample seating, including comfortable couches. The front of the building has a lot of glass, letting a good amount of natural light in. On warm days, the wide front window is often open, providing connection to the outside.",
+    "location": Object {
+      "latitude": 52.3616759,
+      "longitude": 4.8862418,
+    },
+    "menus": Array [],
+    "name": "The Noon",
+    "phone": "+31 20 422 3669",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1243.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Amstel 8 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The interior of this shop is far from what you'd expect with a name like Old Church. Instead of being \\"old\\", the decor in here is quite modern. One of the most notable features is an exposed brick wall, which is carefully framed with metal and wood.",
+    "location": Object {
+      "latitude": 52.36696,
+      "longitude": 4.8941494,
+    },
+    "menus": Array [],
+    "name": "The Old Church",
+    "phone": "+31 20 370 7547",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1253.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Reguliersdwarsstraat 6 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The Otherside is one of the city's most famous LGBT (gay friendly) coffeeshops. The surrounding neighborhood is actually known as Amsterdam's gay nightlife hot spot, making the placement of this shop perfect if you're in the city to enjoy the scene. ",
+    "location": Object {
+      "latitude": 52.3667845,
+      "longitude": 4.8892776,
+    },
+    "menus": Array [],
+    "name": "The Otherside",
+    "phone": "+31 20 421 1014",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1261.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.theotherside.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Nieuwezijds Voorburgwal 132 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Weed",
+    ],
+    "description": "For a long time this establishment was known as Utopia, but changed hands in early 2018 to become The Plug. Interestingly, the new owner also runs The Plug cannabis club in Barcelona, which is quite well known for its connoisseur products.",
+    "location": Object {
+      "latitude": 52.3750993,
+      "longitude": 4.8916121,
+    },
+    "menus": Array [],
+    "name": "The Plug",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3186.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Derde Oosterparkstraat 73 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "The owners of The Point Coffeeshop are from Ghana. This is proudly displayed on their red, green and yellow sign out front, as well as a national flag they have hung behind the ordering counter. Their establishment primarily serves as a take-and-go.",
+    "location": Object {
+      "latitude": 52.3563981,
+      "longitude": 4.9162761,
+    },
+    "menus": Array [],
+    "name": "The Point",
+    "phone": "+31 70 3652460",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1265.jpg",
+    },
+    "rating": 0,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.coffeeshopthepoint.nl/",
+      },
+    ],
+  },
+  Object {
+    "address": "Regulierssteeg 2 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The decor in here would be best described as \\"jungle theme\\". There is a great deal of mural art on the walls to that effect, complimented by colorful lighting. The Saint Coffeeshop also has a long row of tables and chairs outside the shop.",
+    "location": Object {
+      "latitude": 52.3668283,
+      "longitude": 4.8949199,
+    },
+    "menus": Array [],
+    "name": "The Saint",
+    "phone": "+31 20 330 0074",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1273.jpg",
+    },
+    "rating": 3,
+    "social": Array [],
+  },
+  Object {
+    "address": "Westerstraat 121 Centrum, Amsterdam",
+    "badges": Array [
+      "Top Shops",
+    ],
+    "description": "The Sprit is an establishment that would be best described as a cross between a traditional dutch coffeeshop, and a retro amusement center. It has a full wall of pinball machines... arcade games... There is no other place like it in Amsterdam!",
+    "location": Object {
+      "latitude": 52.3781714,
+      "longitude": 4.8829411,
+    },
+    "menus": Array [],
+    "name": "The Spirit",
+    "phone": "+31 20 625 4650",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2101.jpg",
+    },
+    "rating": 4,
+    "social": Array [],
+  },
+  Object {
+    "address": "Singel 14 Centrum, Amsterdam",
+    "badges": Array [],
+    "description": "The Store Coffeeshop is a small shop on the north end of the Singel canal. This is a rock ‘n’ roll themed shop. As expected, they play a lot of 60’s and 70’s classic rock and roll. The main focus of the décor is also this era of music. ",
+    "location": Object {
+      "latitude": 52.3790237,
+      "longitude": 4.8937968,
+    },
+    "menus": Array [],
+    "name": "The Store",
+    "phone": "+31 20 626 3900",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1293.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://www.thestoreamsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Molukkenstraat 581 Oost, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "The Stud Coffeeshop sits near the eastern edge of Amsterdam-Oost (Amsterdam East) in the Indische Buurt neighborhood. The cannabis menu itself is large, with more than a dozen weed options. These include many local favorites, and contemporary strains",
+    "location": Object {
+      "latitude": 52.3587518,
+      "longitude": 4.9410238,
+    },
+    "menus": Array [],
+    "name": "The Stud",
+    "phone": "+31 20 694 0983",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1299.jpg",
+    },
+    "rating": 5,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "https://thestud.nl",
+      },
+    ],
+  },
+  Object {
+    "address": "Zeeburgerdijk 33 Oost, Amsterdam",
+    "badges": Array [],
+    "description": "Trefpunt translates into “meeting point” in English. To that end, this shop does seem to live up to its name. Trefpunt Coffeeshop is a popular gathering place for locals. The interior is decidedly contemporary in appearance.",
+    "location": Object {
+      "latitude": 52.3661306,
+      "longitude": 4.9298274,
+    },
+    "menus": Array [],
+    "name": "Trefpunt",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3284.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Heisteeg 6 Centrum, Amsterdam",
+    "badges": Array [
+      "Best Hash",
+    ],
+    "description": "Tweede Kamer is noted for a quality cannabis menu, something not unexpected given this shop is owned by the same people that built Dampkring. Likewise, they offer a diverse variety of weed (flower) and hashish options. They also serve great coffee.",
+    "location": Object {
+      "latitude": 52.368831,
+      "longitude": 4.888386,
+    },
+    "menus": Array [],
+    "name": "Tweede Kamer",
+    "phone": "+31 20 422 2236",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_2470.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Overtoom 451 West, Amsterdam",
+    "badges": Array [],
+    "description": "As seen immediately when approaching this shop, this is quite an upscale location. The façade is made of polished dark wood, and runs the entire stretch, top to bottom, of this street-level shop. ",
+    "location": Object {
+      "latitude": 52.3585898,
+      "longitude": 4.8592885,
+    },
+    "menus": Array [],
+    "name": "Vondel",
+    "phone": "",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1321.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Geldersekade 2 Centrum, Amsterdam",
+    "badges": Array [
+      "Vapor Lounge",
+      "Best Weed",
+    ],
+    "description": "The coffeeshop has definitely been partnering with quality breeders. Likewise, they often have a menu with competition-winning selections on it. We recognize this shop as a connoisseur establishment; a distinction well deserved.",
+    "location": Object {
+      "latitude": 52.3763525,
+      "longitude": 4.9020334,
+    },
+    "menus": Array [],
+    "name": "Voyagers",
+    "phone": "+31 20 330 4403",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_3326.jpg",
+    },
+    "rating": 4,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://www.voyagersamsterdam.com",
+      },
+    ],
+  },
+  Object {
+    "address": "Van Woustraat 147 Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "The interior of Warda 1 feels more like a nightclub than a traditional Dutch coffeeshop. This is most notable in the shop’s smoking lounge in the back. Here, you will find comfortable Moroccan couches paired with neon lighting and trendy wood accents",
+    "menus": Array [],
+    "name": "Warda 1",
+    "phone": "+31 6 11773202",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1341.jpg",
+    },
+    "rating": 5,
+    "social": Array [],
+  },
+  Object {
+    "address": "Knollendamstraat 5 West, Amsterdam",
+    "badges": Array [],
+    "description": "Yin-Yang Coffeeshop is a take-and-go establishment. It mainly services locals, who stop in for a quick purchase. Even so, this shop has an open-arms policy for all visitors which one may feel is apparent by the very name of the shop.",
+    "menus": Array [],
+    "name": "Yin-Yang",
+    "phone": "+31 6 24133653",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1353.jpg",
+    },
+    "rating": 0,
+    "social": Array [],
+  },
+  Object {
+    "address": "Tweede Jan van der Heijdenstraat 79/HS Zuid, Amsterdam",
+    "badges": Array [],
+    "description": "Yo-Yo Coffeeshop is open, spacious, and bright with natural light. This is an impressive coffeeshop on several levels. Aside from the shop itself, they are also an art gallery (galerie), serve delicious hot food, and have legendary hospitality. ",
+    "menus": Array [],
+    "name": "Yo-Yo",
+    "phone": "+31 20 664 7173",
+    "photo": Object {
+      "url": "https://amsterdamcoffeeshops.com/media/cache/small/custom/domain_1/image_files/sitemgr_photo_1357.jpg",
+    },
+    "rating": 3,
+    "social": Array [
+      Object {
+        "label": "Official Website",
+        "url": "http://coffeeshopyoyo.nl",
+      },
+    ],
+  },
+]
+`;
+
+exports[`createScraper - Single page (strict mode off) 1`] = `
+Array [
+  Object {
+    "createdAt": "2021-11-14T00:15:27",
+    "createdBy": "mancerayder",
+    "failingOnPurpose": undefined,
+    "name": "U.S. states file updated antitrust complaint against Google",
+    "rank": 1,
+    "score": "127 points",
+    "url": "https://www.reuters.com/world/us/us-states-file-updated-antitrust-complaint-against-alphabets-google-2021-11-13/",
+  },
+  Object {
+    "createdAt": "2021-11-13T22:47:42",
+    "createdBy": "todsacerdoti",
+    "failingOnPurpose": undefined,
+    "name": "Hoax email blast abused poor coding in FBI website",
+    "rank": 2,
+    "score": "184 points",
+    "url": "https://krebsonsecurity.com/2021/11/hoax-email-blast-abused-poor-coding-in-fbi-website/",
+  },
+  Object {
+    "createdAt": "2021-11-13T20:50:57",
+    "createdBy": "thunderbong",
+    "failingOnPurpose": undefined,
+    "name": "The case of the 500-mile email (2002)",
+    "rank": 3,
+    "score": "201 points",
+    "url": "https://www.ibiblio.org/harris/500milemail.html",
+  },
+  Object {
+    "createdAt": "2021-11-13T17:18:12",
+    "createdBy": "picture",
+    "failingOnPurpose": undefined,
+    "name": "Reverse-engineering the Yamaha DX7 synthesizer's sound chip from die photos",
+    "rank": 4,
+    "score": "311 points",
+    "url": "https://www.righto.com/2021/11/reverse-engineering-yamaha-dx7.html",
+  },
+  Object {
+    "createdAt": "2021-11-13T22:41:06",
+    "createdBy": "dootah",
+    "failingOnPurpose": undefined,
+    "name": "Study finds a difference between neurons of humans and other mammals",
+    "rank": 5,
+    "score": "64 points",
+    "url": "https://news.mit.edu/2021/neurons-humans-mammals-1110",
+  },
+  Object {
+    "createdAt": "2021-11-13T21:47:36",
+    "createdBy": "bobitsaboy",
+    "failingOnPurpose": undefined,
+    "name": "Dataminers are finding developer comments and unlicensed songs in GTA Trilogy",
+    "rank": 6,
+    "score": "73 points",
+    "url": "https://www.pcgamer.com/uk/dataminers-are-finding-developer-comments-and-unlicensed-songs-in-gta-trilogy-as-rockstar-games-launcher-remains-offline/",
+  },
+  Object {
+    "createdAt": "2021-11-13T21:14:11",
+    "createdBy": "jkuria",
+    "failingOnPurpose": undefined,
+    "name": "In a ‘learning trap’ experiment, adults leap conclusions while children explore",
+    "rank": 7,
+    "score": "87 points",
+    "url": "https://www.wsj.com/articles/why-children-learn-better-than-adults-11636033185",
+  },
+  Object {
+    "createdAt": "2021-11-13T23:19:58",
+    "createdBy": "elsewhen",
+    "failingOnPurpose": undefined,
+    "name": "Richard ‘Lowtax’ Kyanka, founder of Something Awful, has died",
+    "rank": 8,
+    "score": "43 points",
+    "url": "https://www.vice.com/en/article/v7dmqb/richard-lowtax-kyanka-founder-of-something-awful-is-dead-at-45",
+  },
+  Object {
+    "createdAt": "2021-11-13T20:36:00",
+    "createdBy": "rmason",
+    "failingOnPurpose": undefined,
+    "name": "How Michigan grew its startup ecosystem",
+    "rank": 9,
+    "score": "95 points",
+    "url": "https://timesofe.com/how-michigan-grew-its-startup-ecosystem-and-became-the-state-with-the-fastest-growing-venture-capital/",
+  },
+  Object {
+    "createdAt": "2021-11-13T13:04:37",
+    "createdBy": "IceWreck",
+    "failingOnPurpose": undefined,
+    "name": "Restic – Backups Done Right",
+    "rank": 10,
+    "score": "424 points",
+    "url": "https://restic.net/",
+  },
+  Object {
+    "createdAt": "2021-11-13T22:31:59",
+    "createdBy": "tomohawk",
+    "failingOnPurpose": undefined,
+    "name": "Vaccum-chamber quantum sensor device could allow GPS-free navigation",
+    "rank": 11,
+    "score": "53 points",
+    "url": "https://breakingdefense.com/2021/11/sandias-atomic-avocado-could-allow-gps-free-pnt/",
+  },
+  Object {
+    "createdAt": "2021-11-12T13:21:50",
+    "createdBy": "johanznsdn",
+    "failingOnPurpose": undefined,
+    "name": "Show HN: Stringmark – Chrome extension that makes online research easier",
+    "rank": 12,
+    "score": "68 points",
+    "url": "https://www.stringmark.com",
+  },
+  Object {
+    "createdAt": "2021-11-12T04:55:42",
+    "createdBy": "healeycodes",
+    "failingOnPurpose": undefined,
+    "name": "Spotify Codes – Part 2",
+    "rank": 13,
+    "score": "36 points",
+    "url": "https://boonepeter.github.io/posts/spotify-codes-part-2/",
+  },
+  Object {
+    "createdAt": "2021-11-13T21:26:19",
+    "createdBy": "throwaway9838",
+    "failingOnPurpose": undefined,
+    "name": "Ask HN: Advice for moving on from a failed startup?",
+    "rank": 14,
+    "score": "59 points",
+    "url": "item?id=29213305",
+  },
+  Object {
+    "createdAt": "2021-11-13T15:56:36",
+    "createdBy": "ali92hm",
+    "failingOnPurpose": undefined,
+    "name": "Breaking down the 'payment for order flow' debate",
+    "rank": 15,
+    "score": "17 points",
+    "url": "https://a16z.com/2021/02/17/payment-for-order-flow/",
+  },
+  Object {
+    "createdAt": "2021-11-12T20:31:47",
+    "createdBy": "xenodium",
+    "failingOnPurpose": undefined,
+    "name": "Show HN: Plain Org – a new org mode app for iOS",
+    "rank": 16,
+    "score": "32 points",
+    "url": "https://apps.apple.com/us/app/plain-org/id1578965002",
+  },
+  Object {
+    "createdAt": "2021-11-13T17:03:47",
+    "createdBy": "todsacerdoti",
+    "failingOnPurpose": undefined,
+    "name": "Managing an external display on Linux shouldn’t be this hard",
+    "rank": 17,
+    "score": "68 points",
+    "url": "https://changelog.complete.org/archives/10311-managing-an-external-display-on-linux-shouldnt-be-this-hard",
+  },
+  Object {
+    "createdAt": "2021-11-13T21:00:51",
+    "createdBy": undefined,
+    "failingOnPurpose": undefined,
+    "name": "Substack (YC W18) is hiring engineering managers to build the future of writing",
+    "rank": 18,
+    "score": undefined,
+    "url": "https://jobs.lever.co/substackinc/ae724ae2-7882-4ac6-ab70-699327f8f2e7",
+  },
+  Object {
+    "createdAt": "2021-11-12T04:21:44",
+    "createdBy": "sblank",
+    "failingOnPurpose": undefined,
+    "name": "When there seems to be no way out – customer discovery for your head",
+    "rank": 19,
+    "score": "42 points",
+    "url": "https://steveblank.com/2021/11/11/when-there-seems-to-be-no-way-out-customer-discovery-for-your-head/",
+  },
+  Object {
+    "createdAt": "2021-11-13T03:53:59",
+    "createdBy": "tjalfi",
+    "failingOnPurpose": undefined,
+    "name": "The weirdest bug I've ever encountered",
+    "rank": 20,
+    "score": "81 points",
+    "url": "https://mental-reverb.com/blog.php?id=29",
+  },
+  Object {
+    "createdAt": "2021-11-13T14:49:12",
+    "createdBy": "malshe",
+    "failingOnPurpose": undefined,
+    "name": "In the 17th century, Leibniz dreamed of a machine that could calculate ideas",
+    "rank": 21,
+    "score": "91 points",
+    "url": "https://spectrum.ieee.org/in-the-17th-century-leibniz-dreamed-of-a-machine-that-could-calculate-ideas",
+  },
+  Object {
+    "createdAt": "2021-11-13T14:52:08",
+    "createdBy": "krycroft",
+    "failingOnPurpose": undefined,
+    "name": "Show HN: Marvin – A grumpy Slackbot who doesn't like your ideas",
+    "rank": 22,
+    "score": "94 points",
+    "url": "https://github.com/keltrycroft/marvin",
+  },
+  Object {
+    "createdAt": "2021-11-13T06:01:19",
+    "createdBy": "Jtsummers",
+    "failingOnPurpose": undefined,
+    "name": "Metaobject protocols: Why we want them and what else they can do (1993) [pdf]",
+    "rank": 23,
+    "score": "38 points",
+    "url": "https://users.cs.duke.edu/~vahdat/ps/mop.pdf",
+  },
+  Object {
+    "createdAt": "2021-11-10T20:40:46",
+    "createdBy": "joeyespo",
+    "failingOnPurpose": undefined,
+    "name": "The strong and weak forces of architecture",
+    "rank": 24,
+    "score": "25 points",
+    "url": "https://martinfowler.com/articles/strong-weak-arch.html",
+  },
+  Object {
+    "createdAt": "2021-11-13T17:33:39",
+    "createdBy": "tosh",
+    "failingOnPurpose": undefined,
+    "name": "Project Euler",
+    "rank": 25,
+    "score": "251 points",
+    "url": "https://projecteuler.net",
+  },
+  Object {
+    "createdAt": "2021-11-13T18:05:15",
+    "createdBy": "nixcraft",
+    "failingOnPurpose": undefined,
+    "name": "Dte: A language for expressing and calculating date and time",
+    "rank": 26,
+    "score": "48 points",
+    "url": "https://github.com/mvrozanti/dte",
+  },
+  Object {
+    "createdAt": "2021-11-12T13:15:08",
+    "createdBy": "nz",
+    "failingOnPurpose": undefined,
+    "name": "Gin, television, and social surplus, or, “looking for the mouse” (2008)",
+    "rank": 27,
+    "score": "96 points",
+    "url": "https://gist.github.com/jm3/6724931",
+  },
+  Object {
+    "createdAt": "2021-11-13T11:37:06",
+    "createdBy": "duiker101",
+    "failingOnPurpose": undefined,
+    "name": "Show HN: Relative Bookmarks Browser Extension",
+    "rank": 28,
+    "score": "22 points",
+    "url": "https://github.com/duiker101/relative_bookmarks",
+  },
+  Object {
+    "createdAt": "2021-11-13T09:13:49",
+    "createdBy": "h1x",
+    "failingOnPurpose": undefined,
+    "name": "Sign arbitrary data with your SSH keys",
+    "rank": 29,
+    "score": "548 points",
+    "url": "https://www.agwa.name/blog/post/ssh_signatures",
+  },
+  Object {
+    "createdAt": "2021-11-13T13:14:18",
+    "createdBy": "theduder99",
+    "failingOnPurpose": undefined,
+    "name": "Chemists discover new way to harness energy from ammonia",
+    "rank": 30,
+    "score": "55 points",
+    "url": "https://phys.org/news/2021-11-chemists-harness-energy-ammonia.html",
+  },
+]
+`;
+
+exports[`createScraper - Single page (strict mode on) 1`] = `
 Array [
   Object {
     "createdAt": "2021-11-14T00:15:27",

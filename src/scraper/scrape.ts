@@ -8,6 +8,7 @@ import {
   createSelectorUtilities,
   SelectorUtilities,
 } from '../selectors/createSelectorUtilities';
+import { mapNodeListToArray } from '../utilities/mapNodeListToArray';
 
 export interface ScrapeProps<
   T extends SelectorMap,
@@ -58,9 +59,7 @@ export async function scrape<
   logger,
   options,
 }: ScrapeProps<T, B>) {
-  const nodes: Element[] = Array.prototype.slice.call(
-    document.querySelectorAll(target)
-  );
+  const nodes = mapNodeListToArray(document.querySelectorAll(target));
 
   type SelectorKey = keyof T;
   const selectorKeys = Object.keys(selectors) as SelectorKey[];
