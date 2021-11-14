@@ -90,6 +90,21 @@
   "tsd": {
     "directory": "src"
   },
+  "jest": {
+    "testEnvironment": "node",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__fixtures__/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.test-d.ts",
+      "!**/node_modules/**"
+    ]
+  },
   "release": {
     "branches": [
       "master"

@@ -2,7 +2,10 @@ import fetch from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
 import { hash } from '../utilities/hash';
 
-const geocache = new LocalStorage('./geocache');
+const cachePath =
+  process.env.PAPERCUT_GEOSEARCH_CACHE_PATH ?? './geocache';
+
+const geocache = new LocalStorage(cachePath, 30 * 1024 * 1024);
 
 interface Location {
   place_id: number;

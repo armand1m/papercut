@@ -92,10 +92,10 @@ Papercut works well out of the box, but some environment variables are available
 
 ## Roadmap
 
-- [-] Add unit tests
+- [x] Add unit tests
 - [x] Add documentation generation
 - [ ] Create medium article introducing the library
-- [-] Create a gh-pages for the library
+- [x] Create a gh-pages for the library
 - [x] Create more examples
 
 ## Contributing
