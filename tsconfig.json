@@ -4,7 +4,7 @@
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "pretty": true,
-    "removeComments": true,
+    "removeComments": false,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "alwaysStrict": true,

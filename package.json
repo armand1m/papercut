@@ -106,7 +106,8 @@
           "assets": [
             "package.json",
             "README.md",
-            "CHANGELOG.md"
+            "CHANGELOG.md",
+            "docs"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }

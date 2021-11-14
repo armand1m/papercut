@@ -31,6 +31,9 @@ jobs:
       - name: Regenerate README.md
         run: yarn generate:readme
 
+      - name: Regenerate Docs 
+        run: yarn docs 
+
       - name: Pack Inspect
         run: yarn pack:inspect
     

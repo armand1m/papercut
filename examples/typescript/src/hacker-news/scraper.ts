@@ -1,21 +1,22 @@
-import papercut from '@armand1m/papercut';
+import { createScraper } from '@armand1m/papercut';
 
 const main = async () => {
-  const scraper = new papercut.Scraper(
-    {
-      name: `Hacker News`,
-      baseUrl: `https://news.ycombinator.com/`,
-    },
-    {
+  const scraper = createScraper({
+    name: `Hacker News`,
+    options: {
       log: process.env.DEBUG === 'true',
       cache: true,
     }
-  )
-    .forEach('.athing')
-    .createSelectors({
+  });
+
+  const results = await scraper.run({
+    strict: true,
+    baseUrl: "https://news.ycombinator.com/",
+    target: ".athing",
+    selectors: {
       rank: ({ text }) => text('.rank'),
-      name: ({ text }) => text('.storylink'),
-      url: ({ href }) => href('.storylink'),
+      name: ({ text }) => text('.titlelink'),
+      url: ({ href }) => href('.titlelink'),
       score: ({ element }) => {
         return element.nextElementSibling?.querySelector('.score')
           ?.textContent;
@@ -29,9 +30,8 @@ const main = async () => {
           ?.querySelector('.age')
           ?.getAttribute('title');
       },
-    });
-
-  const results = await scraper.run();
+    }
+  });
 
   console.log(JSON.stringify(results, null, 2));
 };
