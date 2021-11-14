@@ -28,6 +28,25 @@ export type ScrapeResultType<
   ? { [Prop in keyof T]: ReturnType<T[Prop]> }
   : { [Prop in keyof T]?: ReturnType<T[Prop]> };
 
+/**
+ * the scrape function
+ *
+ * this function will select all target nodes from
+ * the given document and spawn promise pools for
+ * triggering selector scraping.
+ *
+ * this function is used by papercut runner with
+ * the managed jsdom instances.
+ *
+ * if you want to have more control over jsdom
+ * but still leverage papercut, you can use this
+ * function directly instead of using `createScraper`
+ * or `createRunner`
+ *
+ * @typeParam T A mapped type based on the given selectors.
+ * @typeParam B The strict mode boolean type. Used to tweak the scrape result type strictness.
+ * @param props The scraping properties and selectors.
+ */
 export async function scrape<
   T extends SelectorMap,
   B extends boolean
