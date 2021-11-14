@@ -78,8 +78,7 @@
     "lodash": "^4.17.19",
     "node-fetch": "^2.6.0",
     "node-localstorage": "^2.1.6",
-    "pino": "^7.2.0",
-    "signale": "^1.4.0"
+    "pino": "^7.2.0"
   },
   "resolutions": {
     "**/typescript": "^4.4.4",

@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import { LocalStorage } from 'node-localstorage';
+import { hash } from '../utilities/hash';
 
 const geocache = new LocalStorage('./geocache');
 
@@ -24,7 +25,8 @@ export interface GeosearchResult {
 }
 
 export const geosearch = async (q: string, limit: number = 1) => {
-  const cacheResponse = geocache.getItem(q);
+  const hashKey = hash(q);
+  const cacheResponse = geocache.getItem(hashKey);
 
   if (cacheResponse) {
     return JSON.parse(cacheResponse) as GeosearchResult;
@@ -50,7 +52,7 @@ export const geosearch = async (q: string, limit: number = 1) => {
     longitude: Number(payload[0].lon),
   };
 
-  geocache.setItem(q, JSON.stringify(result));
+  geocache.setItem(hashKey, JSON.stringify(result));
 
   return result;
 };
