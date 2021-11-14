@@ -14,7 +14,7 @@ function extractLines(content, fromLine, hasDash, toLine) {
 }
 
 function codeImport(options = {
-  async: true
+  async: false 
 }) {
   return function transformer(tree, file) {
     const codes = [];
