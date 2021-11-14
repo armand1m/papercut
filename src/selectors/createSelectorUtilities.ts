@@ -1,5 +1,5 @@
 import { DOMWindow, JSDOM } from 'jsdom';
-import { geosearch } from './geosearch';
+import { geosearch } from '../http/geosearch';
 import { fetchPage } from '../http/fetchPage';
 
 export type SelectorUtilities = ReturnType<

@@ -16,5 +16,8 @@ export type {
 export { scrape } from './next/scrape';
 export type { ScrapeProps, ScrapeResultType } from './next/scrape';
 
-export { createSelectorUtilities } from './utilities/createSelectorUtilities';
-export type { SelectorUtilities } from './utilities/createSelectorUtilities';
+export { createSelectorUtilities } from './selectors/createSelectorUtilities';
+export type { SelectorUtilities } from './selectors/createSelectorUtilities';
+
+export { geosearch } from './http/geosearch';
+export type { GeosearchResult } from './http/geosearch';

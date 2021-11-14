@@ -1,9 +1,12 @@
 import { DOMWindow, JSDOM } from 'jsdom';
+import range from 'lodash/range';
 import { pipe } from 'fp-ts/function';
 import { fromNullable, match } from 'fp-ts/Option';
+import PromisePool from '@supercharge/promise-pool/dist';
 
 import { fetchPage } from '../http/fetchPage';
-import { SelectorUtilities } from '../utilities/createSelectorUtilities';
+import { flat } from '../utilities/flat';
+import { SelectorUtilities } from '../selectors/createSelectorUtilities';
 
 import { scrape } from './scrape';
 import { Logger } from './createLogger';
@@ -153,6 +156,7 @@ export const createRunner = ({
     baseUrl,
     target,
     selectors,
+    pagination,
   }: RunProps<T, B>) => {
     logger.info('Fetching...');
 
@@ -163,10 +167,12 @@ export const createRunner = ({
     let window: DOMWindow | null = new JSDOM(rawHTML).window;
     let document: Document | null = window.document;
 
-    logger.info('Scraping...');
+    logger.info('Starting...');
 
     const results = await pipe(
-      fromNullable(getLastPageNumberFromDocument(document)),
+      fromNullable(
+        getLastPageNumberFromDocument(document, pagination)
+      ),
       match(
         async () => {
           logger.info(
@@ -194,12 +200,72 @@ export const createRunner = ({
 
           return mainPageResults;
         },
-        async (pageNumber) => {
-          logger.info(`Found ${pageNumber} pages`);
+        async (lastPageNumber) => {
+          logger.info(`Found ${lastPageNumber} pages`);
 
-          // TODO: implement paginated scraping
+          const pageNumbers = range(1, lastPageNumber);
 
-          return [];
+          const createPaginatedUrl = pagination?.createPaginatedUrl;
+
+          if (!createPaginatedUrl) {
+            throw new Error(
+              'Please define a function to build a paginated url.'
+            );
+          }
+
+          const { results, errors } =
+            await PromisePool.withConcurrency(
+              options.concurrency.page
+            )
+              .for(pageNumbers)
+              .process(async (pageNumber: number) => {
+                logger.await(`Fetching page ${pageNumber}`);
+
+                let pagePayload: string | null = await fetchPage(
+                  createPaginatedUrl(baseUrl, pageNumber)
+                );
+
+                logger.info(`Parsing page ${pageNumber}`);
+
+                let pageWindow: DOMWindow | null = new JSDOM(
+                  pagePayload
+                ).window;
+                let pageDocument: Document | null =
+                  pageWindow.document;
+
+                logger.info(`Scraping page ${pageNumber}`);
+
+                const pageResult = await scrape({
+                  strict,
+                  target,
+                  document: pageDocument,
+                  selectors,
+                  logger,
+                  options,
+                });
+
+                pageWindow.close();
+                pageWindow = null;
+                pagePayload = null;
+                pageDocument = null;
+
+                return pageResult;
+              });
+
+          if (errors) {
+            logger.error(
+              'Some scraping requests failed with errors.'
+            );
+            logger.error(errors);
+          }
+
+          const flatResults = flat(results);
+
+          window?.close();
+          window = null;
+          document = null;
+
+          return flatResults;
         }
       )
     );
@@ -211,7 +277,35 @@ export const createRunner = ({
 };
 
 const getLastPageNumberFromDocument = (
-  _document: Document
+  document: Document,
+  options?: PaginationOptions
 ): number | undefined => {
-  return undefined;
+  if (!options) {
+    return;
+  }
+
+  if (!options.enabled) {
+    return;
+  }
+
+  const lastPageNumberElement = document.querySelector(
+    options.lastPageNumberSelector
+  );
+
+  if (!lastPageNumberElement) {
+    throw new Error(
+      `Failed to fetch page count, cannot scrape with pagination. Aborted.`
+    );
+  }
+
+  const content = lastPageNumberElement.textContent;
+  const possibleLastPageNumber = Number(content);
+
+  if (isNaN(possibleLastPageNumber)) {
+    throw new Error(
+      `Failed to parse last page number using content found on given selector. Found "${content}" for selector "${options.lastPageNumberSelector}"`
+    );
+  }
+
+  return possibleLastPageNumber;
 };

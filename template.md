@@ -1,22 +1,31 @@
 # Papercut
 
-Papercut is a scraping/crawling library for Node.js, written in Typescript. It provides features that make it fairly easy to scrape a webpage with.
+Papercut is a scraping/crawling library for Node.js, written in Typescript.
 
-Papercut is still in early days and the API might change a lot in the future. 
+It provides a type-safe and small foundation that makes it fairly easy to scrape webpages with confidence.
 
 ## Features
+
+### Selectors API
+
+Inspired by GraphQL Resolvers, Papercut works similarly by allowing you to specify selectors for each scraper runner.
+The type definition for the scrape result array items is guaranteed to be compliant with the selectors given.
 
 ### JSDOM Integration
 
 Instead of relying on a headless browser engine, papercut relies on JSDOM to process client-side javascript code. This means that Papercut is also able to scrape Single Page Applications _(to a certain extent)_.
 
-### Flexible API 
+### Concurrency controls
 
-In most cases when web scraping, you're looking to scrape a feed. This feed is usually a very long list and it might have pagination and a hard to predict total number of pages.
+Papercut makes usage of Promise Pools to run pagination, node scraping and selector scraping. It comes with sane defaults for simple tasks, but configurable properties to make sure you have the flexibility to suit your needs.
 
-Most of the time, there is some way to figure these things out in the UI though. With this in mind, papercut offers an API that makes it easier for you to just create selectors for all the elements that match a selector.
+### Pagination 
 
-Papercut treats results always as lists. 
+In most cases when web scraping, you're looking to scrape a feed. This feed can be quite long and you might have other challenges like pagination and a hard to predict total number of pages.
+
+Luckily, most of the time, there is some way to figure the last page number in the UI. Papercut allows you to set a selector to find an element that contains the last page number and a callback for creating the url for each page number using the base url. 
+
+As page urls are not always implemented in the same way, Papercut leaves it up to you to tell it how to build it.
 
 ### Page Caching
 
@@ -24,7 +33,7 @@ As many websites introduce rate limits or blocks for scrapers, page caching is a
 
 Once Papercut hits a page, it stores the payload locally in order to reuse it for subsequent executions. This reduces the need for network requests.
 
-**Note:** when scraping a big amount of pages, be mindful about disk space.
+**Note:** when scraping a big amount of pages, be mindful about disk space. Papercut **does not** handle cache invalidation.
 
 ### Cached Geosearch
 
@@ -62,19 +71,10 @@ yarn add @armand1m/papercut
 
 Setup a scraper instance and set the selectors and how to fill them using the utilities offered:
 
-```js file=./examples/javascript/hacker-news/scraper.js
-```
-
-In case you're using TS or a version of node without support for top-level await, use the code below instead:
-
 ```ts file=./examples/typescript/src/hacker-news/scraper.ts
 ```
 
 Then run it using `node` or `ts-node`:
-
-```sh
-node ./demo-scraper.mjs
-```
 
 ```sh
 npx ts-node ./demo-scraper.ts
@@ -82,20 +82,21 @@ npx ts-node ./demo-scraper.ts
   
 ## API Reference
 
-_TBD_
+[Click here to open the API reference.](https://armand1m.github.io/papercut)
   
 ## Environment Variables
 
 Papercut works well out of the box, but some environment variables are available for customizing behavior:
 
 `DEBUG=true`: enables debug level logs.
+
 ## Roadmap
 
-- Add unit tests
-- Add documentation generation
-- Create medium article introducing the library
-- Create a gh-pages for the library
-- Create more examples
+- [-] Add unit tests
+- [x] Add documentation generation
+- [ ] Create medium article introducing the library
+- [-] Create a gh-pages for the library
+- [x] Create more examples
 
 ## Contributing
 
@@ -107,7 +108,7 @@ See `CONTRIBUTING.md` for ways to get started.
 
 #### Why not use `puppeteer`, `selenium` or `webdriver`?
 
-JSDOM is lighter and easier than using a headless browser engine and allows for enough scraping capabilities. Setup is minimal and it works out-of-the box with minimal overhead to users of this library. Please open an issue if you'd like to discuss more about this, I can be wrong.
+JSDOM is lighter and easier than using a headless browser engine and _(I hope that it)_ allows for enough scraping capabilities. Setup is minimal and it works out-of-the box with minimal overhead to users of this library. Please open an issue if you'd like to discuss more about this, I can definitely be wrong.
 
 #### Why not use `cheerio`?
 

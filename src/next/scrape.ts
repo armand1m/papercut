@@ -7,7 +7,7 @@ import { supress } from '../utilities/supress';
 import {
   createSelectorUtilities,
   SelectorUtilities,
-} from '../utilities/createSelectorUtilities';
+} from '../selectors/createSelectorUtilities';
 
 export interface ScrapeProps<
   T extends SelectorMap,
