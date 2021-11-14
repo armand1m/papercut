@@ -2,8 +2,8 @@ import { DOMWindow, JSDOM } from 'jsdom';
 import { pipe } from 'fp-ts/function';
 import { fromNullable, match } from 'fp-ts/Option';
 
-import { fetchPage } from '../fetchPage';
-import { SelectorUtilities } from '../createSelectorUtilities';
+import { fetchPage } from '../http/fetchPage';
+import { SelectorUtilities } from '../utilities/createSelectorUtilities';
 
 import { scrape } from './scrape';
 import { Logger } from './createLogger';
@@ -18,6 +18,10 @@ import { ScraperOptions } from './createScraper';
  */
 export type SelectorMap = Record<string, SelectorFunction>;
 
+/**
+ * Function to be used when scraping the target node
+ * for specific data.
+ */
 export type SelectorFunction = (
   /**
    * Scraping utilities offered by papercut.
@@ -171,7 +175,7 @@ export const createRunner = ({
 
           if (document === null) {
             throw new Error(
-              'Somehow the scraping started with a null document.'
+              'Unexpected error: the scraping started with a null document.'
             );
           }
 

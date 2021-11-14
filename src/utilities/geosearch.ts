@@ -18,11 +18,16 @@ interface Location {
   icon: string;
 }
 
+export interface GeosearchResult {
+  latitude: number;
+  longitude: number;
+}
+
 export const geosearch = async (q: string, limit: number = 1) => {
   const cacheResponse = geocache.getItem(q);
 
   if (cacheResponse) {
-    return JSON.parse(cacheResponse);
+    return JSON.parse(cacheResponse) as GeosearchResult;
   }
 
   const params = new URLSearchParams({
@@ -40,7 +45,7 @@ export const geosearch = async (q: string, limit: number = 1) => {
     throw new Error(`No response for Address: ${q}`);
   }
 
-  const result = {
+  const result: GeosearchResult = {
     latitude: Number(payload[0].lat),
     longitude: Number(payload[0].lon),
   };

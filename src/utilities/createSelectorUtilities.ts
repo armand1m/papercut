@@ -1,6 +1,6 @@
-import { JSDOM } from 'jsdom';
+import { DOMWindow, JSDOM } from 'jsdom';
 import { geosearch } from './geosearch';
-import { fetchPage } from './fetchPage';
+import { fetchPage } from '../http/fetchPage';
 
 export type SelectorUtilities = ReturnType<
   typeof createSelectorUtilities
@@ -28,7 +28,15 @@ export const createSelectorUtilities = (element: Element) => {
   const className = (selector: string) => attr(selector, 'class');
 
   const createWindowForHTMLContent = (htmlContent: string) => {
-    return new JSDOM(htmlContent).window;
+    let window: DOMWindow | null = new JSDOM(htmlContent).window;
+
+    return {
+      window,
+      close: () => {
+        window?.close();
+        window = null;
+      },
+    };
   };
 
   const all = (selector: string) => {

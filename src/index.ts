@@ -16,5 +16,5 @@ export type {
 export { scrape } from './next/scrape';
 export type { ScrapeProps, ScrapeResultType } from './next/scrape';
 
-export { createSelectorUtilities } from './createSelectorUtilities';
-export type { SelectorUtilities } from './createSelectorUtilities';
+export { createSelectorUtilities } from './utilities/createSelectorUtilities';
+export type { SelectorUtilities } from './utilities/createSelectorUtilities';

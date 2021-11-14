@@ -3,11 +3,11 @@ import { Logger } from './createLogger';
 import { SelectorMap } from './createRunner';
 import { ScraperOptions } from './createScraper';
 
-import { supress } from '../supress';
+import { supress } from '../utilities/supress';
 import {
   createSelectorUtilities,
   SelectorUtilities,
-} from '../createSelectorUtilities';
+} from '../utilities/createSelectorUtilities';
 
 export interface ScrapeProps<
   T extends SelectorMap,

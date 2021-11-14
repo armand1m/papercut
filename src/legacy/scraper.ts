@@ -1,15 +1,15 @@
 import { DOMWindow, JSDOM } from 'jsdom';
 import PromisePool from '@supercharge/promise-pool';
 import range from 'lodash/range';
+import { Signale } from 'signale';
 import { createLogger } from './logger';
-import { fetchPage } from './fetchPage';
-import { supress } from './supress';
+import { fetchPage } from '../http/fetchPage';
+import { supress } from '../utilities/supress';
 import {
   createSelectorUtilities,
   SelectorUtilities,
-} from './createSelectorUtilities';
-import { flat } from './flat';
-import { Signale } from 'signale';
+} from '../utilities/createSelectorUtilities';
+import { flat } from '../utilities/flat';
 
 export interface ScraperProps {
   name: string;
