@@ -3,7 +3,7 @@ import path from 'path';
 import { createScraper } from './createScraper';
 process.env.PAPERCUT_PAGE_CACHE_PATH = path.resolve(
   __dirname,
-  './__fixtures__/pagecache'
+  './__fixtures__/testpagecache'
 );
 
 test('createScraper', async () => {
