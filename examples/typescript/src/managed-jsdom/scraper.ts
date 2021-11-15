@@ -1,17 +1,19 @@
-import { createScraper } from '@armand1m/papercut';
+import pino from 'pino'
+import { scrape, fetchPage, createWindow } from '@armand1m/papercut';
 
 const main = async () => {
-  const scraper = createScraper({
-    name: `Hacker News`,
-    options: {
-      log: process.env.DEBUG === 'true',
-      cache: true,
-    }
+  const logger = pino({
+    name: 'Hacker News',
+    enabled: false
   });
 
-  const results = await scraper.run({
+  const rawHTML = await fetchPage('https://news.ycombinator.com/')
+  const window = createWindow(rawHTML);
+
+  const results = await scrape({
     strict: true,
-    baseUrl: "https://news.ycombinator.com/",
+    logger,
+    document: window.document,
     target: ".athing",
     selectors: {
       rank: (utils) => {
@@ -33,8 +35,19 @@ const main = async () => {
           ?.querySelector('.age')
           ?.getAttribute('title');
       },
+    },
+    options: {
+      log: false,
+      cache: true,
+      concurrency: {
+        page: 2,
+        node: 2,
+        selector: 2
+      }
     }
   });
+
+  window.close();
 
   console.log(JSON.stringify(results, null, 2));
 };
