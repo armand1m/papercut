@@ -1,4 +1,3 @@
-import { DOMWindow, JSDOM } from 'jsdom';
 import range from 'lodash/range';
 import { pipe } from 'fp-ts/function';
 import { fromNullable, match } from 'fp-ts/Option';
@@ -6,6 +5,7 @@ import PromisePool from '@supercharge/promise-pool/dist';
 
 import { fetchPage } from '../http/fetchPage';
 import { flat } from '../utilities/flat';
+import { createWindow } from '../utilities/createWindow';
 import { SelectorUtilities } from '../selectors/createSelectorUtilities';
 
 import { scrape } from './scrape';
@@ -158,45 +158,39 @@ export const createRunner = ({
     selectors,
     pagination,
   }: RunProps<T, B>) => {
-    logger.info('Fetching initial page...');
+    logger.info('Fetching main page...');
 
-    const rawHTML = await fetchPage(baseUrl);
+    const mainPageHTML = await fetchPage(baseUrl);
 
-    logger.info('Parsing initial page...');
+    logger.info('Parsing main page...');
 
-    let window: DOMWindow | null = new JSDOM(rawHTML).window;
-    let document: Document | null = window.document;
+    const mainPageWindow = createWindow(mainPageHTML);
 
     logger.info('Starting scraping process...');
 
     const results = await pipe(
       fromNullable(
-        getLastPageNumberFromDocument(document, pagination)
+        getLastPageNumberFromDocument(
+          mainPageWindow.document,
+          pagination
+        )
       ),
       match(
         async () => {
           logger.info(
-            'Unable to find last page number. Scraping the initial page only.'
+            'Unable to find last page number. Scraping main page only.'
           );
-
-          if (document === null) {
-            throw new Error(
-              'Unexpected error: the scraping started with a null document.'
-            );
-          }
 
           const mainPageResults = await scrape({
             strict,
             target,
-            document,
+            document: mainPageWindow.document,
             selectors,
             logger,
             options,
           });
 
-          window?.close();
-          window = null;
-          document = null;
+          mainPageWindow.close();
 
           return mainPageResults;
         },
@@ -221,33 +215,26 @@ export const createRunner = ({
               .process(async (pageNumber: number) => {
                 logger.info(`Fetching page no. ${pageNumber}`);
 
-                let pagePayload: string | null = await fetchPage(
+                const pagePayload = await fetchPage(
                   createPaginatedUrl(baseUrl, pageNumber)
                 );
 
                 logger.info(`Parsing page no. ${pageNumber}`);
 
-                let pageWindow: DOMWindow | null = new JSDOM(
-                  pagePayload
-                ).window;
-                let pageDocument: Document | null =
-                  pageWindow.document;
+                const pageWindow = createWindow(pagePayload);
 
                 logger.info(`Scraping page no. ${pageNumber}`);
 
                 const pageResult = await scrape({
                   strict,
                   target,
-                  document: pageDocument,
+                  document: pageWindow.document,
                   selectors,
                   logger,
                   options,
                 });
 
                 pageWindow.close();
-                pageWindow = null;
-                pagePayload = null;
-                pageDocument = null;
 
                 return pageResult;
               });
@@ -259,13 +246,9 @@ export const createRunner = ({
             logger.error(errors);
           }
 
-          const flatResults = flat(results);
+          mainPageWindow.close();
 
-          window?.close();
-          window = null;
-          document = null;
-
-          return flatResults;
+          return flat(results);
         }
       )
     );

@@ -1,6 +1,6 @@
-import { DOMWindow, JSDOM } from 'jsdom';
 import { geosearch } from '../http/geosearch';
 import { fetchPage } from '../http/fetchPage';
+import { createWindow } from '../utilities/createWindow';
 import { mapNodeListToArray } from '../utilities/mapNodeListToArray';
 
 export type SelectorUtilities = ReturnType<
@@ -24,7 +24,7 @@ export type SelectorUtilities = ReturnType<
  */
 export const createSelectorUtilities = (element: Element) => {
   const $ = element.querySelector.bind(element);
-  const attr = (selector: string, attribute: string) => {
+  const attr = (attribute: string) => (selector: string) => {
     const fallback = '';
     const innerElement = $(selector);
 
@@ -40,23 +40,6 @@ export const createSelectorUtilities = (element: Element) => {
     return attr ?? fallback;
   };
 
-  const text = (selector: string) => attr(selector, 'textContent');
-  const src = (selector: string) => attr(selector, 'src');
-  const href = (selector: string) => attr(selector, 'href');
-  const className = (selector: string) => attr(selector, 'class');
-
-  const createWindowForHTMLContent = (htmlContent: string) => {
-    let window: DOMWindow | null = new JSDOM(htmlContent).window;
-
-    return {
-      window,
-      close: () => {
-        window?.close();
-        window = null;
-      },
-    };
-  };
-
   const all = (selector: string) => {
     const nodes = element.querySelectorAll(selector);
 
@@ -67,16 +50,17 @@ export const createSelectorUtilities = (element: Element) => {
   };
 
   return {
-    text,
-    src,
-    href,
-    attr,
+    text: attr('textContent'),
+    src: attr('src'),
+    href: attr('href'),
+    className: attr('class'),
+    attr: (selector: string, attribute: string) =>
+      attr(attribute)(selector),
     all,
-    className,
     element,
     geosearch,
     fetchPage,
-    createWindowForHTMLContent,
+    createWindow,
     mapNodeListToArray,
   };
 };
