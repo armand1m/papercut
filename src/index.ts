@@ -21,3 +21,6 @@ export type { SelectorUtilities } from './selectors/createSelectorUtilities';
 
 export { geosearch } from './http/geosearch';
 export type { GeosearchResult } from './http/geosearch';
+
+export { fetchPage } from './http/fetchPage';
+export { createWindow } from './utilities/createWindow';

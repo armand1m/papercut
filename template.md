@@ -104,6 +104,21 @@ Then run it using `node` or `ts-node`:
 npx ts-node ./paginated-scraper.ts
 ```
 
+#### Managed JSDOM
+
+In case you want to use your own JSDOM and Pino instance and tweak/configure as much as you prefer, you can use the `scrape` function instead.
+
+In the example below, we use the exposed `createWindow` and `fetchPage` utilities for convenience. You can use JSDOM constructor directly and any other strategy to fetch your page HTML as desired.
+
+```ts file=./examples/typescript/src/managed-jsdom/scraper.ts
+```
+
+Then run it using `node` or `ts-node`:
+
+```sh
+npx ts-node ./managed-jsdom.ts
+```
+
 ## API Reference
 
 [Click here to open the API reference.](https://armand1m.github.io/papercut)
