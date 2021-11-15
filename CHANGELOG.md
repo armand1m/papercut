@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/armand1m/papercut/compare/v2.0.4...v2.0.5) (2021-11-15)
+
+
+### Bug Fixes
+
+* export utilities and add managed jsdom example ([132038b](https://github.com/armand1m/papercut/commit/132038bd46bf6386b168967925f0cadf8a906241))
+
 ## [2.0.4](https://github.com/armand1m/papercut/compare/v2.0.3...v2.0.4) (2021-11-15)
 
 
