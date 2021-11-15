@@ -69,7 +69,11 @@ Add papercut:
 yarn add @armand1m/papercut
 ```
 
-Setup a scraper instance and set the selectors and how to fill them using the utilities offered:
+#### Single page scraper 
+
+For this example, we gonna scrape Hacker News first page.
+
+Setup a scraper instance and set the selectors using the utilities offered:
 
 ```ts file=./examples/typescript/src/hacker-news/scraper.ts
 ```
@@ -77,9 +81,24 @@ Setup a scraper instance and set the selectors and how to fill them using the ut
 Then run it using `node` or `ts-node`:
 
 ```sh
-npx ts-node ./demo-scraper.ts
+npx ts-node ./single-page-scraper.ts
 ```
   
+#### Paginated scraper 
+
+For this example, because I live in Amsterdam, we gonna scrape the Amsterdam Coffeeshops website for all coffeeshops in Amsterdam.
+
+Setup a scraper instance and set the selectors using the utilities offered:
+
+```ts file=./examples/typescript/src/amsterdam-coffeeshops/scraper.ts
+```
+
+Then run it using `node` or `ts-node`:
+
+```sh
+npx ts-node ./paginated-scraper.ts
+```
+
 ## API Reference
 
 [Click here to open the API reference.](https://armand1m.github.io/papercut)
@@ -94,9 +113,9 @@ Papercut works well out of the box, but some environment variables are available
 
 - [x] Add unit tests
 - [x] Add documentation generation
-- [ ] Create medium article introducing the library
 - [x] Create a gh-pages for the library
 - [x] Create more examples
+- [ ] Create medium article introducing the library
 
 ## Contributing
 

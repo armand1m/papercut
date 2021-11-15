@@ -28,12 +28,12 @@ const main = async () => {
       instantPageUrl: ({ href }) =>
       `${baseUrl}${href('.instant-link')}`,
       instantSoundUrl: async (selectors, $this) => {
-        const { fetchPage, createWindowForHTMLContent } = selectors;
+        const { fetchPage, createWindow } = selectors;
         const soundPageUrl = $this.instantPageUrl(selectors, $this);
 
         const soundHTML = await fetchPage(soundPageUrl);
-        let { window: soundWindow, close } = createWindowForHTMLContent(soundHTML);
-        let soundDocument = soundWindow.document;
+        const soundWindow = createWindow(soundHTML);
+        const soundDocument = soundWindow.document;
 
         const ogAudioMeta = soundDocument.querySelector(
           `meta[property="og:audio"]`
@@ -44,8 +44,7 @@ const main = async () => {
         const soundUrl = ogAudioMeta.getAttribute('content');
         const soundType = ogAudioTypeMeta.getAttribute('content');
 
-        close();
-        soundDocument = null;
+        soundWindow.close();
 
         return {
           soundUrl,
