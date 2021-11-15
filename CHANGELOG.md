@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/armand1m/papercut/compare/v2.0.3...v2.0.4) (2021-11-15)
+
+
+### Bug Fixes
+
+* make jsdom and pino peer dependencies ([5aabad2](https://github.com/armand1m/papercut/commit/5aabad246c45127f9a3f5b23f18e1aa407410704))
+
 ## [2.0.3](https://github.com/armand1m/papercut/compare/v2.0.2...v2.0.3) (2021-11-15)
 
 
