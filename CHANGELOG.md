@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/armand1m/papercut/compare/v2.0.2...v2.0.3) (2021-11-15)
+
+
+### Bug Fixes
+
+* createWindow handler and support for promise result inference ([34787fc](https://github.com/armand1m/papercut/commit/34787fc5f65fca3bfd5925f90b4221a06b57a42c))
+* make type inference promise friendly ([dd04439](https://github.com/armand1m/papercut/commit/dd04439702feed9b3ea61b7b8d221947437ed775))
+
 ## [2.0.2](https://github.com/armand1m/papercut/compare/v2.0.1...v2.0.2) (2021-11-14)
 
 
