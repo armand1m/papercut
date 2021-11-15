@@ -1,7 +1,7 @@
 import { expectType } from 'tsd';
+import { scrape } from './scrape';
 import { Logger } from './createLogger';
 import { defaultOptions } from './createScraper';
-import { scrape } from './scrape';
 
 const strictResult = scrape({
   strict: true,
@@ -14,6 +14,10 @@ const strictResult = scrape({
     bar: () => 'bar' as const,
     optional: ({ element }) =>
       element.nextElementSibling?.textContent,
+    asyncValue: async ({ text }) => {
+      await Promise.resolve();
+      return text('.async');
+    },
   },
 });
 
@@ -28,6 +32,10 @@ const looseResult = scrape({
     bar: () => 'bar' as const,
     optional: ({ element }) =>
       element.nextElementSibling?.textContent,
+    asyncValue: async ({ text }) => {
+      await Promise.resolve();
+      return text('.async');
+    },
   },
 });
 
@@ -35,6 +43,7 @@ type ResultType = {
   foo: string;
   bar: 'bar';
   optional: string | null | undefined;
+  asyncValue: string;
 };
 
 type ExpectedStrictResultType = Promise<ResultType[]>;
