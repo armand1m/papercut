@@ -1,8 +1,13 @@
 # Papercut
 
-Papercut is a scraping/crawling library for Node.js, written in Typescript.
+[![NPM](https://img.shields.io/npm/v/@armand1m/papercut.svg)](https://www.npmjs.com/package/@armand1m/papercut) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![codecov](https://codecov.io/gh/armand1m/papercut/branch/master/graph/badge.svg)](https://codecov.io/gh/armand1m/papercut)
+[![bundlephobia](https://badgen.net/bundlephobia/min/@armand1m/papercut)](https://bundlephobia.com/result?p=@armand1m/papercut)
+[![bundlephobia](https://badgen.net/bundlephobia/minzip/@armand1m/papercut)](https://bundlephobia.com/result?p=@armand1m/papercut)
 
-It provides a type-safe and small foundation that makes it fairly easy to scrape webpages with confidence.
+> Papercut is a scraping/crawling library for Node.js, written in Typescript.
+
+Papercut provides a small type-safe and tested foundation that makes it fairly easy to scrape webpages with confidence.
 
 ## Features
 
@@ -63,10 +68,10 @@ cd papercut-demo
 yarn init -y
 ```
 
-Add papercut:
+Add papercut and the needed peer dependencies:
 
 ```sh
-yarn add @armand1m/papercut
+yarn add @armand1m/papercut jsdom pino
 ```
 
 #### Single page scraper

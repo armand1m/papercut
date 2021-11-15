@@ -10,6 +10,17 @@
       "email": "armando.mag95@gmail.com"
     }
   ],
+  "keywords": [
+    "nodejs",
+    "scraper",
+    "scraping",
+    "jsdom",
+    "crawler",
+    "web-scraping",
+    "typescript",
+    "caching",
+    "geosearching"
+  ],
   "files": [
     "dist"
   ],
@@ -31,7 +42,10 @@
     "generate:readme": "node ./scripts/generateReadme.js < template.md > README.md",
     "semantic-release": "semantic-release"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "jsdom": "^18.1.0",
+    "pino": "^7.2.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -44,6 +58,7 @@
     "trailingComma": "es5"
   },
   "name": "@armand1m/papercut",
+  "description": "Papercut is a scraping/crawling library for Node.js, written in Typescript.",
   "author": "Armando Magalhães",
   "module": "dist/papercut.esm.js",
   "devDependencies": {
@@ -58,6 +73,8 @@
     "@types/signale": "^1.4.1",
     "husky": "^4.2.5",
     "jest": "^27.3.1",
+    "jsdom": "^18.1.0",
+    "pino": "^7.2.0",
     "remark-code-import": "^0.3.0",
     "remark-contributors": "^5.1.0",
     "remark-gfm": "^1.0.0",
@@ -75,11 +92,9 @@
   "dependencies": {
     "@supercharge/promise-pool": "^1.5.0",
     "fp-ts": "^2.11.5",
-    "jsdom": "^16.3.0",
     "lodash": "^4.17.19",
     "node-fetch": "^2.6.0",
-    "node-localstorage": "^2.1.6",
-    "pino": "^7.2.0"
+    "node-localstorage": "^2.1.6"
   },
   "resolutions": {
     "**/typescript": "^4.4.4",
