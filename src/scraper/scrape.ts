@@ -22,12 +22,14 @@ export interface ScrapeProps<
   options: ScraperOptions;
 }
 
+export type Awaited<T> = T extends PromiseLike<infer U> ? U : T;
+
 export type ScrapeResultType<
   T extends SelectorMap,
   B extends boolean
 > = B extends true
-  ? { [Prop in keyof T]: ReturnType<T[Prop]> }
-  : { [Prop in keyof T]?: ReturnType<T[Prop]> };
+  ? { [Prop in keyof T]: Awaited<ReturnType<T[Prop]>> }
+  : { [Prop in keyof T]?: Awaited<ReturnType<T[Prop]>> };
 
 /**
  * the scrape function
