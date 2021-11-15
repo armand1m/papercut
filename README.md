@@ -1,6 +1,6 @@
 # Papercut
 
-[![NPM](https://img.shields.io/npm/v/@armand1m/papercut.svg)](https://www.npmjs.com/package/@armand1m/papercut) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@armand1m/papercut.svg)](https://www.npmjs.com/package/@armand1m/papercut)
 [![codecov](https://codecov.io/gh/armand1m/papercut/branch/master/graph/badge.svg)](https://codecov.io/gh/armand1m/papercut)
 [![bundlephobia](https://badgen.net/bundlephobia/min/@armand1m/papercut)](https://bundlephobia.com/result?p=@armand1m/papercut)
 [![bundlephobia](https://badgen.net/bundlephobia/minzip/@armand1m/papercut)](https://bundlephobia.com/result?p=@armand1m/papercut)
