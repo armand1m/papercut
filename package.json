@@ -80,7 +80,7 @@
     "remark-gfm": "^1.0.0",
     "remark-parse": "^9.0.0",
     "remark-stringify": "^9.0.1",
-    "semantic-release": "^17.4.4",
+    "semantic-release": "^19.0.3",
     "tsd": "^0.18.0",
     "tsdx": "^0.14.1",
     "typedoc": "^0.22.8",
